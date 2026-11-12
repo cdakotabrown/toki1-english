@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""File-level tests of the 2026-11-03 art (docs/translation/VISUAL-SWEEP.md 3.1.2):
+"""File-level tests of the 2026-11-03 art:
 
 * KARI.BIN: the borrowing race's 失格 stamp is our DISQUALIFIED (the stamp
   is drawn translucent, so the screen-picture gate cannot match its

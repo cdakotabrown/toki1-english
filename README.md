@@ -70,7 +70,7 @@ make gates test ci  # re-check the build, unit tests, the CI jobs
 | `patch/` | the patch code (IDO C); `patch/debug/` the debug build |
 | `art/` | English lettering: PNG cells and manifests |
 | `tools/` | build, gates, lint, hydrate; `reviewer/` sheet editor; `jev_qa_kit/` QA kit |
-| `docs/` | how the patch works (other `docs/` files cited in comments are unpublished notes) |
+| `docs/` | how the patch works |
 | `work/` | yours: hydrated sheets (ignored) |
 
 ## Licence

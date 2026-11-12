@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""File-level tests of the sports-day surname plates (VISUAL-SWEEP.md 3.1.4):
+"""File-level tests of the sports-day surname plates:
 TAIIKU/KARI.BIN's seven 32x16 plates (page at file offset 0) and the six
 mirrored copies in TAIIKU/TAMA.BIN (pages 14 / 15).
 

@@ -1405,7 +1405,7 @@
    "align": "left",
    "valign": 0,
    "frame": 135,
-   "note": "The Memorial Spot genre tags (docs/translation/VISUAL-SWEEP.md 3.2): the retail tags are exe frames 134..143 of basyo_init_tbl1, each 1..5 cels of 8x8 kana shared between tags on this page's rows 48..71 (cel page 0xA = MAINROM p12; tp 0x3110 = VRAM CLUT row 481, the exe row at 0x800CC740, index 9 = (128, 128, 160) as measured on screen).  Each genre_* cell is one English word strip in the 7-px tiny_caps face (\"frame\": the exe frame it serves); config/patch/english.json main.pokes re-point the records at them (tools/patch/mag_genre_tags.py generates and checks those pokes).  Space used: the kana area, plus x 104..111 and 120..127 of rows 48..63, x 64..71 of rows 64..71 and x 64..119 of rows 72..79, blank in the retail page and referenced by no frame of the table (genre_erase_ru clears the last kana)."
+   "note": "The Memorial Spot genre tags: the retail tags are exe frames 134..143 of basyo_init_tbl1, each 1..5 cels of 8x8 kana shared between tags on this page's rows 48..71 (cel page 0xA = MAINROM p12; tp 0x3110 = VRAM CLUT row 481, the exe row at 0x800CC740, index 9 = (128, 128, 160) as measured on screen).  Each genre_* cell is one English word strip in the 7-px tiny_caps face (\"frame\": the exe frame it serves); config/patch/english.json main.pokes re-point the records at them (tools/patch/mag_genre_tags.py generates and checks those pokes).  Space used: the kana area, plus x 104..111 and 120..127 of rows 48..63, x 64..71 of rows 64..71 and x 64..119 of rows 72..79, blank in the retail page and referenced by no frame of the table (genre_erase_ru clears the last kana)."
   },
   {
    "name": "genre_suspense",

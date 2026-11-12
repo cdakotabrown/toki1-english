@@ -11,7 +11,7 @@ runs that differ between the player's Track 1 and the English disc
 the player's own dump, but "changed" is not "ours": some changed bytes are
 still derived from the original disc (relocated or repacked Japanese
 strings, re-encoded glyphs, image bytes where one 4-bit pixel changed,
-sector EDC/ECC; docs/pc-port/TRANSLATION-ON-PC.md section 1.3), so the
+sector EDC/ECC), so the
 README says exactly that and no more.  The README's checksums come
 from the files on THIS machine: the player's dump, the PPF, and the result
 of applying it (tools/patch/verify_ppf.py proves that result equals the

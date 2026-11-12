@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""File-level tests of the Memorial Spot genre tags (VISUAL-SWEEP.md 3.2):
+"""File-level tests of the Memorial Spot genre tags:
 
 * config/patch/english.json carries exactly the pokes mag_genre_tags.py
   generates from the manifest and the retail exe;

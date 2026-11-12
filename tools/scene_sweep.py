@@ -2,8 +2,8 @@
 """scene_sweep.py - force every scene of the retail scene table on a disc
 and screenshot it (the English patch's broad regression test).
 
-For each scene id of the loader's switch (docs/reference/DEAD-OVERLAYS-
-EVENT-GYOZI.md: NAME_ENT 17.., OPTION 32.., ETC, OLH 58, TEL, DATE, SHUGAKU
+For each scene id of the loader's switch (NAME_ENT 17.., OPTION 32.., ETC,
+OLH 58, TEL, DATE, SHUGAKU
 81, SHOUGATU, VALEN, GEKO, DATE2, KANGEI, OMIMAI, ENDING 99, BUNKASAI 112,
 BUNKAKEN 113, TAIIKU, RENSYU, MASTER, BUNKA_SD 128, RPG_BAT 129, EN_NICHI
 130, TT 208) the reference emulator regtest host loads a CALENDAR-IDLE save state

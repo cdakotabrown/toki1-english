@@ -9,7 +9,7 @@ that name exists in slot 1, "DEBUG MODE OK" goes to the TTY and
 `D_800B9710 = 1`: the debug flag that gates the step overlay, the debug
 text renderers and the hidden OPTION scenes 33 (sound test) and 34
 (parameter editor with the page-F scene warp), entered with L1+L2+R1+R2 on
-the option menu (docs/reference/KONAMI-DEBUG-FACILITIES.md).  Only the
+the option menu.  Only the
 file's EXISTENCE is tested: nothing reads its contents.
 
 This writes a standard 128 KB PlayStation memory card image (an emulator

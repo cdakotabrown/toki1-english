@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """mag_genre_tags.py - the exe pokes that point the Memorial Spot magazine's
-genre tags at English word strips (docs/translation/VISUAL-SWEEP.md 3.2).
+genre tags at English word strips.
 
 The magazine page (config_screen_init, holiday screen icon 10, step
 70/32/1) draws its MOVIE / CONCERT genre tags as frames 134..143 of the

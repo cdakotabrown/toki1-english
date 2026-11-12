@@ -1,5 +1,5 @@
 {
-  "description": "Runtime coverage plan of the English patch (tools/patch/coverage_campaign.py). Every item reaches one text the player can see, from power-on or from the state of the item it names in `from`; pokes are the save-block / step-machine addresses of docs/reference/KONAMI-DEBUG-FACILITIES.md sections 6-7.",
+  "description": "Runtime coverage plan of the English patch (tools/patch/coverage_campaign.py). Every item reaches one text the player can see, from power-on or from the state of the item it names in `from`; pokes are save-block / step-machine addresses.",
   "macros": {
     "pad_digital": ["800EF6D4:01"],
     "no_replay": ["800EF884:00"],
@@ -23,7 +23,7 @@
     "club11": ["800EE855:b0"]
   },
   "cards": {"blank": {"kind": "blank"}, "unformatted": {"kind": "zero"}, "full": {"kind": "full"}, "debug": {"kind": "debug"}, "album1": {"kind": "copy", "from_item": "card.album"}, "corrupt_system": {"kind": "corrupt", "from_item": "card.album", "file": 0}, "corrupt_album": {"kind": "corrupt", "from_item": "card.album", "file": 1}, "holiday_card": {"kind": "copy", "from_item": "boot.holiday_card"}},
-  "expected_japanese": [{"step": 20, "from": "0x8014B000", "to": "0x8014B400", "why": "name-entry kana / symbol / kanji key grids: read by column position and compared with what the player types, kept Japanese on purpose (PS1-PATCH-STATUS.md section 4, item 4)"}, {"step": 20, "from": "0x801FE000", "to": "0x80200000", "why": "name-entry symbol / kanji key rows (built on the stack from the font's JIS order): the same key grids"}, {"step": 20, "from": "0x8014CC70", "to": "0x8014CC90", "why": "the name fields themselves after the campaign typed kana / kanji keys (a Japanese name is the player's choice)"}],
+  "expected_japanese": [{"step": 20, "from": "0x8014B000", "to": "0x8014B400", "why": "name-entry kana / symbol / kanji key grids: read by column position and compared with what the player types, kept Japanese on purpose"}, {"step": 20, "from": "0x801FE000", "to": "0x80200000", "why": "name-entry symbol / kanji key rows (built on the stack from the font's JIS order): the same key grids"}, {"step": 20, "from": "0x8014CC70", "to": "0x8014CC90", "why": "the name fields themselves after the campaign typed kana / kanji keys (a Japanese name is the player's choice)"}],
   "items": [
     {"id": "boot.title", "group": "system", "title": "power-on to the title menu (Konami logo, opening, Game Start / Options)", "frames": 3000, "interval": 100, "save": true, "expect_final": {"now_step": 18}},
     {"id": "boot.sun", "group": "base", "title": "new game to the first April Sunday idle (album, name entry, prologue, classroom, calendar)", "route": "calendar", "frames": 23560, "interval": 500, "save": true, "expect_steps": [21]},

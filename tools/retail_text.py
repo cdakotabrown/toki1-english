@@ -61,7 +61,7 @@ def _file(rel: str) -> bytes:
             return data
     raise RetailTextError(
         f"{rel} is not on disk. The sheets carry no Japanese: extract the disc "
-        f"first (docs/GETTING-STARTED.md, 'Extract the assets').")
+        f"first.")
 
 
 def japanese_for(row: dict) -> str:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The name entry's field labels, units and Yes / No are English
-(NAME_ENT.NBN cel_remap, docs/translation/VISUAL-SWEEP.md).
+(NAME_ENT.NBN cel_remap).
 
 Reads the frame table of build/patch/files/CDROM/NAME_ENT/NAME_ENT.NBN the
 way sprite_slot_disp draws it and checks that no frame still draws a

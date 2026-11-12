@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""visual_sweep.py - the English visual sweep (docs/translation/VISUAL-SWEEP.md).
+"""visual_sweep.py - the English visual sweep.
 
 The drawn-text log (audit_drawn_text.py) sees every string the engine draws,
 but not text baked into pictures.  This tool works on screenshots instead:

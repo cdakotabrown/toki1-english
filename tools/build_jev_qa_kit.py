@@ -88,8 +88,8 @@ SPEAKER_ROLE = {"player": "player", "player (choice)": "player",
                 "narrator": "narrator", "system": "system", "announcer": "npc",
                 "other (Rei/Miharu/NPC)": "npc", "Yoshio Saotome": "friend"}
 
-# container -> what scene it is.  "docs" = stated in docs/game-flows or the
-# patch docs; "name" = inferred from the file name and its lines.
+# container -> what scene it is.  "docs" = stated in the project's
+# documentation; "name" = inferred from the file name and its lines.
 SCENES = {
     "SERIFU/DATE_": ("Date with {girl}: the date script, organised by date spot (museum, bowling, "
                      "concert, zoo, ...) in file order; heroine lines, the player's lines and his "
@@ -302,8 +302,8 @@ def audit_flags():
     return flags
 
 
-# docs/translation/BROKEN-STRINGS-AUDIT.md section 1: main-exe ranges that
-# went back to Japanese on the PC port before the 2026-11-02 fix
+# main-exe ranges that went back to Japanese on the PC port before the
+# 2026-11-02 fix
 BLANK_AT = set()     # (target, addr) of strings the patch blanks on purpose
 
 BROKEN_RANGES = [((0x800B7240, 0x800B72A0), "join-club template / captain's line"),

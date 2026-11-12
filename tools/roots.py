@@ -4,9 +4,9 @@ The English patch (toki1-english) reads, but never writes, the decompiled
 tree (toki1-decomp): the C sources, include/, the symbol ledger and .sym
 maps, the IDO toolchain, the clean main/EXN builds under its build/, and
 the disc inputs its setup extracted (disks/, assets/).  It may also use a
-few PC-port tools (toki1-pc, optional).  docs/REPO-SPLIT-PLAN.md is the
-contract; tools/repo_paths.py resolves the roots.  In the monorepo all
-three roots are the repository root and nothing changes.
+few PC-port tools (toki1-pc, optional).  tools/repo_paths.py resolves the
+roots.  In the monorepo all three roots are the repository root and
+nothing changes.
 
 The English files themselves have two layouts: the monorepo's
 (translation/localization/sheets, src/patch/main, config/patch, ...) and
@@ -141,8 +141,7 @@ class _NoRefEmu:
         return (f"{what} needs the reference emulator's regtest host; no PC "
                 f"port checkout (toki1-pc) was found to locate it, and "
                 f"REFEMU_REGTEST is not an executable: set it, or check out "
-                f"toki1-pc next to this repository (pc/tools/refemu.py, "
-                f"docs/pc-port/REFERENCE-EMULATOR.md)")
+                f"toki1-pc next to this repository (pc/tools/refemu.py)")
 
 
 def refemu():

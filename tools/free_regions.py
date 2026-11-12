@@ -42,7 +42,7 @@ Static unreachability is the claim; the runtime half is
 config/patch/english-poison.json (every region filled with self-loop
 traps) driven by soak_test.py / scene_sweep.py and compared frame by frame
 with the plain English disc, plus soak_test.py's write watch on the
-module pieces placed there (docs/translation/PS1-PATCH-STATUS.md 3.6).
+module pieces placed there.
 """
 import argparse
 import json

@@ -3,7 +3,7 @@
 # AUTHORED FOR THIS PROJECT (Tokimeki Memorial English patch), 2026-11-06.
 # Drawn by hand pixel by pixel for this file; not derived from, traced from
 # or measured against any existing font or any retail game art.  It sets
-# the Memorial Spot magazine's genre tags (VISUAL-SWEEP.md 3.2), whose
+# the Memorial Spot magazine's genre tags, whose
 # retail kana sit in 8-px rows of FUKUTEST/MAINROM.NBN page 12 where the
 # 12-px latin12 face does not fit.
 #

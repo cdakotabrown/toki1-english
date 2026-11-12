@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The title Options sub-lists (FUKUTEST/OPTION.NBN sprite frames) are
-English in the patch build (docs/translation/VISUAL-SWEEP.md).
+English in the patch build.
 
 Reads the frames back out of build/patch/files/CDROM/FUKUTEST/OPTION.NBN
 (what build_patched.py / nbn_inject.py wrote) exactly as sprite_slot_disp

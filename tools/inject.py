@@ -4,8 +4,7 @@
 Reads the translation sheets (translation/localization/sheets/<DIR>/<FILE>.csv,
 READ ONLY) and rewrites COPIES of the script containers under
 build/patch/files/CDROM/... so that every file keeps its exact size (and so
-its sector count: the loader addresses every file by LBA, see
-docs/translation/PS1-PATCH-FEASIBILITY.md section 3.1).
+its sector count: the loader addresses every file by LBA).
 
 What a container looks like (measured; tools/translation/extract_containers.py
 is the extractor whose sheets this consumes):
@@ -91,7 +90,7 @@ ACCEPT_STATUS = ("draft", "translated", "edited", "qa", "final")
 TOKEN_RE = re.compile(r"\{(br|opt|P|G|p|m|F|Y|S|O|W|A|M)\}")
 TOKEN_SPLIT_RE = re.compile(r"\{(?:br|opt|P|G|p|m|F|Y|S|O|W|A|M)\}")
 
-# event window geometry (docs/translation/TEXT-DRAW-INVENTORY.md section 2):
+# event window geometry:
 # body rows at x = -72, text area ends at 129 -> 201 px; choice rows start
 # at the retail bullet column x = -128 (plain layout, no brackets) -> 257 px
 LINE_PX = 201

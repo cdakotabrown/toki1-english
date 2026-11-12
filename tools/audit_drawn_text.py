@@ -48,7 +48,7 @@ Usage:
   records the current set.  The baseline stores only hashes of the text
   and the class (no game text), per target.
 
-Typical runs (docs/translation/BROKEN-STRINGS-AUDIT.md):
+Typical runs:
   PC:  python3 pc/tools/playthrough.py pc/tools/playthrough/english_tour.txt \\
            --set TOKI_LANG=en --set TOKI_TEXTLOG=$PWD/build/audit/pc/tour.jsonl
   PS1: python3 tools/patch/build_patched.py config/patch/english-drawlog.json
@@ -358,7 +358,7 @@ def write_md(groups, summary, counts, path):
 
 
 # ------------------------------------------------------------ class d: baked art
-# Every text-bearing picture docs/translation/SPRITE-TEXT-INVENTORY.md lists
+# Every text-bearing picture the sprite-text inventory lists
 # (section 4, plus the manual-review and optional rows): CDROM path, what the
 # text is, how often a player sees it (1 = every session ... 4 = rare or
 # optional), and the inventory section.  `art` says, per target, whether the
@@ -481,8 +481,8 @@ def main():
             known.setdefault(t, {})[k] = c
         bpath.write_text(json.dumps({
             "note": "known broken / untranslated drawn strings by target: sha1(Japanese "
-                    "characters)[:16] -> class (tools/patch/audit_drawn_text.py; "
-                    "docs/translation/BROKEN-STRINGS-AUDIT.md). No game text is stored.",
+                    "characters)[:16] -> class (tools/patch/audit_drawn_text.py). "
+                    "No game text is stored.",
             "known": {t: dict(sorted(v.items())) for t, v in sorted(known.items())}},
             indent=1) + "\n")
         print(f"[audit] baseline -> {bpath} ({sum(len(v) for v in known.values())} keys)")

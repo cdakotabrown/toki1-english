@@ -4,8 +4,7 @@
 The title Options screen (OPTION.EXN) draws the entries of its sub-lists
 (text speed, icon mode, mouse, menu mode, cursor speed, voice, extras and
 the extras' voice-cast / heroine lists) as SPRITE FRAMES of
-FUKUTEST/OPTION.NBN, not as strings, so the drawn-text log never sees them
-(docs/translation/VISUAL-SWEEP.md, BROKEN-STRINGS-AUDIT.md 5.2):
+FUKUTEST/OPTION.NBN, not as strings, so the drawn-text log never sees them:
 
   * option_init1 loads the file to 0x801B0000 and points every Rec68 slot
     of D_80128B30 at the frame table 0x801C32D8 (slot+12) and the page

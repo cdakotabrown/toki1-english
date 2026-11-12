@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """File-level tests of the Stardust Symphony EX OPERATIONS pages
-(TACO/TACOTEX.NBN, src/patch/art/TACOTEX; strip map:
-docs/translation/TACOTEX-OPERATIONS-STRIP-MAP.md):
+(TACO/TACOTEX.NBN, src/patch/art/TACOTEX):
 
 * every manifest cell is a run of cels of TACOTEXO frame 1 or 2 that sit
   side by side on one screen row, in the cell's piece order (so an English

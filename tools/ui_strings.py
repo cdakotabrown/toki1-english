@@ -13,7 +13,7 @@ string that does not fit its slot is reported (and left Japanese) rather
 than truncated.  Strings reached through a pointer word (`ptr_at`) go to
 the string pool and have no size limit.
 
-Not translated on purpose (documented in PS1-PATCH-STATUS.md): the memory
+Not translated on purpose: the memory
 card file titles (the BIOS card manager needs Shift-JIS), the event
 dispatcher's strcmp specials (sound-effect literals compared against the
 containers), the bracket glyphs, and the information-magazine 17-byte

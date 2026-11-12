@@ -2194,7 +2194,7 @@
   "src/main/matched/msg_part_reorder.c": "choice shuffle: re-joins the reply segments in a new order, replaced by text_msg.c pt_choice_shuffle",
   "src/main/matched/sprintf.c": "the sprintf implementation itself",
   "src/main/matched/save_name_set.c": "memory-card file name bu00:BISLPS-00065 + hex digit (BIOS directory entry, never drawn)",
-  "src/main/matched/card_file_save.c": "memory-card file title for the BIOS card manager (Shift-JIS on purpose, PS1-PATCH-STATUS.md section 4)",
+  "src/main/matched/card_file_save.c": "memory-card file title for the BIOS card manager (Shift-JIS on purpose)",
   "src/main/matched/card_file_write.c": "memory-card file title for the BIOS card manager (Shift-JIS on purpose)",
   "src/main/matched/album_info_disp.c": "album card: rendered by the main/album_info_disp:* compositions",
   "src/overlay/TACO/taco_num_set.c": "TwinBee score: right-aligned digits padded with spaces (drawn by the TACO sprite font)",
