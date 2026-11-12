@@ -1,0 +1,145 @@
+{
+ "note": "Reference screens of the English visual gate (pc/tools/test_visual_sweep.py, docs/translation/VISUAL-SWEEP.md): each entry is a playthrough script and the `shot` labels whose English screenshot must show no Japanese glyph (tools/patch/visual_sweep.py Detector, >= min_hits hits fails). `ja_hits` lists the shots that must show Japanese in TOKI_LANG=ja (the negative control: the detector sees the text the English build replaced). No pixels are stored; the screenshots are taken at test time. `art_routes`: scenarios (pc/tools/scenario.py, swept with PC_SWEEP_DIR every `sweep_every` frames) whose lettering the detector cannot read (banners, logos): each `art` cell (a src/patch/art manifest cell) must show as our English PNG on some English picture and its retail lettering (cut from the player's file at test time) on none; the Japanese run must show the retail lettering (negative control) and never ours (visual_sweep.picture_at); an `erase_only` cell (a counter word English drops) is only checked for the retail lettering. A route may also list `art` cells (Rei Ijuin's name card on the tour): the presence check of the art routes on the route's own sweep pictures; `region` [x, y, w, h] is the part of the cell a sprite in front leaves visible. The borrowing race's DISQUALIFIED stamp (src/patch/art/KARI) is drawn translucent, so its colours never match a screen picture: it is gated on the file (tools/patch/test_art_frames_2026_11_03.py) and its scenario (scene114_taiiku_kari_foul.txt) is for review.",
+ "min_hits": 2,
+ "routes": [
+  {
+   "script": "pc/tools/playthrough/english_options_full.txt",
+   "shots": [
+    "opt_menu",
+    "text_speed_0",
+    "text_speed_1",
+    "text_speed_2",
+    "icon_mode_0",
+    "icon_mode_2",
+    "menu_mode_0",
+    "menu_mode_3",
+    "cursor_speed_0",
+    "cursor_speed_2",
+    "cursor_speed_4",
+    "voice_0",
+    "voice_1",
+    "voice_2"
+   ],
+   "ja_hits": [
+    "text_speed_0",
+    "cursor_speed_0",
+    "voice_0",
+    "icon_mode_2"
+   ]
+  },
+  {
+   "script": "pc/tools/playthrough/english_tour.txt",
+   "shots": [
+    "title",
+    "album_prompt",
+    "album_pick",
+    "name_entry",
+    "birthday",
+    "confirm",
+    "prologue_a",
+    "prologue_c",
+    "schedule"
+   ],
+   "ja_hits": [
+    "name_entry",
+    "birthday",
+    "confirm"
+   ],
+   "art": [
+    {
+     "manifest": "src/patch/art/CUT_10/manifest.json",
+     "cell": "name_card",
+     "region": [
+      24,
+      0,
+      96,
+      76
+     ]
+    }
+   ]
+  }
+ ],
+ "art_routes": [
+  {
+   "scenario": "pc/tools/scenarios/scene114_taiiku_ballroll_out.txt",
+   "sweep_every": 5,
+   "art": [
+    {
+     "manifest": "src/patch/art/TAMA/manifest.json",
+     "cell": "banner_course"
+    },
+    {
+     "manifest": "src/patch/art/TAMA/manifest.json",
+     "cell": "banner_out"
+    }
+   ]
+  },
+  {
+   "scenario": "pc/tools/scenarios/scene130_en_nichi_goldfish.txt",
+   "sweep_every": 5,
+   "art": [
+    {
+     "manifest": "src/patch/art/KINGYO/manifest.json",
+     "cell": "result_title"
+    },
+    {
+     "manifest": "src/patch/art/KINGYO/manifest.json",
+     "cell": "result_counter",
+     "erase_only": true
+    }
+   ]
+  },
+  {
+   "scenario": "pc/tools/scenarios/scene130_en_nichi_shooting.txt",
+   "sweep_every": 5,
+   "art": [
+    {
+     "manifest": "src/patch/art/SHATEKI/manifest.json",
+     "cell": "end_banner"
+    }
+   ]
+  },
+  {
+   "scenario": "pc/tools/scenarios/scene052_save_badge.txt",
+   "sweep_every": 3,
+   "art": [
+    {
+     "manifest": "src/patch/art/MAINROM/manifest.json",
+     "cell": "icon_saving"
+    }
+   ]
+  },
+  {
+   "scenario": "pc/tools/scenarios/scene070_magazine.txt",
+   "sweep_every": 10,
+   "art": [
+    {
+     "manifest": "src/patch/art/MAINROM/manifest.json",
+     "cell": "mag_hl_central_park"
+    },
+    {
+     "manifest": "src/patch/art/MAINROM/manifest.json",
+     "cell": "mag_issue_summer"
+    },
+    {
+     "manifest": "src/patch/art/MAINROM/manifest.json",
+     "cell": "mag_ad_on_sale"
+    },
+    {
+     "manifest": "src/patch/art/MAINROM/manifest.json",
+     "cell": "mag_masthead"
+    }
+   ]
+  },
+  {
+   "scenario": "pc/tools/scenarios/scene128_speech_topic.txt",
+   "sweep_every": 5,
+   "art": [
+    {
+     "manifest": "src/patch/art/B_BUNGEI/manifest.json",
+     "cell": "topic_looking_back"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+  "assets/extracted_iso/CDROM/MASTER/KOSIEN.BIN": {"base": "0x801E8000", "sheet": "build/patch/gen/sheets_en/MASTER/KOSIEN.BIN.csv", "size": 4096, "note": "baseball tournament lines (MASTER scene 116-118); no sheet in translation/, English from config/patch/overlay_drafts.json via tools/patch/overlay_sheets.py --containers"},
+  "assets/extracted_iso/CDROM/BUNKA/URANAI.BIN": {"base": "0x801E8000", "sheet": "build/patch/gen/sheets_en/BUNKA/URANAI.BIN.csv", "size": 2048, "note": "culture-festival PC fortune (BUNKASAI)"},
+  "assets/extracted_iso/CDROM/TARA_OBJ/KARAKASI.BIN": {"base": "0x801E8000", "sheet": "build/patch/gen/sheets_en/TARA_OBJ/KARAKASI.BIN.csv", "size": 4096, "note": "karaoke lyrics (DATE2 scene 92); drawn by the lyric page hooked in text_ov_date2.c; untranslated until the editor fills the sheet"}
+}

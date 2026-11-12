@@ -1,0 +1,56 @@
+{
+ "_comment": "Runner settings. backend: mock | http | custom. The http section is a GUESS at a local Jev API (see docs/SETUP.md): change endpoint, templates and response paths to match yours, or put a client in runner/backends/custom.py and set backend to custom. ${JEV_API_KEY} is read from the environment.",
+ "backend": "mock",
+ "workers": 4,
+ "rate_limit_per_sec": 5,
+ "max_retries": 5,
+ "backoff_base_sec": 1.0,
+ "backoff_max_sec": 60,
+ "timeout_sec": 60,
+ "state_format": "json",
+ "results_path": "results/results.jsonl",
+ "errors_path": "results/errors.jsonl",
+ "store_raw_response": false,
+ "progress_every_sec": 5,
+ "estimate": {
+  "seconds_per_call": 1.0,
+  "cost_per_call": 0.0,
+  "currency": "USD"
+ },
+ "http": {
+  "endpoint": "http://127.0.0.1:8080/v1/classify",
+  "method": "POST",
+  "headers": {
+   "Content-Type": "application/json",
+   "Authorization": "Bearer ${JEV_API_KEY}"
+  },
+  "batch_size": 1,
+  "item_template": {
+   "state": "{{state}}",
+   "questions": ["{{question}}"]
+  },
+  "request_template": {
+   "model": "jev",
+   "state": "{{state}}",
+   "questions": ["{{question}}"]
+  },
+  "request_template_batch": {
+   "model": "jev",
+   "items": "{{items}}"
+  },
+  "response": {
+   "items_path": "answers",
+   "batch_items_path": "results",
+   "batch_answer_path": "answers.0",
+   "match_by": "index",
+   "id_field": "id",
+   "boolean_prob_path": "probability",
+   "choice_probs_path": "probabilities",
+   "score_value_path": "value",
+   "score_probs_path": "probabilities"
+  }
+ },
+ "custom": {
+  "endpoint": "http://127.0.0.1:8080/classify"
+ }
+}

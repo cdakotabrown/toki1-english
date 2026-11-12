@@ -1,0 +1,367 @@
+{
+ "file": "CDROM/BUNKASD/B_BUNGEI.BIN",
+ "note": "BUNKA_SD literary-club stage (forced scene 128: the speech contest). 8-bpp 128x128 pages at 0x2000 + 0x4000k, uploaded to VRAM (320 + 64k, 0) for k 0-5 and (320.., 128) after (checked on a VRAM dump of the scene); CLUT = the 256 colours at +0x200 (board 0xaf light grey, strokes 0x88 with 0xa2-0xa6 anti-aliasing). The stage's title board 'Literature Club Speech Contest' is one sprite drawn from two pieces: page 0x16000 u 91-127 (frame + 文芸) beside page 0x1a000 u 0-103 (部 弁論大会 + frame); its text rows are 38-54 and the text area u 96-127 + u 0-95 (128 px). The speech-topic board ('My High School Life' and the other four titles, assembled from shared word pieces on page 0x12000): see frame_layout.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x200",
+  "entries": 256
+ },
+ "cells": [
+  {
+   "name": "title_board",
+   "h": 17,
+   "pieces": [
+    {
+     "offset": "0x16000",
+     "x": 96,
+     "y": 38,
+     "w": 32
+    },
+    {
+     "offset": "0x1a000",
+     "x": 0,
+     "y": 38,
+     "w": 96
+    }
+   ],
+   "text": "Lit. Club Speech Contest",
+   "jp": "",
+   "fg": 136,
+   "outline": 165,
+   "erase": [
+    136,
+    162,
+    163,
+    164,
+    165,
+    166
+   ],
+   "bg": 175,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "topic_reach_you",
+   "offset": "0x12000",
+   "x": 64,
+   "y": 7,
+   "w": 64,
+   "h": 18,
+   "tile_y": 0,
+   "text": " Reach You",
+   "jp": "僕の / の / 存在 (page 4 u64..127, v0)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "topic_looking_back",
+   "offset": "0x12000",
+   "x": 32,
+   "y": 39,
+   "w": 96,
+   "h": 18,
+   "tile_y": 32,
+   "text": "Looking Back on",
+   "jp": "高校 / 生活 / を振 (page 4, v32)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "right",
+   "valign": "center"
+  },
+  {
+   "name": "topic_may_my_feelings",
+   "offset": "0x12000",
+   "x": 32,
+   "y": 71,
+   "w": 96,
+   "h": 18,
+   "tile_y": 64,
+   "text": "May My Feelings",
+   "jp": "り返 / って / 届け (page 4, v64)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "right",
+   "valign": "center"
+  },
+  {
+   "name": "topic_my_high_school",
+   "offset": "0x12000",
+   "x": 32,
+   "y": 103,
+   "w": 96,
+   "h": 18,
+   "tile_y": 96,
+   "text": "My High School",
+   "jp": "貧血 / と私 / 想い (page 4, v96)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "right",
+   "valign": "center"
+  },
+  {
+   "name": "topic_high_school",
+   "offset": "0x2000",
+   "x": 0,
+   "y": 7,
+   "w": 64,
+   "h": 18,
+   "tile_y": 0,
+   "text": " High School",
+   "jp": "unused page 0 space (a copied blank board)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "left",
+   "valign": "center",
+   "tile_page": 0
+  },
+  {
+   "name": "topic_life",
+   "offset": "0x2000",
+   "x": 0,
+   "y": 39,
+   "w": 32,
+   "h": 18,
+   "tile_y": 32,
+   "text": " Life",
+   "jp": "unused page 0 space (a copied blank board)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "left",
+   "valign": "center",
+   "tile_page": 0
+  },
+  {
+   "name": "topic_anemia",
+   "offset": "0x2000",
+   "x": 0,
+   "y": 71,
+   "w": 64,
+   "h": 18,
+   "tile_y": 64,
+   "text": "Anemia and Me",
+   "jp": "unused page 0 space (a copied blank board)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "center",
+   "valign": "center",
+   "tile_page": 0
+  },
+  {
+   "name": "topic_my_existence",
+   "offset": "0x2000",
+   "x": 0,
+   "y": 103,
+   "w": 64,
+   "h": 18,
+   "tile_y": 96,
+   "text": "My Existence",
+   "jp": "unused page 0 space (a copied blank board)",
+   "clut": {
+    "source": "file:0x0",
+    "entries": 256
+   },
+   "fg": 97,
+   "erase": [
+    97,
+    126,
+    127
+   ],
+   "bg": 115,
+   "align": "center",
+   "valign": "center",
+   "tile_page": 0
+  }
+ ],
+ "copy_rects": [
+  {
+   "note": "a blank 64x32 word board (page 4's 高校 生活 board, v32 u32..95; its kanji are erased by the cell drawn over it) into unused page 0 space, rows 0..31",
+   "from": {
+    "offset": "0x12000",
+    "x": 32,
+    "y": 32
+   },
+   "to": {
+    "offset": "0x2000",
+    "x": 0,
+    "y": 0
+   },
+   "w": 64,
+   "h": 32
+  },
+  {
+   "note": "a blank 64x32 word board (page 4's 高校 生活 board, v32 u32..95; its kanji are erased by the cell drawn over it) into unused page 0 space, rows 32..63",
+   "from": {
+    "offset": "0x12000",
+    "x": 32,
+    "y": 32
+   },
+   "to": {
+    "offset": "0x2000",
+    "x": 0,
+    "y": 32
+   },
+   "w": 64,
+   "h": 32
+  },
+  {
+   "note": "a blank 64x32 word board (page 4's 高校 生活 board, v32 u32..95; its kanji are erased by the cell drawn over it) into unused page 0 space, rows 64..95",
+   "from": {
+    "offset": "0x12000",
+    "x": 32,
+    "y": 32
+   },
+   "to": {
+    "offset": "0x2000",
+    "x": 0,
+    "y": 64
+   },
+   "w": 64,
+   "h": 32
+  },
+  {
+   "note": "a blank 64x32 word board (page 4's 高校 生活 board, v32 u32..95; its kanji are erased by the cell drawn over it) into unused page 0 space, rows 96..127",
+   "from": {
+    "offset": "0x12000",
+    "x": 32,
+    "y": 32
+   },
+   "to": {
+    "offset": "0x2000",
+    "x": 0,
+    "y": 96
+   },
+   "w": 64,
+   "h": 32
+  }
+ ],
+ "frame_layout": {
+  "note": "the speech-topic board (class_w[100], rollcall_init; cel by bunka_sd_kind 0..4 = 191 / 194 / 192 / 193 / 195), drawn at y 56 centred on x 160 from 32-px word pieces (CLUT 0 = file 0x0; board interior rows +7..+24): the retail pieces on page 4 (file 0x12000) are shared between the titles (僕の 高校 生活 の 私), so each board is laid out again from English pieces: four on page 4 where the kanji were, four on unused space of page 0 (file 0x2000; the sprite's page list holds all nine pages and search_tpage uploads a page on first use) over blank boards copied from page 4 (copy_rects).  16-px tiles: page << 6 | v/16 << 3 | u/16; the caps 0x102 / 0x103 (the 「 」 ends) are kept.  Two-piece titles are set right / left in their pieces so the word gap stays one space.",
+  "ram": "0x80180000",
+  "table": "0x801A88EC",
+  "page": 4,
+  "tile": 16,
+  "frames": [
+   {
+    "frame": 191,
+    "jp": "(kind 0, the player: My High School Life)",
+    "en": "My High School Life",
+    "cels": [
+     "@0x102",
+     "topic_my_high_school",
+     "topic_life",
+     "@0x103"
+    ]
+   },
+   {
+    "frame": 194,
+    "jp": "「僕の存在」 (kind 1, a male student)",
+    "en": "My Existence",
+    "cels": [
+     "@0x102",
+     "topic_my_existence",
+     "@0x103"
+    ]
+   },
+   {
+    "frame": 192,
+    "jp": "(kind 2, Shiori: Looking Back on High School Life)",
+    "en": "Looking Back on High School",
+    "cels": [
+     "@0x102",
+     "topic_looking_back",
+     "topic_high_school",
+     "@0x103"
+    ]
+   },
+   {
+    "frame": 193,
+    "jp": "「貧血と私」 (kind 3, Mio)",
+    "en": "Anemia and Me",
+    "cels": [
+     "@0x102",
+     "topic_anemia",
+     "@0x103"
+    ]
+   },
+   {
+    "frame": 195,
+    "jp": "(kind 4, Miharu: Reach Out, My Feelings)",
+    "en": "May My Feelings Reach You",
+    "cels": [
+     "@0x102",
+     "topic_may_my_feelings",
+     "topic_reach_you",
+     "@0x103"
+    ]
+   }
+  ]
+ }
+}

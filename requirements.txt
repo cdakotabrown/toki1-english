@@ -1,0 +1,5 @@
+# toki1-english: the patch build and its tools (plus what toki1-decomp's
+# overlay/link helpers it imports need)
+Pillow>=10.0        # font and sprite art (tools/patch/*.py)
+numpy>=1.24         # NBN art injector and scanners
+pyelftools>=0.30    # ELF reading in toki1-decomp's resolve_overlay_relocs.py

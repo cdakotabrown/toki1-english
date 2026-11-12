@@ -1,0 +1,302 @@
+Japanese,English,Category,Notes,Status
+ときめきメモリアル,Tokimeki Memorial,title,Title stays Japanese (brand).,final
+きらめき高校,Kirameki High School,place,"'Kirameki High' in dialogue.",draft
+伝説の木,the Legendary Tree,place,The confession spot under the tree on graduation day.,draft
+藤崎詩織,Shiori Fujisaki,character,,draft
+虹野沙希,Saki Nijino,character,,draft
+如月未緒,Mio Kisaragi,character,,draft
+紐緒結奈,Yuina Himoo,character,"ひもお: the お is a separate kana, not a long vowel, so Himoo keeps both o (STYLE-GUIDE §3).",final
+片桐彩子,Ayako Katagiri,character,,draft
+清川望,Nozomi Kiyokawa,character,,draft
+鏡魅羅,Mira Kagami,character,,draft
+朝日奈夕子,Yuko Asahina,character,ゆうこ: long vowel dropped (not Yuuko); STYLE-GUIDE §3.,final
+古式ゆかり,Yukari Koshiki,character,,draft
+美樹原愛,Megumi Mikihara,character,,draft
+早乙女優美,Yumi Saotome,character,Calls the player Senpai.,draft
+伊集院レイ,Rei Ijuin,character,"The reading I-juu-in: long vowel dropped, as in Yuko (STYLE-GUIDE §3, producer decision 2026-11-03; formerly Ijuuin).",final
+館林見晴,Miharu Tatebayashi,character,Hidden heroine.,draft
+早乙女好雄,Yoshio Saotome,character,{Y} token.,draft
+先輩,Senpai,address,"Only as Yumi Saotome's address form, and only where the Japanese has it; vocative at a natural clause start/end, capitalized. Otherwise drop. (Producer decision 2026-11-05, D2)",decided
+情報誌,the magazine,item,The town-info magazine that lists date spots.,draft
+詩集,poetry collection,item,Gift; graded good/neutral/bad by heroine. Keep the explicit collection name in gift-return calls so the two gift types stay distinct.,draft
+文集,essay collection,item,Gift (school anthology). Keep the explicit collection name in gift-return calls so the two gift types stay distinct.,draft
+ｐｒｆ,prf,proper,In-game band; keep lowercase Latin.,draft
+美術館,the art museum,place,Date spot.,draft
+ボウリング場,the bowling alley,place,Date spot.,draft
+コンサート,the concert,place,Date spot.,draft
+動物園,the zoo,place,Date spot.,draft
+お祭り,the festival,place,Summer festival date; goldfish scooping / shooting gallery / fireworks.,draft
+金魚すくい,goldfish scooping,term,Festival stall.,draft
+射的,the shooting gallery,term,Festival stall.,draft
+ゲームセンター,the arcade,place,Date spot; video-game corner / medal-game corner.,draft
+メダルゲーム,medal games,term,Token-based arcade machines; keep 'medal games'.,draft
+クレーンゲーム,crane game,term,,draft
+カラオケ,karaoke,place,,draft
+演歌,enka,term,Traditional ballad genre; keep 'enka'.,draft
+公園,the park,place,Talk spot (hobby elicitation).,draft
+映画館,the cinema,place,Date spot.,draft
+遊園地,the amusement park,place,"Menu ""Amusement Park"" (not ""Theme Park""). Rides: roller coaster; ghost house; Ferris wheel; Bibiru; Virtual Ship; parade; hero show. (Producer decision 2026-11-05, E1)",decided
+絶叫マシーン ビビール,"the scream machine, the Bibiru",proper,Ride name; keep 'Bibiru'.,draft
+バーチャルシップ,the Virtual Ship,proper,Ride name.,draft
+ゴーストハウス,the ghost house,place,,draft
+観覧車,the Ferris wheel,place,,draft
+ヒーローショー,the hero show,term,Costumed stage show for kids.,draft
+プール,the pool,place,Date spot.,draft
+プラネタリウム,the planetarium,place,Date spot; constellations Lyra / Cygnus.,draft
+琴座,Lyra,term,,draft
+白鳥座,Cygnus,term,,draft
+海,the beach,place,Date spot.,draft
+植物園,the botanical garden,place,Date spot.,draft
+ショッピング,shopping,place,Clothes / accessories / junk shop.,draft
+ジャンク屋,the junk shop,place,Electronics junk shop.,draft
+スケート場,the ice rink,place,"Date spot; menu ""Ice Rink"". ""go skating"" / ""ice skating"" for the activity stay as they are. (Producer decision 2026-11-05, E2)",decided
+スキー場,the ski resort,place,"Date spot; menus ""Ski Resort"". ""the slopes"" where the Japanese means the runs. (Producer decision 2026-11-05, D11)",decided
+野球場,the ballpark,place,Baseball date.,draft
+プロレス,pro wrestling,term,,draft
+水族館,the aquarium,place,,draft
+図書館,the library,place,,draft
+花見,cherry-blossom viewing,term,Hanami; 'go see the blossoms'.,draft
+並木道,the tree-lined path,place,Park walk variant.,draft
+池,the pond,place,Park walk variant.,draft
+ヨーグルトきのこ,yogurt mushrooms,term,"1994-95 kefir-grain fad. Gift menu ""Yogurt Mushroom Starter""; dialogue ""yogurt mushrooms"" for the fad, ""starter"" for what it does. (Producer decision 2026-11-05, E3)",decided
+テレビ電話,videophones,term,1990s fad line.,draft
+スノーボード,snowboarding,term,,draft
+三流大学,a third-rate college,term,,draft
+ガーギー,Gaugie,proper,"In-game parody of Gauguin (Ayako art-book line). Working decision Producer decision 2026-11-05 (D6); exhibition art, if any, must agree.",draft
+古式不動産,Koshiki Realty,proper,Yukari's family business.,draft
+はにわ,haniwa figurines,term,Clay burial figures; keep 'haniwa'.,draft
+ファンシーショップ,the cute-goods shop,place,Character-goods store (JP "fancy shop").,draft
+ニューミュージック,New Music,term,1980s-90s JP pop genre; keep capitalised.,draft
+二流企業,a second-rate company,term,Pairs with 三流大学.,draft
+立体映像,3D visuals,term,Virtual Ship ride.,draft
+織姫星,the Weaver Star,term,Vega (Tanabata); Lyra answer depends on it.,draft
+花札,hanafuda,term,Card game; keep.,draft
+変身セット,hero transformation sets,term,Toy line (narrator info line).,draft
+吊り天井,Boston crab,term,Pro-wrestling hold; English name.,draft
+グルグル,the spinny thing,term,Yumi Saotome nickname for the Ferris wheel; rows 402/456 must agree.,draft
+たーまやー,"Whoooa!",term,"Fireworks shout (tamaya); no-romanization rule applied; editor may prefer ""Tamaya!""",open
+義理チョコ,giri-choco,term,"""Obligation chocolate""; gloss once per scene (""the obligation kind""), never replace.",draft
+バレンタインデー,Valentine's Day,term,Girls give chocolate; keep the Japanese custom.,draft
+ホワイトデー,White Day,term,March 14; boys return the gift. Keep.,draft
+おみくじ,omikuji,term,New Year temple fortune; keep with a light gloss (""fortune slip"").,draft
+大吉,Best Fortune,term,omikuji rank; 5-char field: Best. Ranks Best / Good / Fair / Minor / Later / Bad (+ Worst for 大凶). Working decision Producer decision 2026-11-05 (D5); art lettering to match.,draft
+文化祭,the culture festival,term,Autumn school festival (bunkasai); ""culture festival"" not ""homecoming"".,draft
+部活,club,term,Clubs are serious commitments; ""club"" never ""extracurricular"".,draft
+先生,Mr./Ms. <Surname>,address,""Sensei"" only for the coaches if the producer prefers.,open
+あなた,you,address,"When a heroine switches to あなた it marks intimacy; carry it in warmth, not with a literal marker.",draft
+初詣,the New Year shrine visit,term,hatsumode; shared across TEST_*.,draft
+体育祭,sports day,term,,draft
+修学旅行,the school trip,term,"Okinawa/Nara/Sapporo stops; 自由行動 = free time, 団体行動 = group-activity day.",draft
+カンペ,cheat sheet,term,,draft
+当たり屋,bump-and-run scam,term,"Yuko first-meeting gag; one rendering everywhere.",draft
+ハブ,habu,term,Okinawan viper; keep.,draft
+クラーク博士,Dr. Clark,proper,"Sapporo statue; keep ""Boys, be ambitious"" in English.",draft
+首里城跡,the Shuri Castle ruins,place,,draft
+時計台,the Clock Tower,place,Sapporo.,draft
+学業成就 / 健康祈願 / 恋愛成就,Academic Success / Good Health / Success in Love,term,"Shrine-prayer choice triplet. Producer decision 2026-11-03; title case as fixed labels. The {W} insert ('mine was {W}.') has 8 bytes per wish in SHOUGATU.EXN, so it uses the short forms Studies / Good Health / Love.",final
+バッチタイミング,Perfect timing!,term,Yuko coinage (sibling of バッチグー).,draft
+ブッチする,skip it,term,Yuko slang.,draft
+ピンポーン / プルルル / ガチャ / ドン,Ding-dong / Brrring / Click / Thud,term,SFX fragments.,draft
+第二ボタン,the second button (of the uniform),term,Graduation confession custom; gloss once.,draft
+インターハイ,the Inter-High,term,National high-school athletics championships; keep.,draft
+木刀,wooden sword,term,School-trip souvenir.,draft
+お弁当,bento,term,Keep.,draft
+学食,the cafeteria,place,,draft
+後輩,juniors,term,"Underclassmen; ""juniors"" not ""kouhai"".",draft
+雪合戦,snowball fight,term,,draft
+ムク,Muku,character,Megumi Mikihara's dog.,draft
+メグ,Megu,character,"Shiori's nickname for Megumi (美樹原愛 is read みきはら めぐみ, official kana on Konami's character site). DECIDED 2026-11-03 (producer): stays 'Megu', not 'Meg'.",final
+戦闘員,goon,term,Hero-show henchman.,draft
+普通,Just average,term,omikuji middle rank.,draft
+吉 / 中吉 / 小吉 / 凶 / 大凶,Good Fortune / Fair Fortune / Minor Fortune / Bad Fortune / Worst Fortune,term,omikuji ranks; 5-char fields Good / Fair / Minor / Bad / Worst. Working decision Producer decision 2026-11-05 (D5).,draft
+上級者/中級者/初心者コース,advanced / intermediate / beginner course,term,Ski slope.,draft
+ホテルのロビー,the hotel lobby,place,School-trip meet-up spot.,draft
+貢ぎ物,tribute,term,Mira's word for a gift.,draft
+ジロジロ,(Stares.),term,"SFX as stage direction; convention open.",open
+鏡です (phone),Kagami residence.,term,Phone-answer convention: <Surname> residence.,draft
+食虫植物 / ウツボカズラ,carnivorous plants / pitcher plant,term,Botanical garden.,draft
+リフト,lift (ski lift),term,Yukari quotes it.,draft
+ウィンブルドン,Wimbledon,proper,,draft
+晴着,New Year's kimono,term,,draft
+混成ダブルス,mixed doubles,term,,draft
+保健室,the nurse's office,place,,draft
+ザッパーン / ボカ,Splash! / Whack,term,SFX.,draft
+家宝,family heirloom,term,Yukari over-formal thanks gag.,draft
+植木賞,the Ueki Prize,proper,In-game parody literary prize (also TEST_FU).,draft
+[proper: All-Japan Drama Grand Prix],the All-Japan Drama Grand Prix,proper,Drama-club goal.,draft
+肝試し,the test of courage,term,Club-camp event.,draft
+文芸部 / 演劇部,literature club / drama club,term,,draft
+発声練習,vocal exercises,term,,draft
+だみ,(dummy),term,"Placeholder third option in some triplets; rendered visibly; engineering to confirm the engine never shows it.",open
+ごそごそ / ドスン / くすん / はぁ、はぁ,"Rustle, rustle / Thud / Sniff... / Huff... huff...",term,SFX.,draft
+甲子園,Koshien,proper,"National HS baseball tournament; gloss ""the national tournament"" once.",draft
+国立競技場,the National Stadium,place,Soccer nationals venue.,draft
+Ｊリーグ,the J-League,proper,,draft
+夏合宿,summer training camp,term,,draft
+迷子センター,the lost-child desk,place,,draft
+差し入れ,a little something to keep you going,term,Club-support snacks.,draft
+[proverb: too much is as bad as too little],too much is as bad as too little,term,Proverb.,draft
+モグモグ / ゴックン / パクッ,"Munch, munch. / Gulp. / Chomp.",term,SFX.,draft
+応急手当,first aid,term,,draft
+科学部 / 電脳部,science club / computer club,term,Two club variants of every Himoo intro line.,draft
+紐緒です (phone),Himoo residence.,term,,draft
+ミステリーサークル,crop circle,term,,draft
+未確認飛行物体 / ＵＦＯ,UFO,term,,draft
+人体改造,body modification,term,Yuina.,draft
+下僕,servant,term,Yuina.,draft
+世界征服,world domination,term,Yuina.,draft
+究極破壊兵器,ultimate weapon of destruction,term,Yuina.,draft
+[term: in-circuit emulator],ICE / in-circuit emulator,term,,draft
+ノーベル賞,the Nobel Prize,proper,,draft
+"[quote: Girls, be ambitious (Clark parody)]","Girls, be ambitious",term,Pairs with the Dr. Clark row.,draft
+ガラッ / ピピッ / ブオーン,Clatter / Beep beep / Vwoom,term,SFX.,draft
+シクラメン / 内気な心,cyclamen / "a shy heart",term,Nozomi favourite flower; language-of-flowers gag.,draft
+ドーバー海峡の横断,swim the English Channel,term,Rumor gag.,draft
+特別練習,special training,term,Swim-club elite squad.,draft
+金の卵,golden boy,term,Nozomi for the player.,draft
+ロードワーク,roadwork,term,50 km every morning.,draft
+実業団,corporate team,term,,draft
+最優秀個人賞,top individual award,term,Sports day.,draft
+バシャーン / キャーッ / いってぇ,Splash! / Eek! / Ow!,term,SFX.,draft
+目展,the Meten exhibition,proper,In-game parody of the Nitten; art-club goal.,draft
+[term: International Band Contest] / 吹奏楽部,the International Band Contest / brass band,term,,draft
+一休さん,Ikkyu (and the tiger),proper,Folk-tale gag; gloss inline.,draft
+片桐です (phone),Katagiri residence.,term,,draft
+Ayako option-B palette,"Bonjour / Au revoir / Bonne annee / Joyeux Noel / Bienvenue / Compris / Doucement / Un moment / Quelle joie / Tu me manques / Excusez-moi / S'il vous plait",term,"Extends DATE_KA's palette (katakana English: Hi / Goodbye / A Happy New Year / Merry Christmas / Welcome / I see / Take it easy / Wait / Glad / I miss you / Excuse me / Please); producer A/B decision pending.",open
+末吉,Later Fortune,term,omikuji rank between 吉 and 凶; 5-char field: Later. Working decision Producer decision 2026-11-05 (D5).,draft
+振袖,kimono (furisode),term,New Year; pairs with 晴着.,draft
+藤崎です (phone),Fujisaki residence.,term,,draft
+[proverb: the year's plan is made on New Year's Day],The year is decided on New Year's Day,term,Proverb.,draft
+カチャ,Clack,term,SFX (distinct from ガチャ Click).,draft
+全国制覇 / 来年の抱負,the national title / resolution for next year,term,,draft
+ライラック,lilacs,term,Sapporo.,draft
+相合い傘,sharing an umbrella,term,Couple connotation; render in-line.,draft
+[idiom: the moon and a soft-shell turtle],worlds apart,term,Idiom.,draft
+[proverb: the early bird gets the worm],the early bird gets the worm,term,Proverb.,draft
+ゲームコンテスト,the game contest,term,Computer-club prize.,draft
+{p}ですけど (phone),"Hello, {p} residence.",term,Player phone answer; editor to confirm.,open
+奥義,Secret Art,term,Training-camp technique mastery; also the {A} runtime string. Use Baseball Secret Art in the club-final mastery headings.,draft
+合宿所,the camp lodge,place,,draft
+特別練習メンバー,special training squad,term,,draft
+シャァァァ / ぎょぇぇぇ〜,Shhhhh... / Gyaaaah!,term,SFX.,draft
+外井雪之丞,Yukinojo Sotoi,character,Rei's butler; レイ様 = Master Rei.,draft
+庶民,commoner,term,Rei's signature word.,draft
+私設軍隊 / 私設医師団,private army / private medical team,term,Rei.,draft
+中央公園,Central Park,place,,draft
+河原の廃工場,the abandoned factory by the river,place,,draft
+大観覧車,the big Ferris wheel,place,,draft
+Concert acts (parodies),"KNM Symphony Orchestra / Chisa Morita / Chage & Asu / WIZARD / Riko Kotama / XeXeX / Bees / SNACK / Rinsu",proper,"茶毛＆明日, 甲玉リコ (reading to confirm), リンスー; editor to confirm.",open
+Film titles (parodies),I'm Doin' It / Forres and Gump / Samaso / Hungah / Kanpanman / Sleepy Fist 2: Ouch / Melody of Love / Speed/King / BANPO / Omen / Love's Journey,proper,おめん may be a Mask/omen pun; editor to decide. Sleepy Fist 2 / Love's Journey: working decision Producer decision 2026-11-05 (D7).,open
+ガガーン / トン,Wham! / Tap,term,SFX.,draft
+弁論,speech contest,term,Literature-club stage event at the culture festival (BUNKA FU_S6*); a student gives a speech.,draft
+公開デッサン / ヌードデッサン,open sketching session / nude sketching session,term,Art-club festival event; the model turns out to be nude (Yoshio scene in FU_S6O).,draft
+似顔絵,caricature,term,Art-club festival stand; 'sketch' in the player's casual lines. Booth labels use Caricatures.,draft
+実験ショー,experiment show,term,Science-club festival demo (chemistry / laser art / matter transport).,draft
+レーザーアート,laser art,term,Science-club demo.,draft
+物質転送実験,matter transport experiment,term,Science-club demo; rumoured to be designed by the computer club.,draft
+コンピュータ占い / 相性占い,computer fortune-telling / compatibility test,term,"Computer-club festival exhibit; blood-type compatibility. 15-char attraction menu: ""Digital Fortune"". (Producer decision 2026-11-05, E6)",decided
+ハッキングの実演,hacking demonstration,term,Computer-club exhibit; the program hijacks a military satellite.,draft
+某Ａ国,a certain Country A,term,Unnamed superpower whose military satellite the computer club hijacks.,draft
+グラディウス,Gradius,proper,Konami shooter; the brass band plays its theme. Keep the title.,draft
+チャルメラ,the ramen-cart jingle,term,"Charumera, the noodle-vendor horn tune, played as a brass-band gag; rendered by function, not name.",draft
+幻魔帝国 / 大聖幻帝ナゾール,the Genma Empire / the Holy Phantom Emperor Nazohl,proper,"Hero-show villains Shiori played a minion for (FU_S6O); parody names, reading of ナゾール to confirm.",open
+時代劇,samurai drama,term,Drama-club period play at the festival.,draft
+石膏像,plaster bust,term,Art-club sketching subject.,draft
+リエ / リホコ / カホリ,Rie / Rihoko / Kahori,character,Shiori's friends in the literature club / drama club / brass band (FU_S6).,draft
+文盲 (ぶんもう/もんもう),illiterary / illiterate,term,Player misreads 文盲; rendered as a malapropism Shiori corrects (FU_S6O).,draft
+有終の美,go out on a high note,term,Idiom.,draft
+[proverb: fortunes are hit or miss],fortunes are hit or miss,term,Proverb.,draft
+ナンパする,go talk to them,term,Chatting up girls; kept mild.,draft
+人間失格,the lowest of the low,term,,draft
+自由行動の日,free-time day,term,School trip.,draft
+Christmas gift items,"Hyper Watch / notebook supercomputer / portable nuclear reactor / 16.7-million-color pastels / English by Feel: A Primer / giant poster / banana-crocodile plushie / Raima / the Tokimeki card game / Memorial Board Game 2",proper,"Retail item names glossed in the English column, in the same order; Raima (ライマ) is an unidentified 1990s fad, flag; editor to rule.",open
+フリーター,freeter,term,Living on part-time jobs; gloss once.,draft
+予備校,cram school,term,,draft
+一流大学 / 二流大学 / 一流企業,top university / second-rate college / top company,term,,draft
+料理の専門学校,cooking school,term,,draft
+防衛隊,the Defense Force,term,,draft
+帝王学,learning to rule an empire,term,Rei.,draft
+Gift-list parodies,"Star of the Kyojin / Iron Cook / Chichibinta Rika / Fighting Spirit history",proper,"Parody titles glossed in the English column, in the same order; editor to rule.",open
+通信カラオケ,online karaoke set,term,,draft
+剣山,kenzan (flower frog),term,,draft
+Ｍｒ．Ｏｓａｗａ,Mr. Osawa,proper,,draft
+金太郎侍,Kintaro the Samurai,proper,Parody of 桃太郎侍.,draft
+[proper: Quiz Squad Cultman],Quiz Squad Cultman,proper,九伊豆 = quiz pun.,draft
+[proper: Romeo and Julietta],Romeo and Julietta,proper,,draft
+[proper: TwinBee Time Attack],TwinBee Time Attack,proper,,draft
+公開薬品調合実験,live chemical-mixing experiment,term,Science club booth.,draft
+Sports-day events,"three-legged race / giant ball roll / scavenger race / spoon relay / folk dance",term,"Retail event names glossed in the English column, in the same order",draft
+ピアス / イヤリング / ポシェット,pierced earrings / clip-on earrings / little shoulder bag,term,Gift names (G_BIRTH convention).,draft
+[proper: Transcontinental Ultra Cannon] / [line: target locked],the Transcontinental Ultra Cannon / Target locked!,proper,Cultman hero-show finishing move.,draft
+カルトマン,Cultman,proper,See Quiz Squad Cultman.,draft
+不思議の国,Wonderland,place,,draft
+きぼぢ悪い,icky-wicky / sooo icky,term,Yumi Saotome baby-talk for gross.,draft
+Ayako option-B palette (BUNKA KT additions),"Tres bien / Pas mal / Pas bon / Mauvais timing / Quoi? / Quelle chance / Pas de chance / Oh, mon dieu / I jest, I jest",term,Extends the DATE_KA palette for the katakana English Very good / Not bad / No good / Bad timing / What / Lucky / Unlucky / Oh my God / Joke joke; producer A/B decision pending.,open
+親衛隊,fan club,term,Rei Ijuin's self-styled guard; rendered as his fan club (KT_S6O).,draft
+呼び込み,barkers,term,Students out front calling in visitors at a festival booth.,draft
+[phrase: ran away / escaped],made a break for it,term,Ayako skipping her own booth to visit the player's.,draft
+猿 (Yuina),monkey,term,"Yuina Himoo's word for the player and other students she despises; keep 'monkey', not 'ape'.",draft
+科学力,scientific prowess,term,"Yuina's boast (私の科学力); flat, never exclaimed.",draft
+野望 / 大いなる計画,my ambition / the great plan,term,"Yuina's world-domination project, always unspecified.",draft
+紐緒様 / 紐緒博士 / 未来の支配者様,Lady Himoo / Dr. Himoo / our future ruler,address,The player's flattery titles that get Yuina to do the chemistry demo (HI_S6B).,draft
+お抱えの劇団 / 画家 / 宮廷楽団,court theater troupe / court painter / court orchestra,term,Yuina's promised posts in her future regime (HI_S6).,draft
+超未来階級占い,Ultra Future Class Fortune,proper,Yuina's IQ-test 'fortune' program; passing makes you her future ruling class (HI_S6B).,draft
+結奈様ゲーム,the Lady Yuina Game,proper,Her brainwashing game (HI_S6B).,draft
+勧善懲悪,good triumphing over evil,term,The samurai-drama moral Yuina rejects.,draft
+[quote: 1945 surrender broadcast: endure the unendurable],"endured the unendurable, borne the unbearable",term,Yuina quoting the 1945 surrender broadcast before her hacking demo; keep the famous phrasing.,draft
+[phrase: think of the audience as pumpkins],think of the audience as pumpkins,term,Stage-fright trick the player teaches Mio before her scene (KS_S6B); she chants 'pumpkins' on her way out.,draft
+文盲 (ぶんもう / もんもう),illiterate ('illiterary' when the player misreads it),term,Running gag: the player says 'bunmou' and Mio gently corrects it to 'monmou' (KS_S6O); keep the pun as a mispronunciation.,draft
+怨みます,I'll hold this against you,term,Mio's bitter last line when the player ruins her final performance (KS_S6B).,draft
+光の妖精のダンス,fairies of light dancing,term,Mio's image for the science-club light show (KS_S61).,draft
+特撮ヒーロー,tokusatsu hero show,term,Drama-club play variant; 'special-effects hero show' if the loanword is rejected.,draft
+目まい / 気を失う,dizzy / faint,term,Mio's frailty: she gets dizzy watching and faints at explosions or surprises (KS_S6*); always excuses herself to the nurse alone.,draft
+ソッコーで,pronto,term,"Yuko slang; default ""pronto"" ('let's go, pronto!'); ""right away"" where her line is gentle or the Japanese is not marked slang. Context wins over the fixed word. (Producer decision 2026-11-05, E4)",decided
+ちょすご / ちょださ,SO awesome / So lame,term,"Yuko's 超 intensifier family; render 超/ちょ as capitalised SO where it modifies an adjective (SO good, SO boring).",draft
+アニマー,animaniac,term,Yuko coinage for anime mania; she glosses it herself in AS_S6W.,draft
+おぽんち,a total dope,term,Yuko slang for a clueless person (AS_S6W caricature scene).,draft
+めた,mega,term,Yuko intensifier (meta aishou warui = mega bad match / meta pani joutai = mega panic mode).,draft
+[line: Mira's booth-visit opener],I have deigned to visit you.,term,Mira's booth-visit opener (KG_S6); her condescension is the joke.,draft
+[line: Mira's exit lines: next appointment / excuse me],I have another engagement. / Now excuse me.,term,Mira's standard exit line; always followed by Oh ho ho ho ho!,draft
+物質転送 / [term: laser strike from a satellite],matter transfer / a laser strike from a satellite,term,"Computer-club / science-club festival demos (KG_S6, KG_S6W).",draft
+お父様,Father,address,"Yukari's father, always 'Father' (capitalised, no article); he shadows her festival visits (KO_S6*).",draft
+ボーッと見る / ボーッとする,drift off (looking at),term,Yukari's habit: she likes anything she can drift off in front of; keep the one phrasing.,draft
+和歌 / 俳句,waka / haiku,term,Yukari dabbles in both; she composes one on the spot in KO_S6W.,draft
+手品,magic trick,term,"What Yukari and Nozomi take the science club's matter-transfer demo for (KO_S6, KY_S6).",draft
+個人練習,solo practice,term,Nozomi's excuse for slipping back to the pool during the festival (KY_S6).,draft
+殺陣,sword fights,term,Stage-combat scenes in the drama club's samurai play; Nozomi's favourite part.,draft
+知恵熱,a fever from thinking,term,Nozomi's joke about reading the essay exhibit (KY_S6W).,draft
+雷,lightning,term,Nozomi's one fear; the science-club laser triggers it (KY_S6W).,draft
+オッズの魔法戦士,Magic Warriors of Oz,proper,Drama-club play that wins the Drama Grand Prix (EN_GP); Wizard of Oz parody.,draft
+演劇グランプリ,the Drama Grand Prix,proper,Short form of the All-Japan Drama Grand Prix in the MASTER/EN_GP ceremony.,draft
+[proper: Stardust Symphony EX],Stardust Symphony EX,proper,The player's prize-winning game (G_CON).,draft
+花と貴婦人,Flowers and a Lady,proper,The player's prize-winning oil painting (MOKUTEN).,draft
+カゼナオール,Kazenaol,proper,The player's Nobel-winning cold cure (NOBEL); pun on kaze naoru 'cures colds'; editor may prefer a localized pun.,open
+人間合格,Human After All,proper,The player's Ueki-Prize novel (UEKI); parody of 人間失格 'No Longer Human'; editor to confirm the title.,open
+大賞,grand prize,term,Meten / game contest / Drama Grand Prix top award.,draft
+[term: International Band Contest (konkuru form)],the International Band Contest,term,Same event as the International Band Contest (kontesuto form) (MASTER/SUI_CON).,draft
+水の貴公子,the Prince of the Water,proper,Player's self-styled title after the swim nationals (TAI_MAS).,draft
+全国大会 / 決勝戦,nationals / the national final,term,Sports-club championship (TAI_MAS).,draft
+練習試合,practice match,term,'practice meet' for the swim club (SIAI_TX).,draft
+日本一,number one in Japan,term,TEST_KY convention; never 'best in Japan'.,draft
+お守り,good-luck charm,term,Megumi's gift before the final (TAI_MAS).,draft
+"[quote: Raoh parody, no regret in my club days]",Not a single regret in all my club days.,term,Raoh parody (TAI_MAS).,draft
+超明釧 / 小波 / 加不紺 / 奈婿 / 順天塔 / 素鬼 / 机亜 (高校),Chomeisen / Konami / Kafukon / Namuko / Juntento / Soki / Tsukuea High,proper,"Nationals-final opponents (TAI_MAS); game-company puns (Konami, Capcom, Namco, Nintendo, Sony, Square); readings to confirm.",open
+大東京 / 東風 / 第三 / 宮前山 / 近衛 / 明和 / 第七 / 平城 / 鬼ヶ原 / 大門 / 末賀 (高校),Daitokyo / Kochi / Daisan / Miyamaeyama / Konoe / Meiwa / Dainana / Heijo / Onigahara / Daimon / Suega High,proper,Practice-match opponents (SIAI_TX); readings of 東風 and 末賀 uncertain.,open
+Ayako option-B palette (MASTER/SHIAI additions),"Felicitations / Non, non / Ce n'est rien / Encore une fois",term,Extends the palette for the katakana English Congratulation / No no / Never mind / Try again; producer A/B decision pending.,open
+世界征服ロボ,World Domination Robo,term,Culture-festival RPG robot; use True World Domination Robo for 真・世界征服ロボ.,draft
+袖竜,Sleeve Dragon,term,"Boss attack in the culture-festival RPG; descriptive attack name, formerly Sode Ryu.",draft
+私設部,private club,term,Rei profile club value; privately organized club rather than a hobby.,draft
+上方,Kamigata,place,Historical Kyoto-Osaka region in the festival samurai play; not Kyoto alone.,draft
+禅門怪人モンドー,Zen Monster Mondo,proper,Cultman stage-play villain; Mondo in the narrow speaker-name column.,draft
+先生 (stage swordsman),Master,address,Hired swordmaster in the festival samurai play; distinct from generic schoolteacher labels.,draft
+音楽室,the music room,place,Music room in short overlay location labels.,draft
+勘定奉行,Finance Magistrate,term,Corrupt official in the festival samurai play; generic 奉行 role labels need a wider column for Magistrate.,draft
+教室,classroom,place,Location label; distinguish the room from a class session.,draft
+超球百裂弾,Burst Ball,term,Baseball special attack; use the same name in mastery and camp menus.,draft
+昇り龍乱れ七変化,Rising Dragon Seven-Change,proper,Named fireworks display in Mira's date replies; preserve the display name and its contrast with sparklers. Shared with the TEST_KG mirror.,draft
+[line: Yukari's formal excuse-me],Please excuse me.,term,"Yukari's gracious, formal leave-taking. Avoid the overly Victorian I bid you good day; compound lines retain their preceding farewell. Lowercase please after a continuing comma.",draft
+ワンピース,Dress,item,Generic one-piece dress; do not narrow to sundress without a source qualifier. Canonical birthday-menu and generated gift-table label.,draft
+[proper: book on sixth-generation computer theory],6th-gen computer theory book,item,Technical birthday gift; retain the sixth-generation computer subject and theory-book format.,draft
+[proper: book on fast geometry computation theory],Fast geometry theory book,item,Technical birthday gift; compact menu label for the book on high-speed geometry calculation theory.,draft
+かんざし,Kanzashi hairpin,item,Traditional Japanese hair ornament; retain the name with the English hairpin gloss in the gift label.,draft
+チャイナドレス,Qipao dress,item,Chinese fitted dress; existing birthday-gift label. The loanword is accompanied by its English clothing category.,draft

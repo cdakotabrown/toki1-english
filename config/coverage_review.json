@@ -1,0 +1,19 @@
+{
+ "_comment": "Reviewer verdicts for tools/patch/coverage_campaign.py (results.md 'verdict' column): the original 436 items' contact sheets / message-window strips were read on the 2026-10-10 merged build (english-drawlog disc). New items require their own review. Items not listed among those 436: ok (English, nothing garbled, clipped or overlapping; 0 Japanese drawn; 0 missing-glyph boxes).",
+ "hero.shiori.walkhome_club": {"verdict": "note", "note": "new route: GEKO club event reached, 42 English draws vs 25 without it, mname decodes to 'the Literature Club'; no Japanese / missing-glyph boxes; screenshot editorial review pending"},
+ "boot.title": {"verdict": "ok", "note": "highlighted Options was retail オプション art: fixed (TITLE.NBN 4th copy)"},
+ "sys.nameent.latin_max_prologue": {"verdict": "ok", "note": "a 48-px player name ran into the quote in the field window: fixed (label fitted, quote hangs at the body column)"},
+ "sys.filesel.corrupt_system": {"verdict": "ok", "note": "'Recreate the system file?' drew 's...' for 'Yes...': fixed (disp_string skips an empty entry)"},
+ "sys.nameent.page_kanji": {"verdict": "ok", "note": "the Kanji tab is inert since 2026-10-10 (text_name_ent.c pt_name_band never reports band 3): the pointer on it lights nothing, Cross opens nothing, the Latin page stays and the item types Latin letters; before, most kanji keys drew the missing-glyph box (the module reclaims glyphs >= ~464). The reading-index row 'yuyo w': fixed earlier (kept Japanese like its siblings)"},
+ "tel.call.megumi.accept": {"verdict": "ok", "note": "TEL silence line ‥‥‥‥。 drawn Japanese: fixed"},
+ "sys.holiday.icon08": {"verdict": "ok", "note": "phone book names ran over the column rule: fixed (Given F.)"},
+ "mg.karaoke.ayako.song1": {"verdict": "ok", "note": "lyric fragments ran together / full-width Latin segments Japanese: fixed (word gap, segments drafted)"},
+ "mg.bunkasai.club3": {"verdict": "ok", "note": "PC fortune machine lines were Japanese: fixed (URANAI rows)"},
+ "end.etc194": {"verdict": "ok", "note": "staff roll English since 2026-10-10 (src/patch/art/STAFF_R: Latin glyph cells on page 14, every sprite frame rebuilt from the DRAFT credits); the whole roll to the KONAMI logo checked on the release and debug discs, plus the all-clear cube variant (Triangle held at the start)"},
+ "mg.taco.3": {"verdict": "note", "note": "TACO tutorial reached (menu OPERATIONS): TACOTEX.NBN pages English art since 2026-11-06 (src/patch/art/TACOTEX, VISUAL-SWEEP 3.1.6)"},
+ "mg.en_nichi.goldfish": {"verdict": "note", "note": "instruction panel and result board are tile art (manual-review list); no engine text"},
+ "mg.en_nichi.shooting": {"verdict": "note", "note": "instruction panel tile art (manual-review list); no engine text"},
+ "mg.bunka_sd.f3": {"verdict": "note", "note": "stage plays, then black at 128/243/7, identical on retail from the same forced entry"},
+ "hero.ayako.ev93_1": {"verdict": "note", "note": "a stub event (no text) on retail too"},
+ "event.exam.day5": {"verdict": "ok", "note": "Final Exam Results board, 'Takeru Suzuki' composed; the 点 glyph after scores is art (manual list)"}
+}

@@ -1,0 +1,52 @@
+{
+  "name": "english-debug",
+  "include": "config/patch/english.json",
+  "description": "The English patch (config/patch/english.json) plus the DEBUG BUILD additions of config/patch/debug.json in ONE module: Konami's step overlay / debug text renderers / OPTION hidden scenes forced on (pokes D_800B9710 = 1, D_800BA280 = 8), the generated 4-bpp debug font (debug_font_load hook), and the L2+R2 scene selector (dbg_game_main through the game_main call site). The debug sources are appended to the English module.  Since the English module grew (2026-10-10) the two no longer fit the release kanji block together: this debug-only profile extends the reclaimed glyph region 0x400 bytes earlier and links whole input sections into retail library code that nothing can reach (config/patch/free_regions.json from tools/patch/free_regions.py, re-proven dead at every build; runtime evidence: config/patch/english-poison.json + soak_test.py). The release region stays unchanged; the debug kanji subset takes what is left. Output: build/patch/english-debug/.",
+  "out": "build/patch/english-debug",
+  "main": {
+    "module": {
+      "generated": [
+        {"tool": "tools/patch/debug_fontgen.py", "args": ["--out", "build/patch/english-debug/gen"]}
+      ],
+      "sources": [
+        "src/patch/debug/dbg_main.c",
+        "src/patch/debug/dbg_scenes.c",
+        "src/patch/debug/dbg_unlock.c",
+        "build/patch/english-debug/gen/debug_font.c"
+      ],
+      "extra_regions_file": "config/patch/free_regions.json",
+      "region": {
+        "start": "0x800BEC30",
+        "note": "debug-only: extend 0x600 bytes further (0x400 on 2026-10-10, +0x100 on 2026-11-06 after the Sunday-cell frame, +0x100 on 2026-11-07 after the mouse-button icons) into reclaimed kanji glyphs so English glyph-per-cell + debug font still fit; release keeps its original region"
+      },
+      "hooks": [
+        {
+          "function": "debug_font_load",
+          "addr": "0x8004B154",
+          "target": "dbg_font_load",
+          "note": "retail uploads RAM 0x801F0020 (nothing ever puts a font there on the retail disc); the hook uploads the generated 4bpp font to the same VRAM rect (704,480 64x32 words)"
+        }
+      ]
+    },
+    "callsites": [
+      {
+        "at": "0x800423A8",
+        "expect": "game_main",
+        "target": "dbg_game_main",
+        "note": "_main's frame loop `jal game_main`: game_main's first two words are a hoisted now_step load that falls into the body, so a head trampoline is impossible; the call site is redirected and dbg_game_main calls the untouched retail game_main"
+      }
+    ],
+    "pokes": [
+      {
+        "addr": "0x800B9710",
+        "u8": 1,
+        "note": "D_800B9710 Konami debug-display flag (.data, retail 0); retail sets it only when the memory-card file BISLPS-00065F exists at OPTION boot (tools/patch/debug_memcard.py makes such a card for the plain English disc); the module re-asserts it every frame"
+      },
+      {
+        "addr": "0x800BA280",
+        "u8": 8,
+        "note": "D_800BA280 'pn' debug text page (retail 0): the three renderers draw only when >= 4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,716 @@
+{
+ "assets/extracted_iso/CDROM/BATTLE/VS_HABU.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/BATTLE/VS_HABU.csv",
+  "size": 262144,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/BATTLE/VS_KUMA.BIN": {
+  "base": "0x8015bc00",
+  "sheet": "translation/localization/sheets/BATTLE/VS_KUMA.csv",
+  "size": 229376,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/BATTLE/VS_SCIE.BIN": {
+  "base": "0x801d8000",
+  "sheet": "translation/localization/sheets/BATTLE/VS_SCIE.csv",
+  "size": 69632,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/BUNKA/AS_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/AS_S6.csv",
+  "size": 40960,
+  "strings": 554
+ },
+ "assets/extracted_iso/CDROM/BUNKA/AS_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/AS_S6S.csv",
+  "size": 4096,
+  "strings": 32
+ },
+ "assets/extracted_iso/CDROM/BUNKA/AS_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/AS_S6W.csv",
+  "size": 32768,
+  "strings": 431
+ },
+ "assets/extracted_iso/CDROM/BUNKA/BUN_FU.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/BUN_FU.csv",
+  "size": 6144,
+  "strings": 71
+ },
+ "assets/extracted_iso/CDROM/BUNKA/BUN_PC.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/BUN_PC.csv",
+  "size": 10240,
+  "strings": 108
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6.csv",
+  "size": 34816,
+  "strings": 462
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6B.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6B.csv",
+  "size": 49152,
+  "strings": 635
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6I.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6I.csv",
+  "size": 6144,
+  "strings": 59
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6O.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6O.csv",
+  "size": 47104,
+  "strings": 617
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6S.csv",
+  "size": 2048,
+  "strings": 21
+ },
+ "assets/extracted_iso/CDROM/BUNKA/FU_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/FU_S6W.csv",
+  "size": 30720,
+  "strings": 443
+ },
+ "assets/extracted_iso/CDROM/BUNKA/HI_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/HI_S6.csv",
+  "size": 53248,
+  "strings": 692
+ },
+ "assets/extracted_iso/CDROM/BUNKA/HI_S6B.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/HI_S6B.csv",
+  "size": 20480,
+  "strings": 256
+ },
+ "assets/extracted_iso/CDROM/BUNKA/HI_S6I.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/HI_S6I.csv",
+  "size": 4096,
+  "strings": 36
+ },
+ "assets/extracted_iso/CDROM/BUNKA/HI_S6O.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/HI_S6O.csv",
+  "size": 18432,
+  "strings": 231
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KG_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KG_S6.csv",
+  "size": 30720,
+  "strings": 388
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KG_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KG_S6S.csv",
+  "size": 4096,
+  "strings": 29
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KG_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KG_S6W.csv",
+  "size": 38912,
+  "strings": 497
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KO_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KO_S6.csv",
+  "size": 26624,
+  "strings": 320
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KO_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KO_S6S.csv",
+  "size": 2048,
+  "strings": 26
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KO_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KO_S6W.csv",
+  "size": 32768,
+  "strings": 421
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KS_S61.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KS_S61.csv",
+  "size": 40960,
+  "strings": 489
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KS_S62.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KS_S62.csv",
+  "size": 36864,
+  "strings": 466
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KS_S6B.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KS_S6B.csv",
+  "size": 22528,
+  "strings": 270
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KS_S6I.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KS_S6I.csv",
+  "size": 4096,
+  "strings": 39
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KS_S6O.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KS_S6O.csv",
+  "size": 14336,
+  "strings": 163
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S61.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S61.csv",
+  "size": 51200,
+  "strings": 645
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S62.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S62.csv",
+  "size": 47104,
+  "strings": 633
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S63.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S63.csv",
+  "size": 30720,
+  "strings": 389
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S6B.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S6B.csv",
+  "size": 24576,
+  "strings": 316
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S6I.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S6I.csv",
+  "size": 4096,
+  "strings": 40
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KT_S6O.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KT_S6O.csv",
+  "size": 18432,
+  "strings": 224
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KY_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KY_S6.csv",
+  "size": 30720,
+  "strings": 408
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KY_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KY_S6S.csv",
+  "size": 2048,
+  "strings": 24
+ },
+ "assets/extracted_iso/CDROM/BUNKA/KY_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/KY_S6W.csv",
+  "size": 32768,
+  "strings": 428
+ },
+ "assets/extracted_iso/CDROM/BUNKA/MI_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/MI_S6.csv",
+  "size": 20480,
+  "strings": 295
+ },
+ "assets/extracted_iso/CDROM/BUNKA/MI_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/MI_S6S.csv",
+  "size": 2048,
+  "strings": 25
+ },
+ "assets/extracted_iso/CDROM/BUNKA/MI_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/MI_S6W.csv",
+  "size": 18432,
+  "strings": 243
+ },
+ "assets/extracted_iso/CDROM/BUNKA/NI_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/NI_S6.csv",
+  "size": 20480,
+  "strings": 278
+ },
+ "assets/extracted_iso/CDROM/BUNKA/NI_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/NI_S6S.csv",
+  "size": 2048,
+  "strings": 31
+ },
+ "assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/NI_S6W.csv",
+  "size": 24576,
+  "strings": 318
+ },
+ "assets/extracted_iso/CDROM/BUNKA/SA_S6.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/SA_S6.csv",
+  "size": 38912,
+  "strings": 509
+ },
+ "assets/extracted_iso/CDROM/BUNKA/SA_S6S.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/SA_S6S.csv",
+  "size": 2048,
+  "strings": 30
+ },
+ "assets/extracted_iso/CDROM/BUNKA/SA_S6W.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/SA_S6W.csv",
+  "size": 26624,
+  "strings": 351
+ },
+ "assets/extracted_iso/CDROM/BUNKA/TWINBEE.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/BUNKA/TWINBEE.csv",
+  "size": 2048,
+  "strings": 9
+ },
+ "assets/extracted_iso/CDROM/BUNKASD/B_KINTA.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/BUNKASD/B_KINTA.csv",
+  "size": 368640,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/BUNKASD/B_SUISOU.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/BUNKASD/B_SUISOU.csv",
+  "size": 176128,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/BUNKASD/B_TENSOU.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/BUNKASD/B_TENSOU.csv",
+  "size": 223232,
+  "strings": 1
+ },
+ "assets/extracted_iso/CDROM/MASTER/EN_GP.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/EN_GP.csv",
+  "size": 6144,
+  "strings": 80
+ },
+ "assets/extracted_iso/CDROM/MASTER/G_CON.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/G_CON.csv",
+  "size": 6144,
+  "strings": 74
+ },
+ "assets/extracted_iso/CDROM/MASTER/MOKUTEN.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/MOKUTEN.csv",
+  "size": 6144,
+  "strings": 74
+ },
+ "assets/extracted_iso/CDROM/MASTER/NOBEL.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/NOBEL.csv",
+  "size": 6144,
+  "strings": 75
+ },
+ "assets/extracted_iso/CDROM/MASTER/SUI_CON.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/SUI_CON.csv",
+  "size": 6144,
+  "strings": 85
+ },
+ "assets/extracted_iso/CDROM/MASTER/TAI_MAS.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/TAI_MAS.csv",
+  "size": 22528,
+  "strings": 299
+ },
+ "assets/extracted_iso/CDROM/MASTER/UEKI.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/MASTER/UEKI.csv",
+  "size": 6144,
+  "strings": 75
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_AS.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_AS.csv",
+  "size": 40960,
+  "strings": 470
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_FU.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_FU.csv",
+  "size": 47104,
+  "strings": 476
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_HI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_HI.csv",
+  "size": 43008,
+  "strings": 447
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_KA.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_KA.csv",
+  "size": 45056,
+  "strings": 458
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_KG.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_KG.csv",
+  "size": 47104,
+  "strings": 496
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_KI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_KI.csv",
+  "size": 49152,
+  "strings": 503
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_KO.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_KO.csv",
+  "size": 47104,
+  "strings": 487
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_KY.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_KY.csv",
+  "size": 43008,
+  "strings": 469
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_MI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_MI.csv",
+  "size": 43008,
+  "strings": 485
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_NI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_NI.csv",
+  "size": 45056,
+  "strings": 502
+ },
+ "assets/extracted_iso/CDROM/SERIFU/DATE_SA.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/DATE_SA.csv",
+  "size": 45056,
+  "strings": 478
+ },
+ "assets/extracted_iso/CDROM/SERIFU/ENDING.BIN": {
+  "base": "0x801f0000",
+  "sheet": "translation/localization/sheets/SERIFU/ENDING.csv",
+  "size": 34816,
+  "strings": 419
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EPILOG.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SERIFU/EPILOG.csv",
+  "size": 18432,
+  "strings": 118
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_AS.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_AS.csv",
+  "size": 8192,
+  "strings": 88
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_FU.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_FU.csv",
+  "size": 12288,
+  "strings": 157
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_HI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_HI.csv",
+  "size": 8192,
+  "strings": 98
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_KA.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_KA.csv",
+  "size": 10240,
+  "strings": 106
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_KG.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_KG.csv",
+  "size": 10240,
+  "strings": 115
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_KI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_KI.csv",
+  "size": 6144,
+  "strings": 72
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_KO.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_KO.csv",
+  "size": 10240,
+  "strings": 119
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_KY.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_KY.csv",
+  "size": 12288,
+  "strings": 150
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_MI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_MI.csv",
+  "size": 10240,
+  "strings": 125
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_NI.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_NI.csv",
+  "size": 14336,
+  "strings": 168
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_OT.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_OT.csv",
+  "size": 14336,
+  "strings": 182
+ },
+ "assets/extracted_iso/CDROM/SERIFU/EVENT_SA.BIN": {
+  "base": "0x80198000",
+  "sheet": "translation/localization/sheets/SERIFU/EVENT_SA.csv",
+  "size": 12288,
+  "strings": 159
+ },
+ "assets/extracted_iso/CDROM/SERIFU/GASSHUKU.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/GASSHUKU.csv",
+  "size": 120832,
+  "strings": 1593
+ },
+ "assets/extracted_iso/CDROM/SERIFU/GASSH_FU.BIN": {
+  "base": "0x801b4400",
+  "sheet": "translation/localization/sheets/SERIFU/GASSH_FU.csv",
+  "size": 92160,
+  "strings": 1216
+ },
+ "assets/extracted_iso/CDROM/SERIFU/GEKO.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/GEKO.csv",
+  "size": 73728,
+  "strings": 1001
+ },
+ "assets/extracted_iso/CDROM/SERIFU/GROUP_D.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/GROUP_D.csv",
+  "size": 34816,
+  "strings": 437
+ },
+ "assets/extracted_iso/CDROM/SERIFU/G_APPEAR.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/G_APPEAR.csv",
+  "size": 32768,
+  "strings": 411
+ },
+ "assets/extracted_iso/CDROM/SERIFU/G_BIRTH.BIN": {
+  "base": "0x801b0000",
+  "sheet": "translation/localization/sheets/SERIFU/G_BIRTH.csv",
+  "size": 45056,
+  "strings": 586
+ },
+ "assets/extracted_iso/CDROM/SERIFU/G_INVITE.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/G_INVITE.csv",
+  "size": 32768,
+  "strings": 359
+ },
+ "assets/extracted_iso/CDROM/SERIFU/HAGEMASI.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/HAGEMASI.csv",
+  "size": 12288,
+  "strings": 171
+ },
+ "assets/extracted_iso/CDROM/SERIFU/KARADATA.BIN": {
+  "base": "0x801b0000",
+  "sheet": "translation/localization/sheets/SERIFU/KARADATA.csv",
+  "size": 6144,
+  "strings": 53
+ },
+ "assets/extracted_iso/CDROM/SERIFU/NYUBU.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/NYUBU.csv",
+  "size": 6144,
+  "strings": 93
+ },
+ "assets/extracted_iso/CDROM/SERIFU/OMIMAI.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/OMIMAI.csv",
+  "size": 8192,
+  "strings": 80
+ },
+ "assets/extracted_iso/CDROM/SERIFU/P_BIRTH.BIN": {
+  "base": "0x801b0000",
+  "sheet": "translation/localization/sheets/SERIFU/P_BIRTH.csv",
+  "size": 6144,
+  "strings": 81
+ },
+ "assets/extracted_iso/CDROM/SERIFU/SERIFU.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/SERIFU.csv",
+  "size": 4096,
+  "strings": 48
+ },
+ "assets/extracted_iso/CDROM/SERIFU/SHOGATU.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/SHOGATU.csv",
+  "size": 106496,
+  "strings": 1505
+ },
+ "assets/extracted_iso/CDROM/SERIFU/SHUGAKU.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/SHUGAKU.csv",
+  "size": 92160,
+  "strings": 1107
+ },
+ "assets/extracted_iso/CDROM/SERIFU/VALEN.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/VALEN.csv",
+  "size": 14336,
+  "strings": 185
+ },
+ "assets/extracted_iso/CDROM/SERIFU/WHITE.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/WHITE.csv",
+  "size": 18432,
+  "strings": 244
+ },
+ "assets/extracted_iso/CDROM/SERIFU/XMAS.BIN": {
+  "base": "0x80197000",
+  "sheet": "translation/localization/sheets/SERIFU/XMAS.csv",
+  "size": 28672,
+  "strings": 364
+ },
+ "assets/extracted_iso/CDROM/SERIFU/ZAKOSEN.BIN": {
+  "base": "0x801b0000",
+  "sheet": "translation/localization/sheets/SERIFU/ZAKOSEN.csv",
+  "size": 2048,
+  "strings": 7
+ },
+ "assets/extracted_iso/CDROM/SHIAI/SIAI_TX.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/SHIAI/SIAI_TX.csv",
+  "size": 14336,
+  "strings": 190
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_AS.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_AS.csv",
+  "size": 79872,
+  "strings": 1099
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_FU.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_FU.csv",
+  "size": 186368,
+  "strings": 2496
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_HI.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_HI.csv",
+  "size": 110592,
+  "strings": 1442
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_KA.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_KA.csv",
+  "size": 112640,
+  "strings": 1446
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_KG.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_KG.csv",
+  "size": 90112,
+  "strings": 1135
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_KI.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_KI.csv",
+  "size": 114688,
+  "strings": 1461
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_KO.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_KO.csv",
+  "size": 102400,
+  "strings": 1295
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_KY.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_KY.csv",
+  "size": 126976,
+  "strings": 1743
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_MI.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_MI.csv",
+  "size": 86016,
+  "strings": 1145
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_NI.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_NI.csv",
+  "size": 114688,
+  "strings": 1556
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_OT.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_OT.csv",
+  "size": 40960,
+  "strings": 538
+ },
+ "assets/extracted_iso/CDROM/SPEAKTST/TEST_SA.BIN": {
+  "base": "0x80180000",
+  "sheet": "translation/localization/sheets/SPEAKTST/TEST_SA.csv",
+  "size": 88064,
+  "strings": 1137
+ },
+ "assets/extracted_iso/CDROM/TAIIKU/F_DANCE.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/TAIIKU/F_DANCE.csv",
+  "size": 4096,
+  "strings": 43
+ },
+ "assets/extracted_iso/CDROM/TAIIKU/KISA23.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/TAIIKU/KISA23.csv",
+  "size": 2048,
+  "strings": 25
+ },
+ "assets/extracted_iso/CDROM/TAIIKU/KIYOTAI.BIN": {
+  "base": "0x801e8000",
+  "sheet": "translation/localization/sheets/TAIIKU/KIYOTAI.csv",
+  "size": 2048,
+  "strings": 14
+ },
+ "assets/extracted_iso/CDROM/TAIIKU/TAI_TX.BIN": {
+  "base": "0x801f0000",
+  "sheet": "translation/localization/sheets/TAIIKU/TAI_TX.csv",
+  "size": 2048,
+  "strings": 7
+ }
+}

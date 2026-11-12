@@ -1,0 +1,41 @@
+# Extra pixel glyphs for the English ART lettering only (the baked
+# instruction panels), in the 12-px grid of latin12.txt.
+# Authored by hand for this project (2026-11-02); not derived from any game
+# or third-party font.  Same format as latin12.txt: "glyph <char> adv <N>",
+# then 12 rows of '.'/'#', rows 1-9 = cap height.  Any single character may
+# name a glyph here.  These glyphs are NOT compiled into the PS1 text
+# renderer (fontgen.py reads latin12.txt and icons12.txt); tools/patch/
+# nbn_inject.py merges them when it renders lettering PNGs.  In engine text
+# the ○ × △ □ buttons are the retail font's glyphs (kept below the module's
+# kanji limit); the renderer's own icons are in icons12.txt.
+
+# the circle button (the panels' red ○ before ボタン)
+glyph ○ adv 11
+.........
+..#####..
+.#.....#.
+#.......#
+#.......#
+#.......#
+#.......#
+#.......#
+.#.....#.
+..#####..
+.........
+.........
+
+# the cross button (the Options voice list: "× button skips"); authored
+# 2026-11-02 for this project
+glyph × adv 9
+........
+........
+#.....#.
+.#...#..
+..#.#...
+...#....
+..#.#...
+.#...#..
+#.....#.
+........
+........
+........

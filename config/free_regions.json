@@ -1,0 +1,135 @@
+{
+ "generated_by": "tools/patch/free_regions.py --write-config config/patch/free_regions.json --min 256 --from 0x80086000",
+ "what": "retail main-exe code no live code, data word or overlay can reach (static proof re-derived by build_patched.py at every build); a profile's main.module.extra_regions_file places module pieces here.  Runtime evidence: soak_test.py with the english-poison profile (every region filled with a self-loop trap) and the write watch of every soak run",
+ "total_bytes": 8700,
+ "regions": [
+  {
+   "start": "0x80097D80",
+   "end": "0x80098408",
+   "bytes": 1672,
+   "functions": [
+    "_SpuMallocSeparateTo3",
+    "SpuMallocWithStartAddr"
+   ]
+  },
+  {
+   "start": "0x8008EAC0",
+   "end": "0x8008EF34",
+   "bytes": 1140,
+   "functions": [
+    "SpuVmSetProgPan",
+    "SpuVmGetProgPan",
+    "SsUtKeyOn"
+   ]
+  },
+  {
+   "start": "0x8008F050",
+   "end": "0x8008F46C",
+   "bytes": 1052,
+   "functions": [
+    "SsUtKeyOnV",
+    "SsUtKeyOffV",
+    "SsUtPitchBend"
+   ]
+  },
+  {
+   "start": "0x800A37B0",
+   "end": "0x800A3B8C",
+   "bytes": 988,
+   "functions": [
+    "RotMatrix_C",
+    "RotMatrixYXZ_C"
+   ]
+  },
+  {
+   "start": "0x8009FBB0",
+   "end": "0x8009FDB0",
+   "bytes": 512,
+   "functions": [
+    "SetGraphReverse",
+    "SetGraphDebug",
+    "SetGraphQueue"
+   ]
+  },
+  {
+   "start": "0x8009F600",
+   "end": "0x8009F7F0",
+   "bytes": 496,
+   "functions": [
+    "GsGetObjLight",
+    "GsGetObjMatrix"
+   ]
+  },
+  {
+   "start": "0x800A0BA0",
+   "end": "0x800A0D80",
+   "bytes": 480,
+   "functions": [
+    "GetODE",
+    "SetTexWindow",
+    "SetDrawArea",
+    "SetDrawOffset",
+    "SetPriority"
+   ]
+  },
+  {
+   "start": "0x800AC6F0",
+   "end": "0x800AC8A8",
+   "bytes": 440,
+   "functions": [
+    "DivideFT3"
+   ]
+  },
+  {
+   "start": "0x800A5A00",
+   "end": "0x800A5BA0",
+   "bytes": 416,
+   "functions": [
+    "ColorMatCol"
+   ]
+  },
+  {
+   "start": "0x800A3110",
+   "end": "0x800A3274",
+   "bytes": 356,
+   "functions": [
+    "DumpDrawEnv"
+   ]
+  },
+  {
+   "start": "0x8008DA50",
+   "end": "0x8008DB90",
+   "bytes": 320,
+   "functions": [
+    "SpuVmNoiseOnWithAdsr",
+    "SpuVmNoiseOff",
+    "SpuVmNoiseOn"
+   ]
+  },
+  {
+   "start": "0x8008F710",
+   "end": "0x8008F82C",
+   "bytes": 284,
+   "functions": [
+    "SsUtGetVVol",
+    "SsUtSetVVol"
+   ]
+  },
+  {
+   "start": "0x8008D430",
+   "end": "0x8008D548",
+   "bytes": 280,
+   "functions": [
+    "vmNoiseOn2"
+   ]
+  },
+  {
+   "start": "0x800A5E80",
+   "end": "0x800A5F88",
+   "bytes": 264,
+   "functions": [
+    "SetMulMatrix"
+   ]
+  }
+ ]
+}

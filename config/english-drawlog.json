@@ -1,0 +1,22 @@
+{
+  "name": "english-drawlog",
+  "include": "config/patch/english.json",
+  "description": "The English patch plus the drawn-text log (src/patch/drawlog/drawlog.c): every string drawn through set_kanji_string that still carries Japanese is recorded in a RAM ring with its scene, step, position and address, for tools/patch/draw_log.py to decode from a regtest RAM dump. A regression-test build only (the ring takes ~6 KB of the kanji block, so this build has no kanji subset). Output: build/patch/english-drawlog/.",
+  "out": "build/patch/english-drawlog",
+  "main": {
+    "module": {
+      "sources": [
+        "src/patch/drawlog/drawlog.c"
+      ],
+      "extra_regions_file": "config/patch/free_regions.json",
+      "extra_keep_objects": ["text_vwf.o"]
+    },
+    "pokes": [
+      {
+        "symbol": "patch_draw_hook",
+        "u32_symbol": "pt_draw_log",
+        "note": "text_vwf.c set_kanji_string calls the hook when this word is a code address (1 = off in the release profile)"
+      }
+    ]
+  }
+}

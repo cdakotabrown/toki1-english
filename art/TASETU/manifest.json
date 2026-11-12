@@ -1,0 +1,232 @@
+{
+ "file": "CDROM/TAIIKU/TASETU.BIN",
+ "note": "TAIIKU sports-day instruction panel (giant ball roll instructions): taiiku_load2_main loads the file whole to 0x8018F000 and its taiiku_module_init* rebuilds the 320x256 8-bpp picture in VRAM with the mod/srn tile-map routines (mod_init / srn_init / srn_vram_set(0, 5, 1408, 240) / mod_trans_vram / get_fnt). The cells edit the decoded picture and tools/patch/tilemap_panel.py re-tiles it (unchanged 32x32 blocks keep their tiles and cells). CLUT = the 256 colours at +0. Paper index 23; text strokes 16 / 17 (dark grey) with 18-22 anti-aliasing, the red words 42 with 43 / 21. Body lines on a 16-px pitch from y 74; English highlights in {braces} are drawn in red (hl 42).",
+ "bpp": 8,
+ "clut": {
+  "source": "file:0x0",
+  "entries": 256
+ },
+ "tilemaps": [
+  {
+   "name": "ball_roll",
+   "load": "0x8018F000",
+   "ptrs": "0x801A1000",
+   "mod": "0x801A1008",
+   "srn": "0x801A2198",
+   "vram_limit": [
+    1408,
+    240
+   ],
+   "text_area": [
+    50,
+    36,
+    221,
+    135
+   ],
+   "text_indices": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ]
+  }
+ ],
+ "cells": [
+  {
+   "name": "ball_roll_title",
+   "tilemap": "ball_roll",
+   "x": 60,
+   "y": 38,
+   "w": 200,
+   "h": 20,
+   "text": "Giant Ball Roll Rules",
+   "jp": "",
+   "fg": 17,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "center",
+   "valign": "glyph",
+   "spacing": 1,
+   "bold": true
+  },
+  {
+   "name": "ball_roll_line1",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 72,
+   "w": 214,
+   "h": 16,
+   "text": "First, choose your {partner}.",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  },
+  {
+   "name": "ball_roll_line2",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 88,
+   "w": 214,
+   "h": 16,
+   "text": "During the game, use the {D-pad} to",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  },
+  {
+   "name": "ball_roll_line3",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 104,
+   "w": 214,
+   "h": 16,
+   "text": "move {forward, back, left and right},",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  },
+  {
+   "name": "ball_roll_line4",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 120,
+   "w": 214,
+   "h": 16,
+   "text": "and push the ball with the {○ button}.",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  },
+  {
+   "name": "ball_roll_line5",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 136,
+   "w": 214,
+   "h": 16,
+   "text": "Push {evenly from the left and right}!",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  },
+  {
+   "name": "ball_roll_line6",
+   "tilemap": "ball_roll",
+   "x": 56,
+   "y": 152,
+   "w": 214,
+   "h": 16,
+   "text": "",
+   "jp": "",
+   "fg": 17,
+   "hl": 42,
+   "erase": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    42,
+    43
+   ],
+   "bg": 23,
+   "align": "left",
+   "valign": 2
+  }
+ ]
+}

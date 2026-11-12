@@ -1,0 +1,111 @@
+{
+ "version": "2026-11-03.1",
+ "note": "The triage question set. Each question is bounded (fixed answer set) and gets only the state fields it needs (state_fields); applies_when names predicates in runner/common.py (all must hold). Bump a question's 'version' when you change its wording, options or state: results are keyed by (line id, question id, version), so a changed question is re-asked and old answers are kept but ignored. 'problem' says which answer means 'something is wrong' (used by the report and the calibration).",
+ "questions": [
+  {
+   "id": "meaning_preserved",
+   "version": 1,
+   "type": "boolean",
+   "question": "Does the English line convey the same meaning as the Japanese line: the same facts, the same speech act (question, refusal, tease, apology...) and the same intent, allowing natural rewording, reordering, and dropped filler particles?",
+   "state_fields": ["jp_readable", "en_readable", "kind", "speaker", "neighbours_short", "token_legend"],
+   "applies_when": ["has_english"],
+   "problem": {"when": "false"},
+   "guidance": "Name tokens in brackets are filled in by the game at run time and are not errors. A reply menu (Reply 1 / Reply 2 ...) is judged reply by reply."
+  },
+  {
+   "id": "register",
+   "version": 1,
+   "type": "choice",
+   "question": "Given the speaker's voice note, how does the English line's register fit that character?",
+   "options": ["matches_voice", "too_formal", "too_casual", "wrong_character_voice"],
+   "option_descriptions": {
+    "matches_voice": "sounds like this character as the voice note describes",
+    "too_formal": "stiffer or more polite than this character would be here",
+    "too_casual": "looser, slangier or ruder than this character would be here",
+    "wrong_character_voice": "sounds like a different character (e.g. another heroine's signature words or tics)"
+   },
+   "state_fields": ["speaker", "voice_note", "jp_readable", "en_readable", "previous_line"],
+   "applies_when": ["has_english", "speaker_has_voice_note", "is_dialogue"],
+   "problem": {"when": "not", "answer": "matches_voice"}
+  },
+  {
+   "id": "terminology",
+   "version": 1,
+   "type": "boolean",
+   "question": "For every Japanese glossary term listed, does the English line use the glossary's English rendering (or a natural inflection or short form the glossary note allows)?",
+   "state_fields": ["jp_readable", "en_readable", "glossary_entries"],
+   "applies_when": ["has_english", "has_glossary_hits"],
+   "problem": {"when": "false"}
+  },
+  {
+   "id": "naturalness",
+   "version": 1,
+   "type": "score",
+   "question": "How natural is the English as something this kind of speaker would actually say or a game would display?",
+   "scale": [0, 1, 2, 3],
+   "scale_labels": {
+    "0": "broken: ungrammatical or hard to understand",
+    "1": "understandable but stilted or translationese",
+    "2": "natural with minor awkwardness",
+    "3": "fully natural"
+   },
+   "state_fields": ["en_readable", "kind", "speaker_role", "scene_short"],
+   "applies_when": ["has_english"],
+   "problem": {"when": "score_at_most", "value": 1}
+  },
+  {
+   "id": "untranslated_or_garbled",
+   "version": 1,
+   "type": "boolean",
+   "question": "Does the English text contain untranslated Japanese, romanized Japanese where plain English was expected, placeholder or note text, a broken control code, or garbled characters?",
+   "state_fields": ["en_raw", "en_readable", "token_legend", "allowed_japanese_terms"],
+   "applies_when": ["has_english"],
+   "problem": {"when": "true"},
+   "guidance": "Allowed on purpose: Senpai (Yumi Saotome only), Sensei, giri-choco, bunkasai, omikuji, prf, and the {tokens} the game fills in."
+  },
+  {
+   "id": "honorific_policy",
+   "version": 1,
+   "type": "choice",
+   "question": "Does the English line follow the style guide's policy on honorifics and forms of address?",
+   "options": ["follows_policy", "honorific_kept", "senpai_misused", "address_handwritten", "teacher_title_wrong"],
+   "option_descriptions": {
+    "follows_policy": "the line follows the policy (or has nothing the policy governs)",
+    "honorific_kept": "a -san / -kun / -chan / -sama suffix the policy drops is in the English",
+    "senpai_misused": "'Senpai' is used by someone other than Yumi Saotome, or Yumi's 先輩 form of address was lost",
+    "address_handwritten": "the player's name or a form of address is typed into the line instead of the game's token, or a name token was dropped",
+    "teacher_title_wrong": "先生 is not rendered as Mr./Ms. Surname (or Sensei for a coach)"
+   },
+   "state_fields": ["policy_excerpt", "speaker", "jp_readable", "en_raw", "tokens"],
+   "applies_when": ["has_english", "has_honorific_signal"],
+   "problem": {"when": "not", "answer": "follows_policy"}
+  },
+  {
+   "id": "tone_shift",
+   "version": 1,
+   "type": "boolean",
+   "question": "Compared with the Japanese, has the English changed the mood or intent of the line: an insult softened or sharpened, a joke added, sincerity turned ironic or campy, a tease turned into an attack, or the emotional beat order changed?",
+   "state_fields": ["jp_readable", "en_readable", "speaker", "neighbours_short", "tone_principles"],
+   "applies_when": ["has_english", "is_dialogue"],
+   "problem": {"when": "true"}
+  },
+  {
+   "id": "choice_contrast",
+   "version": 1,
+   "type": "boolean",
+   "question": "Do the English replies keep the contrast between the Japanese replies (for example sincere vs cocky vs dismissive), so the player can predict how the girl will react to each?",
+   "state_fields": ["jp_replies", "en_replies", "scene_short", "previous_lines"],
+   "applies_when": ["has_english", "is_reply_menu"],
+   "problem": {"when": "false"}
+  },
+  {
+   "id": "needs_human_review",
+   "version": 1,
+   "type": "boolean",
+   "question": "Should a human editor look at this line before release (any doubt about meaning, voice, tone, terminology, or how it reads in context)?",
+   "state_fields": ["jp_readable", "en_readable", "speaker", "scene_short", "neighbours_short", "known_flags"],
+   "applies_when": ["has_english"],
+   "problem": {"when": "true"}
+  }
+ ]
+}
