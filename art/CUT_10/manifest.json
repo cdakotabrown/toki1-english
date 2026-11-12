@@ -1,0 +1,137 @@
+{
+ "file": "CDROM/PROLODIR/CUT_10.NBN",
+ "note": "prologue, Rei Ijuin's introduction (NAME_ENT name_ent_prologue_serifu12_body, name_ent_bg_set): an 8-bpp 384x256 plane of six 128x128 pages (page k at k*0x4000, laid out 3 x 2), CLUT at 0x18000, drawn 320 px wide behind him. The gold name 伊集院 レイ (one line, ~118 px tall, x 0..317, y 24..141) is a two-band metallic ramp (deep ochre to pale yellow, a brown band line, then again) with a 1-px dark keyline (index 7) over grey (index 8) and the roses. English REI IJUIN in the hand-authored display face tools/patch/font/display_caps.txt at 56-px caps, the same ramp (indices of the retail glyph rows, scaled to the cap height) and keyline; the kanji indices are erased and in-painted first.",
+ "bpp": 8,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x18000"
+ },
+ "cells": [
+  {
+   "name": "name_card",
+   "offset": [
+    [
+     "0x0",
+     "0x4000",
+     "0x8000"
+    ],
+    [
+     "0xc000",
+     "0x10000",
+     "0x14000"
+    ]
+   ],
+   "x": 0,
+   "y": 22,
+   "w": 319,
+   "h": 122,
+   "text": "REI IJUIN",
+   "jp": "伊集院 レイ",
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 72,
+   "gap": 8,
+   "space": 28,
+   "fg": 36,
+   "outline": 7,
+   "outline_w": 1,
+   "ramp": [
+    [
+     0.0,
+     33
+    ],
+    [
+     0.05,
+     34
+    ],
+    [
+     0.09,
+     35
+    ],
+    [
+     0.13,
+     64
+    ],
+    [
+     0.15,
+     36
+    ],
+    [
+     0.26,
+     37
+    ],
+    [
+     0.28,
+     38
+    ],
+    [
+     0.45,
+     39
+    ],
+    [
+     0.5,
+     34
+    ],
+    [
+     0.52,
+     47
+    ],
+    [
+     0.54,
+     33
+    ],
+    [
+     0.56,
+     34
+    ],
+    [
+     0.59,
+     65
+    ],
+    [
+     0.61,
+     35
+    ],
+    [
+     0.68,
+     64
+    ],
+    [
+     0.7,
+     36
+    ],
+    [
+     0.87,
+     37
+    ],
+    [
+     0.89,
+     38
+    ]
+   ],
+   "erase": [
+    7,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    43,
+    44,
+    45,
+    46,
+    47,
+    64,
+    65,
+    66
+   ],
+   "align": "center",
+   "valign": 40,
+   "xscale": 0.78
+  }
+ ]
+}

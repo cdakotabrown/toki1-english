@@ -1,0 +1,147 @@
+# display_caps.txt -- a heavy sans display face for the English patch's
+# logotypes (Rei Ijuin's prologue name card, the Memorial Spot masthead).
+#
+# AUTHORED FOR THIS PROJECT (Tokimeki Memorial English patch), 2026-11-03.
+# Original letterforms drawn as geometric shapes by hand for this file; not
+# traced from, derived from or measured against any existing typeface or any
+# retail game art.  Only the STYLE the game applies to the original kanji
+# (stroke weight, gold ramp, dark keyline) was looked at, as a brief.
+#
+# Format (tools/patch/artface.py renders it):
+#   glyph <char> adv <units>     a capital in a 100-unit cap-height box,
+#                                x to the right, y DOWN, baseline y = 100
+#   rect x0,y0 x1,y1             a filled rectangle
+#   poly x,y x,y x,y ...         a filled simple polygon
+#   ring cx,cy rx,ry wx,wy a0,a1 an elliptical band: outer radii rx,ry,
+#                                band thickness wx,wy, angles a0..a1 in
+#                                degrees (0 = right, 90 = DOWN, 180 = left,
+#                                270 = up; a1 > a0 goes clockwise on screen)
+# The shapes of one glyph are united.  Stroke weight is 22 units.
+
+glyph I adv 22
+rect 0,0 22,100
+
+glyph E adv 58
+rect 0,0 22,100
+rect 0,0 58,20
+rect 0,41 50,59
+rect 0,80 58,100
+
+glyph L adv 58
+rect 0,0 22,100
+rect 0,80 58,100
+
+glyph T adv 62
+rect 0,0 62,20
+rect 20,0 42,100
+
+glyph J adv 56
+rect 34,0 56,66
+ring 28,66 28,34 22,20 0,165
+
+glyph U adv 70
+rect 0,0 22,66
+rect 48,0 70,66
+ring 35,66 35,34 22,20 0,180
+
+glyph O adv 70
+ring 35,50 35,50 22,20 0,360
+
+glyph N adv 70
+rect 0,0 22,100
+rect 48,0 70,100
+poly 0,0 24,0 70,100 46,100
+
+glyph M adv 80
+rect 0,0 22,100
+rect 58,0 80,100
+poly 0,0 22,0 40,54 58,0 80,0 50,86 30,86
+
+glyph A adv 76
+poly 28,0 48,0 76,100 54,100
+poly 28,0 48,0 22,100 0,100
+rect 16,60 60,78
+
+glyph R adv 72
+rect 0,0 22,100
+rect 0,0 36,18
+rect 0,38 36,56
+ring 36,28 30,28 20,18 270,450
+poly 30,52 52,52 72,100 50,100
+
+glyph P adv 66
+rect 0,0 22,100
+rect 0,0 36,18
+rect 0,42 36,60
+ring 36,30 30,30 20,18 270,450
+
+glyph S adv 66
+ring 33,29 33,29 22,19 160,340
+ring 33,71 33,29 22,19 340,520
+poly 2,39 22.7,32.4 64,61 43.3,67.6
+
+glyph ! adv 22
+rect 0,0 22,70
+rect 0,80 22,100
+
+glyph - adv 40
+rect 0,42 40,60
+
+glyph . adv 22
+rect 0,80 22,100
+
+# 2026-11-03, second set (the Memorial Spot magazine: headlines, issue
+# lines, ad): same construction, stroke weight 22 units.
+
+glyph B adv 68
+rect 0,0 22,100
+rect 0,0 34,18
+rect 0,41 38,59
+rect 0,82 38,100
+ring 34,29.5 26,29.5 20,18 270,450
+ring 38,70.5 30,29.5 22,18 270,450
+
+glyph C adv 68
+ring 36,50 36,50 22,20 45,315
+
+glyph D adv 72
+rect 0,0 22,100
+ring 22,50 50,50 22,20 270,450
+
+glyph F adv 56
+rect 0,0 22,100
+rect 0,0 56,20
+rect 0,41 48,59
+
+glyph G adv 72
+ring 36,50 36,50 22,20 30,315
+rect 40,46 72,64
+rect 50,46 72,84
+
+glyph H adv 70
+rect 0,0 22,100
+rect 48,0 70,100
+rect 0,41 70,59
+
+glyph K adv 72
+rect 0,0 22,100
+poly 16,50 48,0 72,0 32,62
+poly 30,40 50,40 72,100 48,100
+
+glyph Q adv 72
+ring 36,50 36,50 22,20 0,360
+poly 36,72 54,62 72,100 50,100
+
+glyph V adv 74
+poly 0,0 23,0 37,74 51,0 74,0 48,100 26,100
+
+glyph W adv 100
+poly 0,0 21,0 30,68 40,0 60,0 70,68 79,0 100,0 82,100 60,100 50,42 40,100 18,100
+
+glyph X adv 72
+poly 0,0 24,0 72,100 48,100
+poly 48,0 72,0 24,100 0,100
+
+glyph Y adv 72
+poly 0,0 24,0 36,40 48,0 72,0 47,60 25,60
+rect 25,52 47,100

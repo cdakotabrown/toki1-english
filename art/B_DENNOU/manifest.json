@@ -1,0 +1,114 @@
+{
+ "file": "CDROM/BUNKASD/B_DENNOU.BIN",
+ "note": "BUNKA_SD computer-club stage (forced scene 128 + now_sub_step = 243, the func_801345BC route: func_80134548 loads this file). 8-bpp 128x128 blocks at 0x2000 + 0x4000k; the stage background's CLUT is the 256 colours at +0x0 (paper 0xd5, strokes 0xd1 with a 0xd4 grey edge, 0xd3 in places). The wall sign ㊙スゴイ!! / ハッキング / 実演 sits whole in block 0x2e000 (interior u 17-77, rows 25-70; the ㊙ circle touches the frame row 24, repainted to the frame index), the club board 電脳部 whole in block 0x36000 (interior u 25-70, rows 21-34).",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x0",
+  "entries": 256
+ },
+ "cells": [
+  {
+   "name": "sign_frame_fix",
+   "offset": "0x2e000",
+   "x": 17,
+   "y": 24,
+   "w": 61,
+   "h": 1,
+   "text": "",
+   "jp": "(the ㊙ circle's top on the frame row)",
+   "fg": 212,
+   "erase": [
+    210,
+    211
+   ],
+   "bg": 212
+  },
+  {
+   "name": "sign_line1",
+   "offset": "0x2e000",
+   "x": 17,
+   "y": 25,
+   "w": 61,
+   "h": 15,
+   "text": "Top Secret!",
+   "jp": "㊙スゴイ!!",
+   "erase": [
+    209,
+    210,
+    211,
+    212,
+    216
+   ],
+   "align": "center",
+   "valign": "glyph",
+   "fg": 209,
+   "outline": 212,
+   "bg": 213
+  },
+  {
+   "name": "sign_line2",
+   "offset": "0x2e000",
+   "x": 17,
+   "y": 40,
+   "w": 61,
+   "h": 16,
+   "text": "Hacking",
+   "jp": "ハッキング",
+   "erase": [
+    209,
+    210,
+    211,
+    212
+   ],
+   "align": "center",
+   "valign": "glyph",
+   "fg": 209,
+   "outline": 212,
+   "bg": 213
+  },
+  {
+   "name": "sign_line3",
+   "offset": "0x2e000",
+   "x": 17,
+   "y": 56,
+   "w": 61,
+   "h": 15,
+   "text": "Live Demo",
+   "jp": "実演",
+   "erase": [
+    209,
+    210,
+    211,
+    212
+   ],
+   "align": "right",
+   "valign": "glyph",
+   "fg": 209,
+   "outline": 212,
+   "bg": 213
+  },
+  {
+   "name": "club_board",
+   "offset": "0x36000",
+   "x": 25,
+   "y": 21,
+   "w": 46,
+   "h": 14,
+   "text": "PC Club",
+   "jp": "電脳部",
+   "erase": [
+    209,
+    211,
+    212
+   ],
+   "align": "center",
+   "valign": "glyph",
+   "fg": 209,
+   "outline": 212,
+   "bg": 213
+  }
+ ]
+}

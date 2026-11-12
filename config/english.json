@@ -1,0 +1,1467 @@
+{
+  "name": "english",
+  "description": "The English patch profile (2026-10-09): the proportional Latin text engine and every parser/label override of vwf-test.json, every text container (SERIFU, SPEAKTST, BUNKA, MASTER, TAIIKU, SHIAI) repacked from the cloud agent sheets with an 80-entry DTE built over the whole English corpus, English name tables and the overlay string overrides. Build: python3 tools/patch/build_patched.py config/patch/english.json (or make build-patched PROFILE=config/patch/english.json); apply build/patch/english.ppf to Track 1 of the Rev 1 dump.",
+  "main": {
+    "module": {
+      "generated": [
+        {
+          "tool": "tools/patch/fontgen.py",
+          "args": [
+            "--out",
+            "build/patch/gen"
+          ]
+        }
+      ],
+      "sources": [
+        "src/patch/main/text_vwf.c",
+        "src/patch/main/text_vwf_draw.c",
+        "src/patch/main/text_reveal.c",
+        "src/patch/main/text_msg.c",
+        "src/patch/main/text_field.c",
+        "src/patch/main/text_event.c",
+        "src/patch/main/text_misc.c",
+        "src/patch/main/text_names.c",
+        "src/patch/main/text_choice.c",
+        "src/patch/main/text_name_ent.c",
+        "src/patch/main/text_ov_labels.c",
+        "src/patch/main/text_ov_date2.c",
+        "src/patch/main/text_ov_bunkasai.c",
+        "build/patch/gen/font_latin.c"
+      ],
+      "region": {
+        "start": "0x800BF230",
+        "end": "0x800CC2A4",
+        "what": "JIS level-1 kanji glyphs of the 12x12 font D_800BD250 (glyphs 453..3417); the renderer maps any glyph the module or the string pool overlaps to a box"
+      },
+      "place": "end",
+      "hooks": [
+        {
+          "function": "set_kanji_string",
+          "addr": "0x8004EBB0",
+          "target": "set_kanji_string"
+        },
+        {
+          "function": "load_string",
+          "addr": "0x8004F690",
+          "target": "load_string"
+        },
+        {
+          "function": "disp_string",
+          "addr": "0x8004F238",
+          "target": "disp_string"
+        },
+        {
+          "function": "k_disp_inc",
+          "addr": "0x8004F04C",
+          "target": "pt_k_disp_inc",
+          "note": "only glyph-per-cell Latin entries use faster one-glyph ticks; Japanese and packed fallback retain retail cadence"
+        },
+        {
+          "function": "msg_str_disp",
+          "addr": "0x80081398",
+          "target": "pt_schedule_analyze"
+        },
+        {
+          "function": "msg_part_reorder",
+          "addr": "0x80082F60",
+          "target": "pt_choice_shuffle"
+        },
+        {
+          "function": "sndisp",
+          "addr": "0x800512AC",
+          "target": "pt_field_message"
+        },
+        {
+          "function": "sndi",
+          "addr": "0x80051430",
+          "target": "pt_field_line"
+        },
+        {
+          "function": "gnsx",
+          "addr": "0x8005121C",
+          "target": "pt_speaker_label"
+        },
+        {
+          "function": "serifu_cmd_exec",
+          "addr": "0x8007F08C",
+          "target": "pt_event_message"
+        },
+        {
+          "function": "basyo_init",
+          "addr": "0x8006625C",
+          "target": "pt_basyo_init"
+        },
+        {
+          "function": "girl_menu_set",
+          "addr": "0x80084B14",
+          "target": "pt_vacation_day_init1"
+        },
+        {
+          "function": "telephone_choice_menu_init",
+          "addr": "0x8007837C",
+          "target": "pt_telephone_choice_menu_init",
+          "note": "the Sunday phone book: a full name wider than its 88-px column is drawn as 'Given F.' (text_misc.c)"
+        },
+        {
+          "function": "menu2_init",
+          "addr": "0x800833DC",
+          "target": "pt_menu2_init",
+          "note": "event choice (2 replies): hit boxes from the rows the formatter drew"
+        },
+        {
+          "function": "menu3_init",
+          "addr": "0x800831D8",
+          "target": "pt_menu3_init",
+          "note": "event choice (3 replies)"
+        },
+        {
+          "function": "get_p_name",
+          "addr": "0x80051928",
+          "target": "pt_get_p_name",
+          "note": "full name (case 15) = family + space + whole given name when the family is ASCII"
+        },
+        {
+          "function": "strcpy",
+          "addr": "0x800B4890",
+          "target": "pt_strcpy",
+          "note": "BIOS thunk: a copy that would overflow a retail 8/12-byte name buffer is kept in the module and the buffer gets a PT_C_REF redirect (text_names.c; fixes KiyokawaKiyokawa)"
+        },
+        {
+          "function": "strcat",
+          "addr": "0x800B48A0",
+          "target": "pt_strcat",
+          "note": "BIOS thunk: see pt_strcpy"
+        },
+        {
+          "function": "strncat",
+          "addr": "0x800B48B0",
+          "target": "pt_strncat",
+          "note": "BIOS thunk: plain strncat, except that the memory-card file title (D_8012B604, card_file_write) keeps the retail full-width slot digits for the BIOS card manager (text_names.c)"
+        }
+      ],
+      "set": {
+        "patch_kanji_limit": "kanji_limit"
+      }
+    },
+    "strings": [
+      {
+        "addr": "0x800B9B20",
+        "max_bytes": 2,
+        "text": "",
+        "note": "get_p_name suffix 君 -> none"
+      },
+      {
+        "addr": "0x800B9B24",
+        "max_bytes": 4,
+        "text": "",
+        "note": "get_p_name suffix さん -> none"
+      },
+      {
+        "ptr_at": "0x800B9AE0",
+        "text": "Fujisaki",
+        "note": "D_800B9AE0[0] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AE4",
+        "text": "Kisaragi",
+        "note": "D_800B9AE0[1] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AE8",
+        "text": "Himoo",
+        "note": "D_800B9AE0[2] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AEC",
+        "text": "Katagiri",
+        "note": "D_800B9AE0[3] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AF0",
+        "text": "Nijino",
+        "note": "D_800B9AE0[4] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AF4",
+        "text": "Koshiki",
+        "note": "D_800B9AE0[5] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AF8",
+        "text": "Kiyokawa",
+        "note": "D_800B9AE0[6] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9AFC",
+        "text": "Kagami",
+        "note": "D_800B9AE0[7] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B00",
+        "text": "Asahina",
+        "note": "D_800B9AE0[8] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B04",
+        "text": "Mikihara",
+        "note": "D_800B9AE0[9] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B08",
+        "text": "Saotome",
+        "note": "D_800B9AE0[10] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B0C",
+        "text": "Tatebayashi",
+        "note": "D_800B9AE0[11] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B10",
+        "text": "Ijuin",
+        "note": "D_800B9AE0[12] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B14",
+        "text": "Yoshio",
+        "note": "D_800B9AE0[13] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B18",
+        "text": "Sotoi",
+        "note": "D_800B9AE0[14] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9B1C",
+        "text": "Yumi",
+        "note": "D_800B9AE0[15] girl family name (get_g_name, menus)"
+      },
+      {
+        "ptr_at": "0x800B9A24",
+        "text": "Shiori Fujisaki",
+        "note": "girl_full_name_tbl[0] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A28",
+        "text": "Mio Kisaragi",
+        "note": "girl_full_name_tbl[1] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A2C",
+        "text": "Yuina Himoo",
+        "note": "girl_full_name_tbl[2] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A30",
+        "text": "Ayako Katagiri",
+        "note": "girl_full_name_tbl[3] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A34",
+        "text": "Saki Nijino",
+        "note": "girl_full_name_tbl[4] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A38",
+        "text": "Yukari Koshiki",
+        "note": "girl_full_name_tbl[5] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A3C",
+        "text": "Nozomi Kiyokawa",
+        "note": "girl_full_name_tbl[6] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A40",
+        "text": "Mira Kagami",
+        "note": "girl_full_name_tbl[7] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A44",
+        "text": "Yuko Asahina",
+        "note": "girl_full_name_tbl[8] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A48",
+        "text": "Megumi Mikihara",
+        "note": "girl_full_name_tbl[9] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A4C",
+        "text": "Yumi Saotome",
+        "note": "girl_full_name_tbl[10] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A50",
+        "text": "Miharu Tatebayashi",
+        "note": "girl_full_name_tbl[11] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A54",
+        "text": "Rei Ijuin",
+        "note": "girl_full_name_tbl[12] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A58",
+        "text": "Yoshio Saotome",
+        "note": "girl_full_name_tbl[13] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A5C",
+        "text": "Yukinojo Sotoi",
+        "note": "girl_full_name_tbl[14] full name (evaluation chart, results board)"
+      },
+      {
+        "ptr_at": "0x800B9A60",
+        "text": "Player",
+        "note": "girl_full_name_tbl[15] full name (evaluation chart, results board)"
+      },
+      {
+        "addr": "0x800B633C",
+        "max_bytes": 7,
+        "text": "Shiori",
+        "note": "get_g_name girl 0 given name"
+      },
+      {
+        "addr": "0x800B6344",
+        "max_bytes": 7,
+        "text": "",
+        "note": "get_g_name -chan suffix -> none"
+      },
+      {
+        "addr": "0x800B634C",
+        "max_bytes": 4,
+        "text": "",
+        "note": "get_g_name -san suffix -> none"
+      },
+      {
+        "addr": "0x800B8A00",
+        "max_bytes": 7,
+        "text": "Yoshio",
+        "note": "{Y} token literal 好雄 (slot 4+NUL? checked by the builder)"
+      },
+      {
+        "addr": "0x800B7E38",
+        "max_bytes": 24,
+        "text": "What should I do today?)",
+        "note": "calendar monologue (field path, kind 31 prepends the opening bracket): 'what should I do today?)'"
+      },
+      {
+        "addr": "0x800B66E4",
+        "max_bytes": 26,
+        "text": "What should I do next?)",
+        "note": "calendar monologue after an event day: 'what should I do from tomorrow?)'"
+      }
+    ],
+    "callsites": [
+      {
+        "at": "0x80069AA8",
+        "expect": "strncat",
+        "target": "pt_name_hold",
+        "note": "album card full name (album_info_disp): strncat(family, 6) / strncat(given, 6) with no separator -> text_misc.c joins a Latin name as \"Name: Kenji Fukuda\" (whole parts)"
+      },
+      {
+        "at": "0x80069AD0",
+        "expect": "strncat",
+        "target": "pt_name_put",
+        "note": "album card full name (album_info_disp): strncat(family, 6) / strncat(given, 6) with no separator -> text_misc.c joins a Latin name as \"Name: Kenji Fukuda\" (whole parts)"
+      },
+      {
+        "at": "0x80069F34",
+        "expect": "strncat",
+        "target": "pt_name_hold",
+        "note": "album card full name (album_info_disp): strncat(family, 6) / strncat(given, 6) with no separator -> text_misc.c joins a Latin name as \"Name: Kenji Fukuda\" (whole parts)"
+      },
+      {
+        "at": "0x80069F64",
+        "expect": "strncat",
+        "target": "pt_name_put",
+        "note": "album card full name (album_info_disp): strncat(family, 6) / strncat(given, 6) with no separator -> text_misc.c joins a Latin name as \"Name: Kenji Fukuda\" (whole parts)"
+      },
+      {
+        "at": "0x80069B08",
+        "expect": "strncat",
+        "target": "pt_strncat_nick",
+        "note": "album card nickname: strncat(nickname, 13) cut a 15-letter Latin nickname -> text_misc.c pt_strncat_nick"
+      },
+      {
+        "at": "0x80069FA4",
+        "expect": "strncat",
+        "target": "pt_strncat_nick",
+        "note": "album card nickname: strncat(nickname, 13) cut a 15-letter Latin nickname -> text_misc.c pt_strncat_nick"
+      }
+    ],
+    "pokes": [
+      {
+        "addr": "0x800CF428",
+        "u16": 1,
+        "note": "magazine genre tag: frame 134 -> COMEDY (genre_comedy), cel count"
+      },
+      {
+        "addr": "0x800CF430",
+        "bytes": "f000f8ff6a0a1031000020000800",
+        "note": "magazine genre tag: frame 134 -> COMEDY (genre_comedy), cels"
+      },
+      {
+        "addr": "0x800CF440",
+        "u16": 1,
+        "note": "magazine genre tag: frame 135 -> ROMANCE (genre_romance), cel count"
+      },
+      {
+        "addr": "0x800CF448",
+        "bytes": "f000f8ff600a1031000028000800",
+        "note": "magazine genre tag: frame 135 -> ROMANCE (genre_romance), cels"
+      },
+      {
+        "addr": "0x800CF458",
+        "u16": 1,
+        "note": "magazine genre tag: frame 136 -> ACTION (genre_action), cel count"
+      },
+      {
+        "addr": "0x800CF460",
+        "bytes": "f000f8ff7a0a10310000200008000000000000000000000000000000",
+        "note": "magazine genre tag: frame 136 -> ACTION (genre_action), cels"
+      },
+      {
+        "addr": "0x800CF47C",
+        "u16": 1,
+        "note": "magazine genre tag: frame 137 -> SUSPENSE (genre_suspense), cel count"
+      },
+      {
+        "addr": "0x800CF484",
+        "bytes": "f000f8ff650a1031000028000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 137 -> SUSPENSE (genre_suspense), cels"
+      },
+      {
+        "addr": "0x800CF4BC",
+        "u16": 1,
+        "note": "magazine genre tag: frame 138 -> HORROR (genre_horror), cel count"
+      },
+      {
+        "addr": "0x800CF4C4",
+        "bytes": "f000f8ff980a103100002000080000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 138 -> HORROR (genre_horror), cels"
+      },
+      {
+        "addr": "0x800CF4F0",
+        "u16": 1,
+        "note": "magazine genre tag: frame 139 -> ANIME (genre_anime), cel count"
+      },
+      {
+        "addr": "0x800CF4F8",
+        "bytes": "f000f8ff9c0a103100001800080000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 139 -> ANIME (genre_anime), cels"
+      },
+      {
+        "addr": "0x800CF524",
+        "u16": 1,
+        "note": "magazine genre tag: frame 140 -> CLASSICAL (genre_classical), cel count"
+      },
+      {
+        "addr": "0x800CF52C",
+        "bytes": "f0001800700a10310000280008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 140 -> CLASSICAL (genre_classical), cels"
+      },
+      {
+        "addr": "0x800CF574",
+        "u16": 2,
+        "note": "magazine genre tag: frame 141 -> IDOL (genre_idol), cel count"
+      },
+      {
+        "addr": "0x800CF57C",
+        "bytes": "f00018006f0a1031000008000800f80018007f0a1031000008000800",
+        "note": "magazine genre tag: frame 141 -> IDOL (genre_idol), cels"
+      },
+      {
+        "addr": "0x800CF598",
+        "u16": 1,
+        "note": "magazine genre tag: frame 142 -> ROCK (genre_rock), cel count"
+      },
+      {
+        "addr": "0x800CF5A0",
+        "bytes": "f0001800880a103100001800080000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 142 -> ROCK (genre_rock), cels"
+      },
+      {
+        "addr": "0x800CF5CC",
+        "u16": 1,
+        "note": "magazine genre tag: frame 143 -> NEW MUSIC (genre_new_music), cel count"
+      },
+      {
+        "addr": "0x800CF5D4",
+        "bytes": "f0001800750a103100002800080000000000000000000000000000000000000000000000000000000000",
+        "note": "magazine genre tag: frame 143 -> NEW MUSIC (genre_new_music), cels"
+      },
+      {
+        "addr": "0x800CFDBC",
+        "u32_symbol": "pt_hud_sunday_frame",
+        "note": "LQA F2: D_800CFC5C[88], the calendar banner's Sunday frame (hizuke_init: now_youbi + 82), retail 0x800CED08 = the 日 cell the day unit also draws (D); now the module's two-cel 'Su' record (text_misc.c pt_hud_sunday_frame, S and u halves of the Sa / Tu cells, src/patch/art/MAINROM)"
+      },
+      {
+        "addr": "0x800CEC98",
+        "u16": 22,
+        "note": "LQA F2: Tuesday frame 83's cel x, 24 -> 22: the Tu cell is now drawn as T|u on the 8-px tile grid (2 px further right in the cell), so the label stays where the 12-px cell put it"
+      },
+      {
+        "addr": "0x800CECF8",
+        "u16": 23,
+        "note": "LQA F2: Saturday frame 87's cel x, 24 -> 23: the Sa cell is now S|a on the 8-px tile grid (1 px further right), so the label stays put"
+      }
+    ]
+  },
+  "overlays": {
+    "NAME_ENT": {
+      "strings": [
+        {
+          "addr": "0x8014C4FC",
+          "max_bytes": 19,
+          "encoding": "patch",
+          "text": "Love and hate...",
+          "note": "opening lyric 1 (18+NUL slot)"
+        },
+        {
+          "addr": "0x8014C510",
+          "max_bytes": 35,
+          "encoding": "patch",
+          "text": "I wonder who said it first.",
+          "note": "lyric 2"
+        },
+        {
+          "addr": "0x8014C534",
+          "max_bytes": 31,
+          "encoding": "patch",
+          "text": "Racing on through my Memorial",
+          "note": "lyric 3"
+        },
+        {
+          "addr": "0x8014C554",
+          "max_bytes": 35,
+          "encoding": "patch",
+          "text": "Combing my hair at the mirror again",
+          "note": "lyric 4 (34+NUL slot)"
+        },
+        {
+          "addr": "0x8014B7C4",
+          "max_bytes": 19,
+          "encoding": "patch",
+          "text": "Checking the",
+          "note": "file select: checking card, line 1 (func_8013C69C)"
+        },
+        {
+          "addr": "0x8014B7D8",
+          "max_bytes": 23,
+          "encoding": "patch",
+          "text": "memory card...",
+          "note": "line 2"
+        },
+        {
+          "addr": "0x8014B9C4",
+          "max_bytes": 31,
+          "encoding": "patch",
+          "text": "No game data on this card.",
+          "note": "func_8013DA00 line 1 (x=-64, y=32)"
+        },
+        {
+          "addr": "0x8014B9E4",
+          "max_bytes": 27,
+          "encoding": "patch",
+          "text": "Create a new album and",
+          "note": "line 2"
+        },
+        {
+          "addr": "0x8014BA00",
+          "max_bytes": 27,
+          "encoding": "patch",
+          "text": "start playing the game?",
+          "note": "line 3"
+        },
+        {
+          "addr": "0x8014BA1C",
+          "max_bytes": 27,
+          "encoding": "patch",
+          "text": "　　　Yes...　　　　No...",
+          "note": "yes/no line: the O/X glyphs are drawn by code at x=6 and x=90 over the line (x=-64), so the text is padded with 14-px ideographic spaces to end at those x; the injector computes this padding from the font metrics"
+        },
+        {
+          "addr": "0x8014BA70",
+          "max_bytes": 23,
+          "encoding": "patch",
+          "text": "Which slot do you",
+          "note": "func_8013DBCC line 1"
+        },
+        {
+          "addr": "0x8014BA88",
+          "max_bytes": 15,
+          "encoding": "patch",
+          "text": "want to use?",
+          "note": "line 2"
+        },
+        {
+          "addr": "0x8014BA98",
+          "max_bytes": 27,
+          "encoding": "patch",
+          "text": "Point at one and press O.",
+          "note": "line 3"
+        },
+        {
+          "addr": "0x8014C910",
+          "max_bytes": 11,
+          "encoding": "patch",
+          "text": "Prologue",
+          "note": "place label via basyo_init (plate width from pt_text_width in the patch)"
+        },
+        {
+          "addr": "0x8014CE6C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Fukuda",
+          "note": "default family name 0 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEE4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Kenji",
+          "note": "default given name 0 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF5C",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Fuku",
+          "note": "default nickname 0 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE74",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Matsui",
+          "note": "default family name 1 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEEC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Takeru",
+          "note": "default given name 1 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF68",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "NOR",
+          "note": "default nickname 1 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE7C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Saito",
+          "note": "default family name 2 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEF4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Mikio",
+          "note": "default given name 2 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF74",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Metal",
+          "note": "default nickname 2 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE84",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Nakata",
+          "note": "default family name 3 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEFC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Keizo",
+          "note": "default given name 3 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF80",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "ZIG",
+          "note": "default nickname 3 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE8C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Murai",
+          "note": "default family name 4 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF04",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Kiyo",
+          "note": "default given name 4 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF8C",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "K-mu",
+          "note": "default nickname 4 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE94",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Yamada",
+          "note": "default family name 5 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF0C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Takao",
+          "note": "default given name 5 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CF98",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Yaba",
+          "note": "default nickname 5 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CE9C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Takagi",
+          "note": "default family name 6 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF14",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Akira",
+          "note": "default given name 6 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFA4",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Akindo",
+          "note": "default nickname 6 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEA4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Miura",
+          "note": "default family name 7 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF1C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Hiroki",
+          "note": "default given name 7 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFB0",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Myu",
+          "note": "default nickname 7 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEAC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Hirano",
+          "note": "default family name 8 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF24",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Shoji",
+          "note": "default given name 8 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFBC",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Kinpi",
+          "note": "default nickname 8 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEB4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Suzuki",
+          "note": "default family name 9 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF2C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Masaki",
+          "note": "default given name 9 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFC8",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Mackie",
+          "note": "default nickname 9 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEBC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Kudo",
+          "note": "default family name 10 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF34",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Yuichi",
+          "note": "default given name 10 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFD4",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Uichi",
+          "note": "default nickname 10 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEC4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Konami",
+          "note": "default family name 11 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF3C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Taro",
+          "note": "default given name 11 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFE0",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "573-man",
+          "note": "default nickname 11 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CECC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Sato",
+          "note": "default family name 12 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF44",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Nori",
+          "note": "default given name 12 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFEC",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Noripi",
+          "note": "default nickname 12 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CED4",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Toyama",
+          "note": "default family name 13 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF4C",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Keita",
+          "note": "default given name 13 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014CFF8",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Thomas",
+          "note": "default nickname 13 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "addr": "0x8014CEDC",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Hayama",
+          "note": "default family name 14 (func_80134BA0 table D_8014CE6C, 8-byte cells, 6 copied to the save)"
+        },
+        {
+          "addr": "0x8014CF54",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Taeko",
+          "note": "default given name 14 (D_8014CEE4)"
+        },
+        {
+          "addr": "0x8014D004",
+          "max_bytes": 10,
+          "encoding": "patch",
+          "text": "Chakkari",
+          "note": "default nickname 14 (D_8014CF5C, 12-byte cells, 10 copied to the save)"
+        },
+        {
+          "ptr_at": "0x8014D938",
+          "encoding": "patch",
+          "text": "I'm {P}, a new student{br}here at Kirameki High.",
+          "note": "DRAFT prologue dialogue line 0 (D_8014D938[0], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D93C",
+          "encoding": "patch",
+          "text": "It was my first choice, though{br}I never thought I'd make it.{br}Luckily, I got in.",
+          "note": "DRAFT prologue dialogue line 1 (D_8014D938[1], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D940",
+          "encoding": "patch",
+          "text": "I feel great. I got into the{br}same school as Shiori{br}Fujisaki, the girl I've{br}secretly had a thing for.",
+          "note": "DRAFT prologue dialogue line 2 (D_8014D938[2], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D944",
+          "encoding": "patch",
+          "text": "Actually... we've been{br}childhood friends since{br}grade school, and we live{br}next door to each other...",
+          "note": "DRAFT prologue dialogue line 3 (D_8014D938[3], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D948",
+          "encoding": "patch",
+          "text": "We're worlds apart, she and I.{br}So we've never become more{br}than friends...",
+          "note": "DRAFT prologue dialogue line 4 (D_8014D938[4], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D94C",
+          "encoding": "patch",
+          "text": "Yo. Why the long face?",
+          "note": "DRAFT prologue dialogue line 5 (D_8014D938[5], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D950",
+          "encoding": "patch",
+          "text": "Oh, uh... Nothing.{br}(What a pushy guy...)",
+          "note": "DRAFT prologue dialogue line 6 (D_8014D938[6], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D954",
+          "encoding": "patch",
+          "text": "I'm Yoshio Saotome.{br}Nice to meet you.{br}What's your name?",
+          "note": "DRAFT prologue dialogue line 7 (D_8014D938[7], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D958",
+          "encoding": "patch",
+          "text": "I'm {P}.{br}Nice to meet you too.",
+          "note": "DRAFT prologue dialogue line 8 (D_8014D938[8], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D95C",
+          "encoding": "patch",
+          "text": "Oh, here he comes.",
+          "note": "DRAFT prologue dialogue line 9 (D_8014D938[9], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D960",
+          "encoding": "patch",
+          "text": "He's gorgeous!",
+          "note": "DRAFT prologue dialogue line 10 (D_8014D938[10], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D964",
+          "encoding": "patch",
+          "text": "What's going on? The girls{br}suddenly started buzzing.",
+          "note": "DRAFT prologue dialogue line 11 (D_8014D938[11], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D968",
+          "encoding": "patch",
+          "text": "Greetings, everyone.{br}Sorry to keep you waiting.",
+          "note": "DRAFT prologue dialogue line 12 (D_8014D938[12], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D96C",
+          "encoding": "patch",
+          "text": "I doubt there's anyone here{br}who doesn't know me, but...{br}I am Rei Ijuin, grandson{br}of the school's chairman.",
+          "note": "DRAFT prologue dialogue line 13 (D_8014D938[13], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D970",
+          "encoding": "patch",
+          "text": "My apologies to the other{br}gentlemen of this class...{br}but let's all get along,{br}shall we?",
+          "note": "DRAFT prologue dialogue line 14 (D_8014D938[14], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D974",
+          "encoding": "patch",
+          "text": "Ijuin... as in that{br}rich family? Great,{br}what a class to end up in.",
+          "note": "DRAFT prologue dialogue line 15 (D_8014D938[15], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D978",
+          "encoding": "patch",
+          "text": "Y-yeah, you're right...",
+          "note": "DRAFT prologue dialogue line 16 (D_8014D938[16], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D97C",
+          "encoding": "patch",
+          "text": "Oh, looks like Shiori's{br}introduction is next.)",
+          "note": "DRAFT prologue dialogue line 17 (D_8014D938[17], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D980",
+          "encoding": "patch",
+          "text": "Hello, everyone.{br}My name is Shiori Fujisaki.",
+          "note": "DRAFT prologue dialogue line 18 (D_8014D938[18], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D984",
+          "encoding": "patch",
+          "text": "I like listening to music,{br}classical mostly.{br}I look forward to getting{br}to know you all.",
+          "note": "DRAFT prologue dialogue line 19 (D_8014D938[19], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D988",
+          "encoding": "patch",
+          "text": "Wow, she's cute...{br}Shiori Fujisaki, huh?{br}Glad I'm in this class.",
+          "note": "DRAFT prologue dialogue line 20 (D_8014D938[20], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D98C",
+          "encoding": "patch",
+          "text": "Says the guy who was just{br}complaining about it...)",
+          "note": "DRAFT prologue dialogue line 21 (D_8014D938[21], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D990",
+          "encoding": "patch",
+          "text": "Hey, she just looked at you.{br}You know her?",
+          "note": "DRAFT prologue dialogue line 22 (D_8014D938[22], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D994",
+          "encoding": "patch",
+          "text": "Know her? She's my{br}childhood friend.",
+          "note": "DRAFT prologue dialogue line 23 (D_8014D938[23], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D998",
+          "encoding": "patch",
+          "text": "Oh, is that so...{br}Then when's her birthday?",
+          "note": "DRAFT prologue dialogue line 24 (D_8014D938[24], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D99C",
+          "encoding": "patch",
+          "text": "Her blood type?",
+          "note": "DRAFT prologue dialogue line 25 (D_8014D938[25], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9A0",
+          "encoding": "patch",
+          "text": "Her hobbies?",
+          "note": "DRAFT prologue dialogue line 26 (D_8014D938[26], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9A4",
+          "encoding": "patch",
+          "text": "She just said it.{br}Listening to music.",
+          "note": "DRAFT prologue dialogue line 27 (D_8014D938[27], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9A8",
+          "encoding": "patch",
+          "text": "Oh, right.{br}Her measurements?",
+          "note": "DRAFT prologue dialogue line 28 (D_8014D938[28], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9AC",
+          "encoding": "patch",
+          "text": "How would I know that?",
+          "note": "DRAFT prologue dialogue line 29 (D_8014D938[29], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9B0",
+          "encoding": "patch",
+          "text": "Right, noted.{br}Noted.",
+          "note": "DRAFT prologue dialogue line 30 (D_8014D938[30], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9B4",
+          "encoding": "patch",
+          "text": "Y-you... That notebook{br}is nothing but stuff{br}about girls...",
+          "note": "DRAFT prologue dialogue line 31 (D_8014D938[31], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9B8",
+          "encoding": "patch",
+          "text": "Well, if there's anything{br}you want to know about a{br}girl, give me a call.{br}I'll help you out.",
+          "note": "DRAFT prologue dialogue line 32 (D_8014D938[32], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9BC",
+          "encoding": "patch",
+          "text": "O-okay...{br}Thanks.",
+          "note": "DRAFT prologue dialogue line 33 (D_8014D938[33], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9C0",
+          "encoding": "patch",
+          "text": "More importantly, do you{br}know the legend of{br}this school?",
+          "note": "DRAFT prologue dialogue line 34 (D_8014D938[34], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9C4",
+          "encoding": "patch",
+          "text": "Legend? What's that?",
+          "note": "DRAFT prologue dialogue line 35 (D_8014D938[35], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9C8",
+          "encoding": "patch",
+          "text": "Look out that window.{br}See the big tree?",
+          "note": "DRAFT prologue dialogue line 36 (D_8014D938[36], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9CC",
+          "encoding": "patch",
+          "text": "Hm? Yeah.",
+          "note": "DRAFT prologue dialogue line 37 (D_8014D938[37], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9D0",
+          "encoding": "patch",
+          "text": "They say if a girl confesses{br}to you under that tree,{br}you'll be happy together{br}forever.",
+          "note": "DRAFT prologue dialogue line 38 (D_8014D938[38], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9D4",
+          "encoding": "patch",
+          "text": "Huh, there's a legend{br}like that...",
+          "note": "DRAFT prologue dialogue line 39 (D_8014D938[39], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9D8",
+          "encoding": "patch",
+          "text": "Dunno who started it,{br}but I'm jealous of{br}whoever it happens to.",
+          "note": "DRAFT prologue dialogue line 40 (D_8014D938[40], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9DC",
+          "encoding": "patch",
+          "text": "A legend, huh...{br}Yeah. If it were me...",
+          "note": "DRAFT prologue dialogue line 41 (D_8014D938[41], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "ptr_at": "0x8014D9E0",
+          "encoding": "patch",
+          "text": "And so my high school life{br}began, full of worries{br}and hopes...",
+          "note": "DRAFT prologue dialogue line 42 (D_8014D938[42], kind table D_8014D9E4); relocated to the image tail"
+        },
+        {
+          "addr": "0x8014C718",
+          "max_bytes": 34,
+          "encoding": "patch",
+          "text": "As every beginning has an end,",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C73C",
+          "max_bytes": 38,
+          "encoding": "patch",
+          "text": "every meeting also holds a parting.",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C764",
+          "max_bytes": 22,
+          "encoding": "patch",
+          "text": "A love without end,",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C77C",
+          "max_bytes": 34,
+          "encoding": "patch",
+          "text": "how happy that would be.",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C7A0",
+          "max_bytes": 24,
+          "encoding": "patch",
+          "text": "Here at Kirameki High,",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C7BC",
+          "max_bytes": 22,
+          "encoding": "patch",
+          "text": "there is a legend.",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C7D4",
+          "max_bytes": 30,
+          "encoding": "patch",
+          "text": "An old tree at the yard's end.",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C7F4",
+          "max_bytes": 24,
+          "encoding": "patch",
+          "text": "If a girl confesses to",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C810",
+          "max_bytes": 26,
+          "encoding": "patch",
+          "text": "a boy beneath it on",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C82C",
+          "max_bytes": 28,
+          "encoding": "patch",
+          "text": "graduation day, they will",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C84C",
+          "max_bytes": 20,
+          "encoding": "patch",
+          "text": "be happy forever...",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C864",
+          "max_bytes": 12,
+          "encoding": "patch",
+          "text": "I...",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C874",
+          "max_bytes": 14,
+          "encoding": "patch",
+          "text": "love you.",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C900",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Girl A",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014C908",
+          "max_bytes": 6,
+          "encoding": "patch",
+          "text": "Girl B",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014CCE4",
+          "max_bytes": 28,
+          "encoding": "patch",
+          "text": "What's your family name?",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014CD04",
+          "max_bytes": 8,
+          "encoding": "patch",
+          "text": "Name?",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        },
+        {
+          "addr": "0x8014CD10",
+          "max_bytes": 20,
+          "encoding": "patch",
+          "text": "And your nickname?",
+          "note": "DRAFT (translated from the EXN Japanese; in place)"
+        }
+      ],
+      "hooks": [
+        {
+          "function": "name_ent_hira_disp",
+          "addr": "0x801330E8",
+          "target": "pt_name_page_latin",
+          "note": "name entry page 0: Latin keys instead of hiragana (one glyph per 16-px cell)"
+        },
+        {
+          "function": "name_ent_tab_index_set",
+          "addr": "0x80133E60",
+          "target": "pt_name_band",
+          "note": "page-tab hit test without band 3: the Kanji tab is inert (the module overwrites the kanji font from glyph ~465 up, so the kanji page would draw boxes)"
+        },
+        {
+          "function": "name_ent_glyph_write",
+          "addr": "0x80134254",
+          "target": "pt_name_key",
+          "note": "key press: ASCII append (7/7/15) on page 0, retail pairs on pages 1-3"
+        },
+        {
+          "function": "name_ent_key_cursor_set",
+          "addr": "0x80132B78",
+          "target": "pt_name_cursor",
+          "note": "field cursor: pinned on an ASCII field, Cross deletes a letter"
+        },
+        {
+          "function": "name_ent_record_set",
+          "addr": "0x80138D08",
+          "target": "pt_name_commit",
+          "note": "commit: ASCII bytes straight into the 8/8/16-byte save fields; full name = family + space + given"
+        }
+      ]
+    },
+    "SHOUGATU": {
+      "hooks": [
+        {
+          "function": "shougatu_serifu_step",
+          "addr": "0x80133B48",
+          "target": "pt_shougatu_greeting",
+          "note": "New Year greeting: player family name label -104-4*strlen -> -90-width"
+        }
+      ]
+    },
+    "BUNKA_SD": {
+      "hooks": [
+        {
+          "function": "bunka_sd_rollcall_step",
+          "addr": "0x8013320C",
+          "target": "pt_bunka_sd_rollcall",
+          "note": "festival roll call: season-0 banner label by width"
+        },
+        {
+          "function": "bunka_sd_result_step",
+          "addr": "0x80132FF8",
+          "target": "pt_bunka_sd_announcer",
+          "note": "speech-contest announcer: full name right-aligned to x=96 by width"
+        }
+      ]
+    },
+    "BUNKASAI": {
+      "hooks": [
+        {
+          "function": "bunkasai_girl0_home_club3_96_scene",
+          "addr": "0x801527B0",
+          "target": "pt_bunkasai_photo",
+          "note": "photo booth step machine: family-name label by width (step 16/0)"
+        }
+      ]
+    },
+    "DATE2": {
+      "hooks": [
+        {
+          "function": "date2_sched_menu_disp",
+          "addr": "0x801395A8",
+          "target": "pt_date2_lyrics",
+          "note": "karaoke lyric page: fragments chained by width instead of 7*bytes"
+        },
+        {
+          "function": "date2_song_menu_init",
+          "addr": "0x801385CC",
+          "target": "pt_date2_song_menu",
+          "note": "karaoke song menu: cursor/hit box width from the text width instead of (bytes/2)*16"
+        }
+      ]
+    },
+    "ENDING": {
+      "hooks": [
+        {
+          "function": "ending_song_line_disp",
+          "addr": "0x8013BE20",
+          "target": "pt_ending_song",
+          "note": "bad-ending song line centred by width"
+        }
+      ]
+    },
+    "ETC": {
+      "callsites": [
+        {
+          "at": "0x80147BBC",
+          "expect": "0x800B48B0",
+          "target": "pt_full_name_cat",
+          "note": "exam results board (func_801478F8): strncpy(name, p_sei, 8) + strncat(name, p_mei, 8) -> \"Kenji Fukuda\" like the girls' names on the board (strncat = 0x800B48B0)"
+        }
+      ]
+    }
+  },
+  "containers": {
+    "dirs": [
+      "SERIFU",
+      "SPEAKTST",
+      "BUNKA",
+      "MASTER",
+      "TAIIKU",
+      "SHIAI",
+      "TARA_OBJ"
+    ],
+    "dte": "build/patch/gen/dte.json",
+    "note": "tools/patch/inject.py: every text container repacked from the cloud agent's sheets at its exact size; the DTE table is rebuilt from the whole corpus when build/patch/gen/dte.json is missing. BATTLE and BUNKASD hold mini-game data, not text (refused by the injector)."
+  },
+  "generated": [
+    {
+      "tool": "tools/patch/ui_strings.py",
+      "args": [
+        "--dte",
+        "build/patch/gen/dte.json",
+        "--out",
+        "build/patch/gen/ui_strings.json"
+      ],
+      "note": "UI/system strings (main + overlays), in place; overflows are reported and left Japanese"
+    },
+    {
+      "tool": "tools/patch/overlay_sheets.py",
+      "args": [
+        "--dte",
+        "build/patch/gen/dte.json",
+        "--out",
+        "build/patch/gen/overlay_sheets.json"
+      ],
+      "note": "overlay/main/file strings from the draft sheets + config/patch/overlay_drafts.json (+ editor sheets under translation/localization/sheets/EXEDIR etc.); in place or relocated through the pointer word; overflow reported"
+    }
+  ],
+  "strings_files": [
+    "build/patch/gen/ui_strings.json",
+    "build/patch/gen/overlay_sheets.json"
+  ],
+  "pre_generated": [
+    {
+      "tool": "tools/patch/overlay_sheets.py",
+      "args": [
+        "--containers"
+      ],
+      "note": "writes build/patch/gen/sheets_en/<DIR>/<FILE>.csv for config/patch/containers_extra.json (KOSIEN, URANAI, KARAKASI) with the English of config/patch/overlay_drafts.json"
+    }
+  ]
+}

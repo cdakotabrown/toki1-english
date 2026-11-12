@@ -1,0 +1,22 @@
+{
+ "note": "DRAFT shortened English for container rows that do not fit as the sheet has them: event menus that must fit the retail choice box (three 257-px rows at the 16-px pitch; a reply wraps onto a second row only in a menu of one or two replies) and lines that do not fit their container region. Keyed by <DIR>/<FILE>:<0xoffset>; applied by tools/patch/inject.py at build time; the sheet text is untouched. Checked by tools/patch/choice_check.py. Written here 2026-10-09; the editor owns the final wording.",
+ "rows": {
+  "TAIIKU/TAI_TX.BIN:0x64": "3-legged race{opt}Ball roll{opt}Another event",
+  "TAIIKU/F_DANCE.BIN:0x2e4": "Nice... to... dance...",
+  "SERIFU/SHOGATU.BIN:0x5630": "Look.{br}I got \"{O}\"!",
+  "SERIFU/SHOGATU.BIN:0x5694": "Look.{br}I got \"{O}\"!",
+  "SERIFU/SHOGATU.BIN:0x56f8": "Brutal...{br}I got \"{O}\".",
+  "SERIFU/SHOGATU.BIN:0x71c0": "Well then,{br}mine is {W}.",
+  "SERIFU/SHOGATU.BIN:0xd850": "Mine was \"{O}\" too.",
+  "SERIFU/SHOGATU.BIN:0xd8ac": "Mine was \"{O}\".",
+  "SERIFU/SHOGATU.BIN:0xd904": "Mine was \"{O}\".",
+  "SPEAKTST/TEST_HI.BIN:0xcd80": "Look.{br}I got \"{O}\"!",
+  "SPEAKTST/TEST_HI.BIN:0xcdd8": "Look.{br}I got \"{O}\"!",
+  "SPEAKTST/TEST_HI.BIN:0xce30": "Brutal...{br}I got \"{O}\".",
+  "SPEAKTST/TEST_KA.BIN:0xd610": "Well then,{br}mine is {W}.",
+  "SPEAKTST/TEST_KO.BIN:0xc5e0": "Mine was \"{O}\" too.",
+  "SPEAKTST/TEST_KO.BIN:0xc630": "Mine was \"{O}\".",
+  "SPEAKTST/TEST_KO.BIN:0xc67c": "Mine was \"{O}\".",
+  "BUNKA/BUN_PC.BIN:0x314": "The literature club's{br}showing its book of poems.{br}Quick, gotta get ready."
+ }
+}

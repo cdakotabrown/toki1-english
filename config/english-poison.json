@@ -1,0 +1,9 @@
+{
+  "name": "english-poison",
+  "include": "config/patch/english.json",
+  "description": "TEST build, never shipped: the plain English patch with every region of config/patch/free_regions.json (retail library code tools/patch/free_regions.py proves unreachable) filled with self-loop traps (b . ; nop). If anything executes there, the game freezes and tools/patch/soak_test.py reports a hang; soak_test.py also compares the trap bytes after every segment (a write into a region fails the run). This is the runtime evidence behind the extra module regions of config/patch/english-debug.json. Output: build/patch/english-poison/.",
+  "out": "build/patch/english-poison",
+  "main": {
+    "poison_regions_file": "config/patch/free_regions.json"
+  }
+}

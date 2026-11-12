@@ -1,0 +1,1647 @@
+{
+ "file": "CDROM/FUKUTEST/MAINROM.NBN",
+ "note": "main HUD sheet (boot_data_load -> 0x80180000; 13 4-bpp 128x128 pages of 8 KB, page n at n*0x2000, uploaded to 128x128 VRAM slots; CLUT rows = the 16 rows at D_800CC520 in the exe). Page 9 x96..121: the nine stat labels of the calendar / room panel (parameter_show_init draws them as class_w sprite frames, two 16-px tiles each; the labels sit in 26x12 cells 14 px apart). Page 4: digits 0-9 and 月 on rows 0-11, the weekday / unit kanji 火 水 木 金 土 日 年 on rows 16-27 (12x12 cells, 16-px pitch; hizuke_init: weekday = frame D_800EE7A1+82, the 年/月/日 units are fixed sprites). 日 is one cell serving both the day unit and Sunday, so it reads D in both places; 月 is Mo as the month unit and as Monday. Page 5 x 23..49, y 49..61: the red badge セーブ中 (saving) that replaces the night planner's save icon (bottom right of the icon grid, step 48) while the game writes the card; read on screen 2026-11-03 (explorer album:96/8/10 seed 2, frame 7050: the badge sits where the save icon was, right after the save icon is chosen) and on the page enlarged: セ, ー, ブ (the two dakuten dots), 中.  Drawn with exe CLUT row 13: ring 5, pink fills 7..10.  English SAVE. F2 (2026-11-06): Sunday no longer shares the day unit's cell. Tu and Sa are drawn as two 8-px tile halves (T|u, S|a; the second letter starts on the tile grid) so the exe's Sunday frame 88 (D_800CFC5C[88]) can be rebuilt as two cels, S (tile 0x28) + u (tile 0x21), a new record in the text module (pt_hud_sunday_frame, text_misc.c) with the frame pointer poked (config/patch/english.json main.pokes); the Tue / Sat frames' cel x moves left 2 / 1 px so the labels sit where the 12-px cells drew them.  The 日 cell keeps D as the day unit.",
+ "bpp": 4,
+ "page_bytes": 8192,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "exe",
+  "row": "auto"
+ },
+ "cells": [
+  {
+   "name": "stat_taichou",
+   "page": 9,
+   "x": 96,
+   "y": 0,
+   "w": 28,
+   "h": 12,
+   "text": "Hlth",
+   "jp": "体調",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_geijutsu",
+   "page": 9,
+   "x": 96,
+   "y": 14,
+   "w": 28,
+   "h": 12,
+   "text": "Art",
+   "jp": "芸術",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_youshi",
+   "page": 9,
+   "x": 96,
+   "y": 28,
+   "w": 28,
+   "h": 12,
+   "text": "Look",
+   "jp": "容姿",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_bunkei",
+   "page": 9,
+   "x": 96,
+   "y": 40,
+   "w": 28,
+   "h": 12,
+   "text": "Lit",
+   "jp": "文系",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_undou",
+   "page": 9,
+   "x": 96,
+   "y": 54,
+   "w": 28,
+   "h": 12,
+   "text": "Spt",
+   "jp": "運動",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_konjou",
+   "page": 9,
+   "x": 96,
+   "y": 68,
+   "w": 28,
+   "h": 12,
+   "text": "Guts",
+   "jp": "根性",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_rikei",
+   "page": 9,
+   "x": 96,
+   "y": 80,
+   "w": 28,
+   "h": 12,
+   "text": "Sci",
+   "jp": "理系",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_zatsugaku",
+   "page": 9,
+   "x": 96,
+   "y": 94,
+   "w": 28,
+   "h": 12,
+   "text": "Trv",
+   "jp": "雑学",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_stress",
+   "page": 9,
+   "x": 96,
+   "y": 108,
+   "w": 28,
+   "h": 12,
+   "text": "Strs",
+   "jp": "ストレス",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "unit_month",
+   "page": 4,
+   "x": 113,
+   "y": 0,
+   "w": 12,
+   "h": 12,
+   "text": "Mo",
+   "jp": "月",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_tue_1",
+   "page": 4,
+   "x": 0,
+   "y": 16,
+   "w": 8,
+   "h": 12,
+   "text": "T",
+   "jp": "火 (left half)",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": 2,
+   "valign": 1,
+   "shadow": 10
+  },
+  {
+   "name": "wd_tue_2",
+   "page": 4,
+   "x": 8,
+   "y": 16,
+   "w": 8,
+   "h": 12,
+   "text": "u",
+   "jp": "火 (right half)",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": 0,
+   "valign": 1,
+   "shadow": 10
+  },
+  {
+   "name": "wd_wed",
+   "page": 4,
+   "x": 16,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "We",
+   "jp": "水",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_thu",
+   "page": 4,
+   "x": 32,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Th",
+   "jp": "木",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_fri",
+   "page": 4,
+   "x": 48,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Fr",
+   "jp": "金",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_sat_1",
+   "page": 4,
+   "x": 64,
+   "y": 16,
+   "w": 8,
+   "h": 12,
+   "text": "S",
+   "jp": "土 (left half)",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": 1,
+   "valign": 1,
+   "shadow": 10
+  },
+  {
+   "name": "wd_sat_2",
+   "page": 4,
+   "x": 72,
+   "y": 16,
+   "w": 8,
+   "h": 12,
+   "text": "a",
+   "jp": "土 (right half)",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": 0,
+   "valign": 1,
+   "shadow": 10
+  },
+  {
+   "name": "unit_day",
+   "page": 4,
+   "x": 81,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "D",
+   "jp": "日",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "unit_year",
+   "page": 4,
+   "x": 96,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Yr",
+   "jp": "年",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "icon_saving",
+   "page": 5,
+   "x": 23,
+   "y": 49,
+   "w": 27,
+   "h": 13,
+   "text": "SAVE",
+   "jp": "セーブ中",
+   "clut": {
+    "source": "exe",
+    "row": 13
+   },
+   "fg": 8,
+   "fg_rows": [
+    10,
+    10,
+    10,
+    9,
+    9,
+    9,
+    8,
+    8,
+    7,
+    7,
+    7,
+    7
+   ],
+   "outline": 5,
+   "erase": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_masthead",
+   "page": 11,
+   "x": 0,
+   "y": 0,
+   "w": 112,
+   "h": 32,
+   "jp": "",
+   "text": "MEMORIAL SPOT",
+   "clut": {
+    "source": "exe@0x800CCB20",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 17,
+   "gap": 5,
+   "space": 18,
+   "slant": 0.22,
+   "xscale": 0.6,
+   "fg": 1,
+   "shadow": 4,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "bg": "keep",
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_issue_spring",
+   "page": 11,
+   "x": 0,
+   "y": 40,
+   "w": 56,
+   "h": 16,
+   "jp": "3・4・5月号",
+   "text": "MAR-MAY",
+   "clut": {
+    "source": "exe@0x800CCD20",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 12,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 2,
+   "ramp": [
+    [
+     0.0,
+     7
+    ],
+    [
+     0.12,
+     6
+    ],
+    [
+     0.24,
+     5
+    ],
+    [
+     0.36,
+     4
+    ],
+    [
+     0.46,
+     3
+    ],
+    [
+     0.54,
+     2
+    ],
+    [
+     0.66,
+     3
+    ],
+    [
+     0.76,
+     4
+    ],
+    [
+     0.86,
+     5
+    ],
+    [
+     0.94,
+     6
+    ]
+   ],
+   "erase": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_issue_summer",
+   "page": 11,
+   "x": 0,
+   "y": 56,
+   "w": 56,
+   "h": 16,
+   "jp": "6・7・8月号",
+   "text": "JUN-AUG",
+   "clut": {
+    "source": "exe@0x800CCD20",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 12,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 10,
+   "ramp": [
+    [
+     0.0,
+     15
+    ],
+    [
+     0.12,
+     14
+    ],
+    [
+     0.24,
+     13
+    ],
+    [
+     0.36,
+     12
+    ],
+    [
+     0.46,
+     11
+    ],
+    [
+     0.54,
+     10
+    ],
+    [
+     0.66,
+     11
+    ],
+    [
+     0.76,
+     12
+    ],
+    [
+     0.86,
+     13
+    ],
+    [
+     0.94,
+     14
+    ]
+   ],
+   "erase": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_issue_autumn",
+   "page": 11,
+   "x": 56,
+   "y": 40,
+   "w": 56,
+   "h": 16,
+   "jp": "9・10・11月号",
+   "text": "SEP-NOV",
+   "clut": {
+    "source": "exe@0x800CCD40",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 12,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 2,
+   "ramp": [
+    [
+     0.0,
+     7
+    ],
+    [
+     0.12,
+     6
+    ],
+    [
+     0.24,
+     5
+    ],
+    [
+     0.36,
+     4
+    ],
+    [
+     0.46,
+     3
+    ],
+    [
+     0.54,
+     2
+    ],
+    [
+     0.66,
+     3
+    ],
+    [
+     0.76,
+     4
+    ],
+    [
+     0.86,
+     5
+    ],
+    [
+     0.94,
+     6
+    ]
+   ],
+   "erase": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_issue_winter",
+   "page": 11,
+   "x": 56,
+   "y": 56,
+   "w": 56,
+   "h": 16,
+   "jp": "12・1・2月号",
+   "text": "DEC-FEB",
+   "clut": {
+    "source": "exe@0x800CCD40",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 12,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 10,
+   "ramp": [
+    [
+     0.0,
+     15
+    ],
+    [
+     0.12,
+     14
+    ],
+    [
+     0.24,
+     13
+    ],
+    [
+     0.36,
+     12
+    ],
+    [
+     0.46,
+     11
+    ],
+    [
+     0.54,
+     10
+    ],
+    [
+     0.66,
+     11
+    ],
+    [
+     0.76,
+     12
+    ],
+    [
+     0.86,
+     13
+    ],
+    [
+     0.94,
+     14
+    ]
+   ],
+   "erase": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_first_issue",
+   "pieces": [
+    {
+     "page": 11,
+     "x": 112,
+     "y": 0,
+     "w": 16
+    },
+    {
+     "page": 11,
+     "x": 112,
+     "y": 16,
+     "w": 16
+    }
+   ],
+   "h": 16,
+   "jp": "創刊",
+   "text": "NEW!",
+   "clut": {
+    "source": "exe@0x800CCC60",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 12,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 2,
+   "ramp": [
+    [
+     0.0,
+     7
+    ],
+    [
+     0.12,
+     6
+    ],
+    [
+     0.24,
+     5
+    ],
+    [
+     0.36,
+     4
+    ],
+    [
+     0.46,
+     3
+    ],
+    [
+     0.54,
+     2
+    ],
+    [
+     0.66,
+     3
+    ],
+    [
+     0.76,
+     4
+    ],
+    [
+     0.86,
+     5
+    ],
+    [
+     0.94,
+     6
+    ]
+   ],
+   "erase": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_central_park",
+   "jp": "",
+   "text": "CENTRAL PARK",
+   "clut": {
+    "source": "exe@0x800CCBE0",
+    "entries": 16
+   },
+   "h": 24,
+   "pieces": [
+    {
+     "page": 2,
+     "x": 0,
+     "y": 0,
+     "w": 128
+    },
+    {
+     "page": 2,
+     "x": 120,
+     "y": 24,
+     "w": 8
+    }
+   ],
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.66,
+   "fg": 2,
+   "shadow": 4,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_art_museum",
+   "jp": "美術館完成",
+   "text": "ART MUSEUM OPENS",
+   "clut": {
+    "source": "exe@0x800CCBE0",
+    "entries": 16
+   },
+   "h": 24,
+   "page": 2,
+   "x": 0,
+   "y": 24,
+   "w": 120,
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.6,
+   "fg": 7,
+   "shadow": 9,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_aquarium",
+   "jp": "水族館特集",
+   "text": "AQUARIUM SPECIAL",
+   "clut": {
+    "source": "exe@0x800CCBE0",
+    "entries": 16
+   },
+   "h": 24,
+   "page": 2,
+   "x": 0,
+   "y": 48,
+   "w": 112,
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.56,
+   "fg": 12,
+   "shadow": 14,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_stadium",
+   "jp": "",
+   "text": "STADIUM OPENS",
+   "clut": {
+    "source": "exe@0x800CCC00",
+    "entries": 16
+   },
+   "h": 24,
+   "pieces": [
+    {
+     "page": 2,
+     "x": 0,
+     "y": 72,
+     "w": 128
+    },
+    {
+     "page": 2,
+     "x": 112,
+     "y": 48,
+     "w": 16
+    }
+   ],
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.66,
+   "fg": 2,
+   "shadow": 4,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_botanical",
+   "jp": "植物園特集",
+   "text": "BOTANIC GARDEN",
+   "clut": {
+    "source": "exe@0x800CCC00",
+    "entries": 16
+   },
+   "h": 24,
+   "page": 2,
+   "x": 0,
+   "y": 96,
+   "w": 112,
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.64,
+   "fg": 7,
+   "shadow": 9,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_bowling",
+   "jp": "",
+   "text": "BOWLING SPECIAL",
+   "clut": {
+    "source": "exe@0x800CCC00",
+    "entries": 16
+   },
+   "h": 24,
+   "pieces": [
+    {
+     "page": 7,
+     "x": 0,
+     "y": 0,
+     "w": 128
+    },
+    {
+     "page": 2,
+     "x": 112,
+     "y": 96,
+     "w": 16
+    }
+   ],
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.66,
+   "fg": 12,
+   "shadow": 14,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_karaoke",
+   "jp": "カラオケBOX完成",
+   "text": "KARAOKE BOX OPENS",
+   "clut": {
+    "source": "exe@0x800CCC20",
+    "entries": 16
+   },
+   "h": 24,
+   "pieces": [
+    {
+     "page": 7,
+     "x": 0,
+     "y": 24,
+     "w": 128
+    },
+    {
+     "page": 11,
+     "x": 0,
+     "y": 104,
+     "w": 24
+    }
+   ],
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.66,
+   "fg": 2,
+   "shadow": 4,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_hl_planetarium",
+   "jp": "",
+   "text": "PLANETARIUM SPECIAL",
+   "clut": {
+    "source": "exe@0x800CCC20",
+    "entries": 16
+   },
+   "h": 24,
+   "pieces": [
+    {
+     "page": 7,
+     "x": 0,
+     "y": 48,
+     "w": 128
+    },
+    {
+     "page": 11,
+     "x": 24,
+     "y": 104,
+     "w": 24
+    }
+   ],
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 18,
+   "gap": 6,
+   "space": 22,
+   "xscale": 0.66,
+   "fg": 7,
+   "shadow": 9,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "center"
+  },
+  {
+   "name": "mag_ad_on_sale",
+   "pieces": [
+    {
+     "page": 12,
+     "x": 112,
+     "y": 0,
+     "w": 16
+    },
+    {
+     "page": 12,
+     "x": 112,
+     "y": 16,
+     "w": 16
+    },
+    {
+     "page": 12,
+     "x": 112,
+     "y": 32,
+     "w": 16
+    },
+    {
+     "page": 12,
+     "x": 112,
+     "y": 48,
+     "w": 8
+    }
+   ],
+   "h": 16,
+   "jp": "好評発売中",
+   "text": "ON SALE!",
+   "clut": {
+    "source": "exe@0x800CCE20",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 11,
+   "gap": 7,
+   "space": 20,
+   "xscale": 0.72,
+   "fg": 15,
+   "outline": 1,
+   "outline_w": 1,
+   "ramp": [
+    [
+     0.0,
+     10
+    ],
+    [
+     0.15,
+     11
+    ],
+    [
+     0.3,
+     12
+    ],
+    [
+     0.42,
+     13
+    ],
+    [
+     0.5,
+     15
+    ],
+    [
+     0.62,
+     14
+    ],
+    [
+     0.76,
+     13
+    ],
+    [
+     0.88,
+     12
+    ]
+   ],
+   "erase": [
+    1,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_ad_coming_soon",
+   "pieces": [
+    {
+     "page": 11,
+     "x": 96,
+     "y": 104,
+     "w": 32
+    },
+    {
+     "page": 11,
+     "x": 88,
+     "y": 88,
+     "w": 24
+    }
+   ],
+   "h": 16,
+   "jp": "発売予定",
+   "text": "COMING SOON",
+   "clut": {
+    "source": "exe@0x800CCE20",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 10,
+   "gap": 6,
+   "space": 18,
+   "xscale": 0.6,
+   "fg": 9,
+   "outline": 1,
+   "outline_w": 1,
+   "ramp": [
+    [
+     0.0,
+     4
+    ],
+    [
+     0.15,
+     5
+    ],
+    [
+     0.3,
+     6
+    ],
+    [
+     0.42,
+     7
+    ],
+    [
+     0.5,
+     9
+    ],
+    [
+     0.62,
+     8
+    ],
+    [
+     0.76,
+     7
+    ],
+    [
+     0.88,
+     6
+    ]
+   ],
+   "erase": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "bg": "keep",
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_stadium_wrestling",
+   "page": 12,
+   "x": 0,
+   "y": 64,
+   "w": 32,
+   "h": 16,
+   "jp": "プロレス",
+   "text": "WRESTLING",
+   "clut": {
+    "source": "exe@0x800CCBA0",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 7,
+   "gap": 6,
+   "space": 16,
+   "xscale": 0.5,
+   "fg": 9,
+   "shadow": 10,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "mag_stadium_baseball",
+   "page": 12,
+   "x": 32,
+   "y": 64,
+   "w": 32,
+   "h": 16,
+   "jp": "野球",
+   "text": "BASEBALL",
+   "clut": {
+    "source": "exe@0x800CCBA0",
+    "entries": 16
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 8,
+   "gap": 6,
+   "space": 16,
+   "xscale": 0.55,
+   "fg": 9,
+   "shadow": 10,
+   "shadow_dx": 1,
+   "shadow_dy": 1,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "center"
+  },
+  {
+   "name": "genre_romance",
+   "page": 12,
+   "x": 0,
+   "y": 48,
+   "w": 40,
+   "h": 8,
+   "jp": "",
+   "text": "ROMANCE",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 135,
+   "note": "The Memorial Spot genre tags (docs/translation/VISUAL-SWEEP.md 3.2): the retail tags are exe frames 134..143 of basyo_init_tbl1, each 1..5 cels of 8x8 kana shared between tags on this page's rows 48..71 (cel page 0xA = MAINROM p12; tp 0x3110 = VRAM CLUT row 481, the exe row at 0x800CC740, index 9 = (128, 128, 160) as measured on screen).  Each genre_* cell is one English word strip in the 7-px tiny_caps face (\"frame\": the exe frame it serves); config/patch/english.json main.pokes re-point the records at them (tools/patch/mag_genre_tags.py generates and checks those pokes).  Space used: the kana area, plus x 104..111 and 120..127 of rows 48..63, x 64..71 of rows 64..71 and x 64..119 of rows 72..79, blank in the retail page and referenced by no frame of the table (genre_erase_ru clears the last kana)."
+  },
+  {
+   "name": "genre_suspense",
+   "page": 12,
+   "x": 40,
+   "y": 48,
+   "w": 40,
+   "h": 8,
+   "jp": "サスペンス",
+   "text": "SUSPENSE",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 137
+  },
+  {
+   "name": "genre_comedy",
+   "page": 12,
+   "x": 80,
+   "y": 48,
+   "w": 32,
+   "h": 8,
+   "jp": "コメディー",
+   "text": "COMEDY",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 134
+  },
+  {
+   "name": "genre_classical",
+   "page": 12,
+   "x": 0,
+   "y": 56,
+   "w": 40,
+   "h": 8,
+   "jp": "クラシック",
+   "text": "CLASSICAL",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 140
+  },
+  {
+   "name": "genre_new_music",
+   "page": 12,
+   "x": 40,
+   "y": 56,
+   "w": 40,
+   "h": 8,
+   "jp": "",
+   "text": "NEW MUSIC",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 143
+  },
+  {
+   "name": "genre_action",
+   "page": 12,
+   "x": 80,
+   "y": 56,
+   "w": 32,
+   "h": 8,
+   "jp": "アクション",
+   "text": "ACTION",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 136
+  },
+  {
+   "name": "genre_idol",
+   "jp": "アイドル",
+   "text": "IDOL",
+   "h": 8,
+   "pieces": [
+    {
+     "page": 12,
+     "x": 120,
+     "y": 48,
+     "w": 8
+    },
+    {
+     "page": 12,
+     "x": 120,
+     "y": 56,
+     "w": 8
+    }
+   ],
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 141
+  },
+  {
+   "name": "genre_rock",
+   "page": 12,
+   "x": 64,
+   "y": 64,
+   "w": 24,
+   "h": 8,
+   "jp": "ロック",
+   "text": "ROCK",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 142
+  },
+  {
+   "name": "genre_horror",
+   "page": 12,
+   "x": 64,
+   "y": 72,
+   "w": 32,
+   "h": 8,
+   "jp": "ホラー",
+   "text": "HORROR",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 138
+  },
+  {
+   "name": "genre_anime",
+   "page": 12,
+   "x": 96,
+   "y": 72,
+   "w": 24,
+   "h": 8,
+   "jp": "アニメ",
+   "text": "ANIME",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": 0,
+   "frame": 139
+  },
+  {
+   "name": "genre_erase_ru",
+   "page": 12,
+   "x": 88,
+   "y": 64,
+   "w": 8,
+   "h": 8,
+   "jp": "ル",
+   "text": "",
+   "clut": {
+    "source": "exe@0x800CC740",
+    "entries": 16
+   },
+   "fg": 9,
+   "erase": [
+    9
+   ],
+   "bg": 0
+  }
+ ]
+}

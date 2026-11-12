@@ -1,0 +1,184 @@
+{
+ "file": "CDROM/FUKUTEST/TITLE.NBN",
+ "note": "title menu (title_data_read -> 0x80180000; title_show_init draws frames 0/2/4 of the record table at 0x801EAB3C): the 8-bpp page at file offset 0x62200 (VRAM 448,0) holds 'Game Start' twice (rows 0 and 16, index families 2-15 and 18-31: one per CLUT offset) and オプション in three pieces (オ at 112,0; プ at 112,16; ション at 0,32) that the frame-4 record draws side by side at x 120/136/152. Glyphs: outline 8/24, fill a vertical ramp (2-7 / 18-23) sampled per row from the retail glyph, edges 9-15 / 25-31; English in the 12-px font with the 1-px outline (a bold variant merged the letters). The HIGHLIGHTED Options (the menu cursor on it) is a fourth copy of オプション in the logo page at file offset 0x5A200 (VRAM 384,0), x 48..127 y 112..127, family 2-15 like row 0; found by the 2026-10-09 coverage campaign (the selected item read オプション).",
+ "bpp": 8,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "none"
+ },
+ "cells": [
+  {
+   "name": "game_start",
+   "offset": "0x62200",
+   "x": 0,
+   "y": 0,
+   "w": 112,
+   "h": 16,
+   "text": "Game Start",
+   "jp": "",
+   "fg": "row",
+   "fill_set": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "outline": 8,
+   "erase": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "bold": false,
+   "align": "center"
+  },
+  {
+   "name": "game_start_b",
+   "offset": "0x62200",
+   "x": 0,
+   "y": 16,
+   "w": 112,
+   "h": 16,
+   "text": "Game Start",
+   "jp": "",
+   "fg": "row",
+   "fill_set": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "outline": 24,
+   "erase": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+   ],
+   "bg": 0,
+   "bold": false,
+   "align": "center"
+  },
+  {
+   "name": "options",
+   "h": 16,
+   "pieces": [
+    {
+     "offset": "0x62200",
+     "x": 112,
+     "y": 0,
+     "w": 16
+    },
+    {
+     "offset": "0x62200",
+     "x": 112,
+     "y": 16,
+     "w": 16
+    },
+    {
+     "offset": "0x62200",
+     "x": 0,
+     "y": 32,
+     "w": 48
+    }
+   ],
+   "text": "Options",
+   "jp": "オプション",
+   "fg": "row",
+   "fill_set": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "outline": 24,
+   "erase": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+   ],
+   "bg": 0,
+   "bold": false,
+   "align": "center"
+  },
+  {
+   "name": "options_hi",
+   "offset": "0x5A200",
+   "x": 48,
+   "y": 112,
+   "w": 80,
+   "h": 16,
+   "text": "Options",
+   "jp": "オプション",
+   "fg": "row",
+   "fill_set": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "outline": 8,
+   "erase": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0,
+   "bold": false,
+   "align": "center"
+  }
+ ]
+}

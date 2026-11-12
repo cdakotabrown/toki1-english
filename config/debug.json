@@ -1,0 +1,54 @@
+{
+  "name": "debug",
+  "description": "DEBUG BUILD (2026-10-09): exposes Konami's own in-game debug facilities that survive in SLPS_000.65 (step/sub-step/counter overlay, debug text renderers, OPTION's hidden sound test and parameter editor, the page-F scene warp) and adds a scene-select menu built on the retail step machine. The retail gates stay in the code: D_800B9710 is only forced on by the module each frame, the OPTION card-file check (BISLPS-00065F) still runs. Output: build/patch/debug/.",
+  "out": "build/patch/debug",
+  "symbols": "config/patch/symbols.json",
+  "main": {
+    "module": {
+      "generated": [
+        {"tool": "tools/patch/debug_fontgen.py", "args": ["--out", "build/patch/debug/gen"]}
+      ],
+      "sources": [
+        "src/patch/debug/dbg_main.c",
+        "src/patch/debug/dbg_scenes.c",
+        "src/patch/debug/dbg_unlock.c",
+        "build/patch/debug/gen/debug_font.c"
+      ],
+      "region": {
+        "start": "0x800BF230",
+        "end": "0x800CC2A4",
+        "what": "JIS level-1 kanji glyphs of the 12x12 font D_800BD250 (glyphs 453..3417), the same block the English profile reclaims; the debug module is ~8 KB so only the last ~450 kanji (rarest JIS level-1 codes) are lost"
+      },
+      "place": "end",
+      "hooks": [
+        {
+          "function": "debug_font_load",
+          "addr": "0x8004B154",
+          "target": "dbg_font_load",
+          "note": "retail uploads RAM 0x801F0020 (nothing ever puts a font there on the retail disc); the hook uploads the generated 4bpp font to the same VRAM rect (704,480 64x32 words)"
+        }
+      ]
+    },
+    "callsites": [
+      {
+        "at": "0x800423A8",
+        "expect": "game_main",
+        "target": "dbg_game_main",
+        "note": "_main's frame loop `jal game_main`: game_main's first two words are a hoisted now_step load that falls into the body (func_800426F8 expects it in $v0), so a head trampoline is impossible; the call site is redirected instead and dbg_game_main calls the untouched retail game_main"
+      }
+    ],
+    "pokes": [
+      {
+        "addr": "0x800B9710",
+        "u8": 1,
+        "note": "D_800B9710 Konami debug-display flag (.data, retail 0): gates step_debug_overlay_draw, the debug text renderers, debug_font_load, the pad-2 L1+R1 VRAM viewer and R1/R2 pn_switch in _main, OPTION's L1+L2+R1+R2 debug entry (scenes 33/34). Retail sets it only when the memory-card file BISLPS-00065F exists at OPTION boot; the module re-asserts it every frame."
+      },
+      {
+        "addr": "0x800BA280",
+        "u8": 8,
+        "note": "D_800BA280 'pn' debug text page (retail 0): the three renderers draw only when >= 4. pn_switch (pad-2 R1/R2 under the debug flag) steps 8..0; OPTION's screens call pn_set(4); NAME_ENT saves/restores it around the opening movie."
+      }
+    ]
+  },
+  "overlays": {}
+}

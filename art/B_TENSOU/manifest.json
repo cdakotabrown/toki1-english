@@ -1,0 +1,78 @@
+{
+ "file": "CDROM/BUNKASD/B_TENSOU.BIN",
+ "note": "BUNKA_SD science-club stage (forced scene 128 + now_sub_step = 242, the func_80135A2C route: func_801359B8 loads this file). The stage background is three 128-px 8-bpp blocks at file offsets 0x2a5d4 / 0x2e5d4 / 0x325d4 (not 16 KB aligned in this file), uploaded side by side at VRAM byte x 896 / 1024 / 1152, y 128 (matched row by row on a VRAM dump of the scene); CLUT = the 256 colours at +0x0. The club board 科学部 (white 0xe5, strokes 0xe1 with 0xe3/0xe4 anti-aliasing; interior u 136-183, text rows 21-31 of the two-block surface) and the experiment sign 'Matter Transfer Experiment' (cyan 0xf7 strokes in a blue 0xf6 outline on the gold 0xfb/0xfa panel; u 111-208, rows 40-56) both straddle the 0x2a5d4 | 0x2e5d4 block edge. The A / B and A→B labels are Latin already.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x0",
+  "entries": 256
+ },
+ "cells": [
+  {
+   "name": "club_board",
+   "offset": [
+    "0x2a5d4",
+    "0x2e5d4"
+   ],
+   "x": 136,
+   "y": 21,
+   "w": 48,
+   "h": 11,
+   "text": "Sci. Club",
+   "jp": "科学部",
+   "fg": 225,
+   "outline": 228,
+   "erase": [
+    225,
+    227,
+    228
+   ],
+   "bg": 229,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "club_board_shadow",
+   "offset": [
+    "0x2a5d4",
+    "0x2e5d4"
+   ],
+   "x": 137,
+   "y": 32,
+   "w": 46,
+   "h": 3,
+   "text": "",
+   "jp": "(the kanji's drop shadow on the board's bevel)",
+   "fg": 245,
+   "erase": [
+    241,
+    244
+   ],
+   "bg": 245
+  },
+  {
+   "name": "experiment_sign",
+   "offset": [
+    "0x2a5d4",
+    "0x2e5d4"
+   ],
+   "x": 111,
+   "y": 40,
+   "w": 98,
+   "h": 17,
+   "text": "Teleporter Test",
+   "jp": "",
+   "fg": 247,
+   "outline": 246,
+   "erase": [
+    246,
+    247
+   ],
+   "bg": 250,
+   "align": "center",
+   "valign": "glyph"
+  }
+ ]
+}

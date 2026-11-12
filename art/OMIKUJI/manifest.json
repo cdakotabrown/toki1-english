@@ -1,0 +1,182 @@
+{
+ "file": "CDROM/TARA_OBJ/OMIKUJI.BIN",
+ "note": "SHOUGATU omikuji (func_80135B40: cd_read_start2 -> 0x801C0000, 55 sectors). CLUT = 256 RGB1555 colours at +0; 8-bpp 128x128 pages at 0x2000 + 0x4000k. The fortune slip's top box shows one 32-px word block: 中吉 / 小吉 on page 0x6000 rows 5-26, 吉 / 末吉 rows 37-58, 凶 on page 0x2000 rows 69-90 (u 96), 大吉 / 大凶 rows 101-122 (checked in game: the scene 83 shrine route draws the u 64 block of page 0x6000 row 2 at screen x 144). Paper index 0x9f; the kanji are 0x91 strokes with 0x92-0x94 grey anti-aliasing and a 0x95 halo, matched by fg 0x91, shadow 0x94, outline 0x95. The English follows the fortune words of the SHOUGATU result line (SHOUGATU.EXN 0x11f1c..), producer decision D5: 大吉 Best / 中吉 Good / 吉 Fair / 小吉 Minor / 末吉 Later / 凶 Bad / 大凶 Worst.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x0",
+  "entries": 256
+ },
+ "cells": [
+  {
+   "name": "fortune_chukichi",
+   "offset": "0x6000",
+   "x": 64,
+   "y": 5,
+   "w": 32,
+   "h": 22,
+   "text": "Good",
+   "jp": "中吉",
+   "gloss": "middle blessing",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_shokichi",
+   "offset": "0x6000",
+   "x": 96,
+   "y": 5,
+   "w": 32,
+   "h": 22,
+   "text": "Minor",
+   "jp": "小吉",
+   "gloss": "small blessing",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_kichi",
+   "offset": "0x6000",
+   "x": 64,
+   "y": 37,
+   "w": 32,
+   "h": 22,
+   "text": "Fair",
+   "jp": "吉",
+   "gloss": "blessing",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_suekichi",
+   "offset": "0x6000",
+   "x": 96,
+   "y": 37,
+   "w": 32,
+   "h": 22,
+   "text": "Later",
+   "jp": "末吉",
+   "gloss": "lesser blessing",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_kyou",
+   "offset": "0x2000",
+   "x": 96,
+   "y": 69,
+   "w": 32,
+   "h": 22,
+   "text": "Bad",
+   "jp": "凶",
+   "gloss": "curse",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_daikichi",
+   "offset": "0x2000",
+   "x": 64,
+   "y": 101,
+   "w": 32,
+   "h": 22,
+   "text": "Best",
+   "jp": "大吉",
+   "gloss": "great blessing",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "fortune_daikyou",
+   "offset": "0x2000",
+   "x": 96,
+   "y": 101,
+   "w": 32,
+   "h": 22,
+   "text": "Worst",
+   "jp": "大凶",
+   "gloss": "great curse",
+   "fg": 145,
+   "outline": 149,
+   "shadow": 148,
+   "erase": [
+    145,
+    146,
+    147,
+    148,
+    149
+   ],
+   "bg": 159,
+   "align": "center",
+   "valign": "glyph"
+  }
+ ]
+}

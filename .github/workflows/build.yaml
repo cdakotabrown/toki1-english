@@ -1,0 +1,73 @@
+name: Lint and disc-free tests
+
+# Local mirror: tools/ci/run_ci_locally.sh runs these jobs step for step in a
+# clean checkout of a commit. Change both files in the same commit.
+#
+# CI has no retail disc, so it cannot build the patched disc or run the
+# disc-backed tests (`make test`); README.md says how to run them with your
+# own disc. Everything here is disc-free on purpose: if a check ever needs
+# the disc, delete it here instead of making it skip silently.
+#
+# The patch tools read toki1-decomp (the naming ledger, the C tree), so the
+# job checks it out next to this repository, as a developer would.
+#
+# Runners are pinned: a runner upgrade must be a deliberate commit.
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Syntax, JSON, sheet lint, unit tests, symbol sync
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      TOKI_DECOMP_DIR: ${{ github.workspace }}/toki1-decomp
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: toki1-english
+          fetch-depth: 0      # the lint compares a pull request's rows with its base
+
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/toki1-decomp
+          path: toki1-decomp
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        working-directory: toki1-english
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Byte-compile every Python tool
+        working-directory: toki1-english
+        run: python -m compileall -q -x '/(\.venv|build|__pycache__|\.git)/' tools
+
+      - name: Shell syntax
+        working-directory: toki1-english
+        run: find tools -name '*.sh' -print0 | xargs -0 -r -n1 bash -n
+
+      - name: Every tracked JSON parses
+        working-directory: toki1-english
+        run: python tools/ci/check_json.py
+
+      - name: Sheet lint (format, rows, no Japanese script, tokens, fit)
+        working-directory: toki1-english
+        run: make lint PYTHON=python LINT_ARGS="${{ github.base_ref && format('--base origin/{0}', github.base_ref) || '' }}"
+
+      - name: Disc-free unit tests and the symbol sync check
+        working-directory: toki1-english
+        run: make test-disc-free PYTHON=python

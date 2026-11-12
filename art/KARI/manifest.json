@@ -1,0 +1,323 @@
+{
+ "file": "CDROM/TAIIKU/KARI.BIN",
+ "note": "sports day, borrowing race (TAIIKU step 114): the stamp 失格 'disqualified' that lands after a foul pick (taiiku_ouen_cue: the Konami code entered while the instruction slip is up (114/3/1) arms the foul mode, taiiku_konami_mode = 1; picking the front-row girl then counts as a foul and taiiku_goal_check2 forces last place). Sprite class_w[112], direct cel 160 of TAOPD.BIN (tile 392: runner page 6, u0 v16, 128x64, drawn at 2x), set by taiiku_sprite_init in 114/4/2 and dropped onto the screen in 114/5/3. Page 6 = KARI.BIN + 0x40000 (8-bpp, 128 px wide, uploaded in 114/1/0); the two kanji are rows 26..77, a vertical ramp 199 (top) .. 194 (bottom) with a 1-px keyline 193; CLUT = row 0 of KASETU.BIN (offset 0, VRAM row 496). English DISQUALIFIED in the hand-authored display face (tools/patch/font/display_caps.txt), the same ramp and keyline. Name plates (cells plate_*): seven 32x16 surname plates (藤崎 紐緒 片桐 清川 古式 鏡 如月) on the page at file offset 0 (uploaded to VRAM (640,128) for the race), x 64..127 y 48..127, 12-px kanji in index 1 on a plate of index 47. No frame of the race draws them (docs/translation/VISUAL-SWEEP.md 3.1.4: plates painted with a marker never reach the screen anywhere in the borrowing race); English for completeness: the surname in the 7-px tiny_caps face, on one line where it fits in 32 px, else split over the plate's two 8-px rows (FUJI / SAKI). Render CLUT: KASETU.BIN row 0 (1 near black, 47 light grey).",
+ "bpp": 8,
+ "page_w": 128,
+ "page_h": 128,
+ "cells": [
+  {
+   "name": "stamp_dq",
+   "offset": "0x40000",
+   "x": 0,
+   "y": 16,
+   "w": 128,
+   "h": 64,
+   "jp": "失格",
+   "text": "DISQUALIFIED",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "face": "display_caps",
+   "face_sha1": "b34fa2b9f46fa1a0eb788baf94d75fc12ad39a32",
+   "cap": 26,
+   "gap": 6,
+   "space": 20,
+   "xscale": 0.6,
+   "fg": 196,
+   "outline": 193,
+   "outline_w": 1,
+   "ramp": [
+    [
+     0.0,
+     199
+    ],
+    [
+     0.17,
+     198
+    ],
+    [
+     0.34,
+     197
+    ],
+    [
+     0.5,
+     196
+    ],
+    [
+     0.67,
+     195
+    ],
+    [
+     0.84,
+     194
+    ]
+   ],
+   "erase": [
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "藤崎",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "fujisaki",
+   "name": "plate_fujisaki_1",
+   "x": 64,
+   "y": 48,
+   "h": 8,
+   "text": "FUJI",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "藤崎",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "fujisaki",
+   "name": "plate_fujisaki_2",
+   "x": 64,
+   "y": 56,
+   "h": 8,
+   "text": "SAKI",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "紐緒",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "himoo",
+   "name": "plate_himoo",
+   "x": 96,
+   "y": 48,
+   "h": 16,
+   "text": "HIMOO",
+   "valign": "center"
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "片桐",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "katagiri",
+   "name": "plate_katagiri_1",
+   "x": 96,
+   "y": 64,
+   "h": 8,
+   "text": "KATA",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "片桐",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "katagiri",
+   "name": "plate_katagiri_2",
+   "x": 96,
+   "y": 72,
+   "h": 8,
+   "text": "GIRI",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "清川",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "kiyokawa",
+   "name": "plate_kiyokawa_1",
+   "x": 96,
+   "y": 80,
+   "h": 8,
+   "text": "KIYO",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "清川",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "kiyokawa",
+   "name": "plate_kiyokawa_2",
+   "x": 96,
+   "y": 88,
+   "h": 8,
+   "text": "KAWA",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "古式",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "koshiki",
+   "name": "plate_koshiki",
+   "x": 64,
+   "y": 96,
+   "h": 16,
+   "text": "KOSHIKI",
+   "valign": "center"
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "鏡",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "kagami",
+   "name": "plate_kagami",
+   "x": 96,
+   "y": 96,
+   "h": 16,
+   "text": "KAGAMI",
+   "valign": "center"
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "如月",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "kisaragi",
+   "name": "plate_kisaragi_1",
+   "x": 64,
+   "y": 112,
+   "h": 8,
+   "text": "KISA",
+   "valign": 1
+  },
+  {
+   "offset": "0x0",
+   "w": 32,
+   "jp": "如月",
+   "clut": {
+    "source": "retail:CDROM/TAIIKU/KASETU.BIN@0x0",
+    "entries": 256
+   },
+   "pixel_font": "tiny_caps",
+   "fg": 1,
+   "erase": [
+    1
+   ],
+   "bg": 47,
+   "align": "center",
+   "plate": "kisaragi",
+   "name": "plate_kisaragi_2",
+   "x": 64,
+   "y": 120,
+   "h": 8,
+   "text": "RAGI",
+   "valign": 1
+  }
+ ]
+}

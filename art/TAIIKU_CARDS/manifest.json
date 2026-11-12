@@ -1,0 +1,24 @@
+{
+ "file": "CDROM/TAIIKU/SPOON.BIN",
+ "note": "Sports-day cue cards: the signs held up in the spoon relay and the three-legged race (せえの / みぎ / ひだり = Go! / Right / Left; the rhythm the player follows, so gameplay-relevant). TAIIKU .BIN files are 8-bpp 128x128 pages from file offset 0x2000; the cards are on SPOON.BIN page 6 (0x1A000) at x 80..128, y 64..112: card fill 23, strokes 76 / 77 with a light ring 38, border 46 / 129. The same page is a byte copy in NININ.BIN (0x26000) and TAI_BG.BIN (0x1E000), patched through `copies`. CLUT = the 256 colours at file offset 0. English DRAFT.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {"source": "file:0x0", "entries": 256},
+ "copies": [
+  {"file": "CDROM/TAIIKU/NININ.BIN", "base": "0xC000"},
+  {"file": "CDROM/TAIIKU/TAI_BG.BIN", "base": "0x4000"}
+ ],
+ "cells": [
+  {"name": "card_seeno", "offset": "0x1A000", "x": 82, "y": 66, "w": 44, "h": 12,
+   "text": "Go!", "jp": "せえの", "fg": 77, "outline": 38, "erase": [76, 77, 38], "bg": 23,
+   "align": "center", "valign": "center"},
+  {"name": "card_migi", "offset": "0x1A000", "x": 90, "y": 82, "w": 36, "h": 12,
+   "text": "Right", "jp": "みぎ", "fg": 77, "outline": 38, "erase": [76, 77, 38], "bg": 23,
+   "align": "center", "valign": "center"},
+  {"name": "card_hidari", "offset": "0x1A000", "x": 90, "y": 98, "w": 37, "h": 12,
+   "text": "Left", "jp": "ひだり", "fg": 77, "outline": 38, "erase": [76, 77, 38], "bg": 23,
+   "align": "center", "valign": "center"}
+ ]
+}

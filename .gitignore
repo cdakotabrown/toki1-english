@@ -1,0 +1,35 @@
+# Nothing made from the disc is ever committed.
+
+# Build output: patched files, disc image, PPF, reports
+/build/
+*.bin
+*.BIN
+*.cue
+*.iso
+*.ppf
+*.EXN
+*.NBN
+
+# The sheets hydrated with the Japanese from your disc (make hydrate)
+/work/
+
+# The reviewer's save lock and backups
+*.review-save.lock
+.review-backups/
+
+# Local reference-emulator tooling, QA screenshots
+/local/
+screenshot_*.png
+*.ppm
+*.mcd
+
+# Python, editors, OS
+.venv
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store

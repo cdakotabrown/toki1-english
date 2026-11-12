@@ -1,0 +1,20 @@
+{
+ "note": "DRAFT English for strings the 2026-10-10 runtime coverage campaign (tools/patch/coverage_campaign.py) found still in Japanese after the item-name table: the gift-record tables copied into DATE, DATE2, KANGEI, SHOUGATU and SHUGAKU carry 剣山 and Ｒ２００００チップ, which the inventory never lists (a two-kanji and a full-width word its text filter rejects), so the by_text labels of overlay_drafts.d/items.json never reach these copies (GEKO's copy is covered there by address). The labels are items.json's. TEL's two silence lines ‥‥‥‥。 of a girl's call (Megumi, the date invitation), drawn as dots like the containers' silences.",
+ "by_addr": {
+  "EXEDIR/DATE.EXN:0x2b6d6": "Kenzan flower frog",
+  "EXEDIR/DATE.EXN:0x2b400": "R20000 chip",
+  "EXEDIR/DATE2.EXN:0x8e46": "Kenzan flower frog",
+  "EXEDIR/DATE2.EXN:0x8b70": "R20000 chip",
+  "EXEDIR/KANGEI.EXN:0x8b6e": "Kenzan flower frog",
+  "EXEDIR/KANGEI.EXN:0x8898": "R20000 chip",
+  "EXEDIR/SHOUGATU.EXN:0x1276e": "Kenzan flower frog",
+  "EXEDIR/SHOUGATU.EXN:0x12498": "R20000 chip",
+  "EXEDIR/SHUGAKU.EXN:0x972a": "Kenzan flower frog",
+  "EXEDIR/SHUGAKU.EXN:0x9454": "R20000 chip",
+  "EXEDIR/TEL.EXN:0xe9fc": "........",
+  "EXEDIR/TEL.EXN:0xf588": "........"
+ },
+ "skip": {
+  "EXEDIR/NAME_ENT.EXN:0x193e4": "name-entry kanji page: the reading-index row (や ゆ よ / わ, the 8th of the kana index rows at y=88 whose siblings 0x19080.. are kept Japanese as key grids); its earlier ui_strings draft \"yuyo w\" made it the only Latin row of the kana index (coverage campaign 2026-10-10)"
+ }
+}

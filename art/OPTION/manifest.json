@@ -1,0 +1,2825 @@
+{
+ "file": "CDROM/FUKUTEST/OPTION.NBN",
+ "note": "The title Options screen (OPTION.EXN) draws the entries of its sub-lists (text speed, icon mode, mouse, menu mode, cursor speed, voice, extras and the extras' voice-cast / heroine lists) as SPRITE FRAMES of FUKUTEST/OPTION.NBN, not as strings, so the drawn-text log never sees them (docs/translation/VISUAL-SWEEP.md, BROKEN-STRINGS-AUDIT.md 5.2):",
+ "bpp": 8,
+ "page_w": 128,
+ "page_h": 128,
+ "page_bytes": 16384,
+ "clut": {
+  "source": "file:0x134F0",
+  "entries": 256
+ },
+ "clear": [
+  {
+   "offset": "0xCA00",
+   "bytes": 14336
+  }
+ ],
+ "sprite_frames": {
+  "id_prefix": "FUKUTEST/OPTION.NBN",
+  "editor_sheet": "translation/localization/sheets/FUKUTEST/OPTION.NBN.csv",
+  "status": "draft",
+  "ram": "0x801B0000",
+  "pages": "0x801C32C8",
+  "page_count": 4,
+  "table": "0x801C32D8",
+  "count": 130,
+  "keep": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   119,
+   120,
+   121
+  ],
+  "regions": [
+   [
+    "0x801C0200",
+    "0x801C32C8"
+   ],
+   [
+    "0x801C3CF0",
+    "0x801C7CF0"
+   ]
+  ],
+  "letter_gap": 1,
+  "glyph_dy": 0,
+  "tp": "retail",
+  "frames": [
+   {
+    "frame": 11,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "超遅い",
+      "text": "Slowest"
+     }
+    ]
+   },
+   {
+    "frame": 12,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "超遅い",
+      "text": "Slowest"
+     }
+    ]
+   },
+   {
+    "frame": 13,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "遅い",
+      "text": "Slow"
+     }
+    ]
+   },
+   {
+    "frame": 14,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "遅い",
+      "text": "Slow"
+     }
+    ]
+   },
+   {
+    "frame": 15,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "普通",
+      "text": "Normal"
+     }
+    ]
+   },
+   {
+    "frame": 16,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "普通",
+      "text": "Normal"
+     }
+    ]
+   },
+   {
+    "frame": 17,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "速い",
+      "text": "Fast"
+     }
+    ]
+   },
+   {
+    "frame": 18,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "速い",
+      "text": "Fast"
+     }
+    ]
+   },
+   {
+    "frame": 19,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "超速い",
+      "text": "Fastest"
+     }
+    ]
+   },
+   {
+    "frame": 20,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "超速い",
+      "text": "Fastest"
+     }
+    ]
+   },
+   {
+    "frame": 21,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＴＹＰＥ－Ａ",
+      "text": "TYPE-A"
+     }
+    ]
+   },
+   {
+    "frame": 22,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＴＹＰＥ－Ａ",
+      "text": "TYPE-A"
+     }
+    ]
+   },
+   {
+    "frame": 23,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＴＹＰＥ－Ｂ",
+      "text": "TYPE-B"
+     }
+    ]
+   },
+   {
+    "frame": 24,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＴＹＰＥ－Ｂ",
+      "text": "TYPE-B"
+     }
+    ]
+   },
+   {
+    "frame": 25,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "フリー",
+      "text": "Free"
+     }
+    ]
+   },
+   {
+    "frame": 26,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "フリー",
+      "text": "Free"
+     }
+    ]
+   },
+   {
+    "frame": 27,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "決定ボタン",
+      "text": "OK button"
+     }
+    ]
+   },
+   {
+    "frame": 28,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "決定ボタン",
+      "text": "OK button"
+     }
+    ]
+   },
+   {
+    "frame": 29,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Click mode"
+     }
+    ]
+   },
+   {
+    "frame": 30,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Click mode"
+     }
+    ]
+   },
+   {
+    "frame": 31,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Click speed"
+     }
+    ]
+   },
+   {
+    "frame": 32,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Click speed"
+     }
+    ]
+   },
+   {
+    "frame": 33,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Right button"
+     }
+    ]
+   },
+   {
+    "frame": 34,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Right button"
+     }
+    ]
+   },
+   {
+    "frame": 35,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Left button"
+     }
+    ]
+   },
+   {
+    "frame": 36,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Left button"
+     }
+    ]
+   },
+   {
+    "frame": 37,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Single click"
+     }
+    ]
+   },
+   {
+    "frame": 38,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Single click"
+     }
+    ]
+   },
+   {
+    "frame": 39,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Double click"
+     }
+    ]
+   },
+   {
+    "frame": 40,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Double click"
+     }
+    ]
+   },
+   {
+    "frame": 41,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "初期状態",
+      "text": "Default"
+     }
+    ]
+   },
+   {
+    "frame": 42,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "初期状態",
+      "text": "Default"
+     }
+    ]
+   },
+   {
+    "frame": 43,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "変更",
+      "text": "Change"
+     }
+    ]
+   },
+   {
+    "frame": 44,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "変更",
+      "text": "Change"
+     }
+    ]
+   },
+   {
+    "frame": 45,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＯＮ",
+      "text": "On"
+     }
+    ]
+   },
+   {
+    "frame": 46,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＯＮ",
+      "text": "On"
+     }
+    ]
+   },
+   {
+    "frame": 47,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＯＦＦ",
+      "text": "Off"
+     }
+    ]
+   },
+   {
+    "frame": 48,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "ＯＦＦ",
+      "text": "Off"
+     }
+    ]
+   },
+   {
+    "frame": 49,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "× button skips"
+     }
+    ]
+   },
+   {
+    "frame": 50,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "× button skips"
+     }
+    ]
+   },
+   {
+    "frame": 51,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "サブゲーム",
+      "text": "Mini-games"
+     }
+    ]
+   },
+   {
+    "frame": 52,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "サブゲーム",
+      "text": "Mini-games"
+     }
+    ]
+   },
+   {
+    "frame": 53,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Free talk"
+     }
+    ]
+   },
+   {
+    "frame": 54,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Free talk"
+     }
+    ]
+   },
+   {
+    "frame": 55,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ending"
+     }
+    ]
+   },
+   {
+    "frame": 56,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ending"
+     }
+    ]
+   },
+   {
+    "frame": 57,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Album mode"
+     }
+    ]
+   },
+   {
+    "frame": 58,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Album mode"
+     }
+    ]
+   },
+   {
+    "frame": 59,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "TwinBee Time Attack"
+     }
+    ]
+   },
+   {
+    "frame": 60,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "TwinBee Time Attack"
+     }
+    ]
+   },
+   {
+    "frame": 61,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Stardust Symphony EX"
+     }
+    ]
+   },
+   {
+    "frame": 62,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Stardust Symphony EX"
+     }
+    ]
+   },
+   {
+    "frame": 63,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mami Kingetsu (Fujisaki)"
+     }
+    ]
+   },
+   {
+    "frame": 64,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mami Kingetsu (Fujisaki)"
+     }
+    ]
+   },
+   {
+    "frame": 65,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Akiko Sekine (Kisaragi)"
+     }
+    ]
+   },
+   {
+    "frame": 66,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Akiko Sekine (Kisaragi)"
+     }
+    ]
+   },
+   {
+    "frame": 67,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Tomoko Naka (Himoo)"
+     }
+    ]
+   },
+   {
+    "frame": 68,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Tomoko Naka (Himoo)"
+     }
+    ]
+   },
+   {
+    "frame": 69,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Masayo Kawaguchi (Katagiri)"
+     }
+    ]
+   },
+   {
+    "frame": 70,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Masayo Kawaguchi (Katagiri)"
+     }
+    ]
+   },
+   {
+    "frame": 71,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Sachiko Sugawara (Nijino)"
+     }
+    ]
+   },
+   {
+    "frame": 72,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Sachiko Sugawara (Nijino)"
+     }
+    ]
+   },
+   {
+    "frame": 73,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ayako Kurosaki (Koshiki)"
+     }
+    ]
+   },
+   {
+    "frame": 74,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ayako Kurosaki (Koshiki)"
+     }
+    ]
+   },
+   {
+    "frame": 75,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ayako Sasaki (Kiyokawa)"
+     }
+    ]
+   },
+   {
+    "frame": 76,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Ayako Sasaki (Kiyokawa)"
+     }
+    ]
+   },
+   {
+    "frame": 77,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Rei Igarashi (Kagami)"
+     }
+    ]
+   },
+   {
+    "frame": 78,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Rei Igarashi (Kagami)"
+     }
+    ]
+   },
+   {
+    "frame": 79,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yoko Teppozuka (Asahina)"
+     }
+    ]
+   },
+   {
+    "frame": 80,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yoko Teppozuka (Asahina)"
+     }
+    ]
+   },
+   {
+    "frame": 81,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mikiko Kurihara (Mikihara)"
+     }
+    ]
+   },
+   {
+    "frame": 82,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mikiko Kurihara (Mikihara)"
+     }
+    ]
+   },
+   {
+    "frame": 83,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Kurin Yoshiki (Saotome)"
+     }
+    ]
+   },
+   {
+    "frame": 84,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Kurin Yoshiki (Saotome)"
+     }
+    ]
+   },
+   {
+    "frame": 85,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Shiho Kikuchi (Tatebayashi)"
+     }
+    ]
+   },
+   {
+    "frame": 86,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Shiho Kikuchi (Tatebayashi)"
+     }
+    ]
+   },
+   {
+    "frame": 87,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Narumi Tsunoda (Ijuin)"
+     }
+    ]
+   },
+   {
+    "frame": 88,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Narumi Tsunoda (Ijuin)"
+     }
+    ]
+   },
+   {
+    "frame": 89,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yuji Ueda (Yoshio)"
+     }
+    ]
+   },
+   {
+    "frame": 90,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yuji Ueda (Yoshio)"
+     }
+    ]
+   },
+   {
+    "frame": 91,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "藤崎　詩織",
+      "text": "Shiori Fujisaki"
+     }
+    ]
+   },
+   {
+    "frame": 92,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "藤崎　詩織",
+      "text": "Shiori Fujisaki"
+     }
+    ]
+   },
+   {
+    "frame": 93,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "如月　未緒",
+      "text": "Mio Kisaragi"
+     }
+    ]
+   },
+   {
+    "frame": 94,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "如月　未緒",
+      "text": "Mio Kisaragi"
+     }
+    ]
+   },
+   {
+    "frame": 95,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "紐緒　結奈",
+      "text": "Yuina Himoo"
+     }
+    ]
+   },
+   {
+    "frame": 96,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "紐緒　結奈",
+      "text": "Yuina Himoo"
+     }
+    ]
+   },
+   {
+    "frame": 97,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "片桐　彩子",
+      "text": "Ayako Katagiri"
+     }
+    ]
+   },
+   {
+    "frame": 98,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "片桐　彩子",
+      "text": "Ayako Katagiri"
+     }
+    ]
+   },
+   {
+    "frame": 99,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "虹野　沙希",
+      "text": "Saki Nijino"
+     }
+    ]
+   },
+   {
+    "frame": 100,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "虹野　沙希",
+      "text": "Saki Nijino"
+     }
+    ]
+   },
+   {
+    "frame": 101,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yukari Koshiki"
+     }
+    ]
+   },
+   {
+    "frame": 102,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yukari Koshiki"
+     }
+    ]
+   },
+   {
+    "frame": 103,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "清川　望",
+      "text": "Nozomi Kiyokawa"
+     }
+    ]
+   },
+   {
+    "frame": 104,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "清川　望",
+      "text": "Nozomi Kiyokawa"
+     }
+    ]
+   },
+   {
+    "frame": 105,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "鏡　魅羅",
+      "text": "Mira Kagami"
+     }
+    ]
+   },
+   {
+    "frame": 106,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "鏡　魅羅",
+      "text": "Mira Kagami"
+     }
+    ]
+   },
+   {
+    "frame": 107,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yuko Asahina"
+     }
+    ]
+   },
+   {
+    "frame": 108,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yuko Asahina"
+     }
+    ]
+   },
+   {
+    "frame": 109,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "美樹原　愛",
+      "text": "Megumi Mikihara"
+     }
+    ]
+   },
+   {
+    "frame": 110,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "美樹原　愛",
+      "text": "Megumi Mikihara"
+     }
+    ]
+   },
+   {
+    "frame": 111,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yumi Saotome"
+     }
+    ]
+   },
+   {
+    "frame": 112,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Yumi Saotome"
+     }
+    ]
+   },
+   {
+    "frame": 113,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "館林　見晴",
+      "text": "Miharu Tatebayashi"
+     }
+    ]
+   },
+   {
+    "frame": 114,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "館林　見晴",
+      "text": "Miharu Tatebayashi"
+     }
+    ]
+   },
+   {
+    "frame": 115,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Rei Ijuin"
+     }
+    ]
+   },
+   {
+    "frame": 116,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Rei Ijuin"
+     }
+    ]
+   },
+   {
+    "frame": 117,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Pad end"
+     }
+    ]
+   },
+   {
+    "frame": 118,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Pad end"
+     }
+    ]
+   },
+   {
+    "frame": 122,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mouse-like"
+     }
+    ]
+   },
+   {
+    "frame": 123,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mouse-like"
+     }
+    ]
+   },
+   {
+    "frame": 124,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "パッドＡ",
+      "text": "Pad A"
+     }
+    ]
+   },
+   {
+    "frame": 125,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "パッドＡ",
+      "text": "Pad A"
+     }
+    ]
+   },
+   {
+    "frame": 126,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "パッドＢ",
+      "text": "Pad B"
+     }
+    ]
+   },
+   {
+    "frame": 127,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "パッドＢ",
+      "text": "Pad B"
+     }
+    ]
+   },
+   {
+    "frame": 128,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mouse-like + Pad A"
+     }
+    ]
+   },
+   {
+    "frame": 129,
+    "segs": [
+     {
+      "ox": 0,
+      "oy": 0,
+      "jp": "",
+      "text": "Mouse-like + Pad A"
+     }
+    ]
+   }
+  ]
+ },
+ "cells": [
+  {
+   "name": "g0028",
+   "glyph": "(",
+   "offset": "0xC200",
+   "x": 0,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "(",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0029",
+   "glyph": ")",
+   "offset": "0xC200",
+   "x": 8,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": ")",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g002b",
+   "glyph": "+",
+   "offset": "0xC200",
+   "x": 16,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "+",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g002d",
+   "glyph": "-",
+   "offset": "0xC200",
+   "x": 24,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "-",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0041",
+   "glyph": "A",
+   "offset": "0xC200",
+   "x": 32,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "A",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0042",
+   "glyph": "B",
+   "offset": "0xC200",
+   "x": 40,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "B",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0043",
+   "glyph": "C",
+   "offset": "0xC200",
+   "x": 48,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "C",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0044",
+   "glyph": "D",
+   "offset": "0xC200",
+   "x": 56,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "D",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0045",
+   "glyph": "E",
+   "offset": "0xC200",
+   "x": 64,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "E",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0046",
+   "glyph": "F",
+   "offset": "0xC200",
+   "x": 72,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "F",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0048",
+   "glyph": "H",
+   "offset": "0xC200",
+   "x": 80,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "H",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0049",
+   "glyph": "I",
+   "offset": "0xC200",
+   "x": 88,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "I",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g004b",
+   "glyph": "K",
+   "offset": "0xC200",
+   "x": 96,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "K",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g004c",
+   "glyph": "L",
+   "offset": "0xC200",
+   "x": 104,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "L",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g004d",
+   "glyph": "M",
+   "offset": "0xC200",
+   "x": 112,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "M",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g004e",
+   "glyph": "N",
+   "offset": "0xC200",
+   "x": 120,
+   "y": 16,
+   "w": 8,
+   "h": 16,
+   "text": "N",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g004f",
+   "glyph": "O",
+   "offset": "0xC200",
+   "x": 0,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "O",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0050",
+   "glyph": "P",
+   "offset": "0xC200",
+   "x": 8,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "P",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0052",
+   "glyph": "R",
+   "offset": "0xC200",
+   "x": 16,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "R",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0053",
+   "glyph": "S",
+   "offset": "0xC200",
+   "x": 24,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "S",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0054",
+   "glyph": "T",
+   "offset": "0xC200",
+   "x": 32,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "T",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0055",
+   "glyph": "U",
+   "offset": "0xC200",
+   "x": 40,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "U",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0058",
+   "glyph": "X",
+   "offset": "0xC200",
+   "x": 48,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "X",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0059",
+   "glyph": "Y",
+   "offset": "0xC200",
+   "x": 56,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "Y",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0061",
+   "glyph": "a",
+   "offset": "0xC200",
+   "x": 64,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "a",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0062",
+   "glyph": "b",
+   "offset": "0xC200",
+   "x": 72,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "b",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0063",
+   "glyph": "c",
+   "offset": "0xC200",
+   "x": 80,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "c",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0064",
+   "glyph": "d",
+   "offset": "0xC200",
+   "x": 88,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "d",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0065",
+   "glyph": "e",
+   "offset": "0xC200",
+   "x": 96,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "e",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0066",
+   "glyph": "f",
+   "offset": "0xC200",
+   "x": 104,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "f",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0067",
+   "glyph": "g",
+   "offset": "0xC200",
+   "x": 112,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "g",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0068",
+   "glyph": "h",
+   "offset": "0xC200",
+   "x": 120,
+   "y": 32,
+   "w": 8,
+   "h": 16,
+   "text": "h",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0069",
+   "glyph": "i",
+   "offset": "0xC200",
+   "x": 0,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "i",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006a",
+   "glyph": "j",
+   "offset": "0xC200",
+   "x": 8,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "j",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006b",
+   "glyph": "k",
+   "offset": "0xC200",
+   "x": 16,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "k",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006c",
+   "glyph": "l",
+   "offset": "0xC200",
+   "x": 24,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "l",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006d",
+   "glyph": "m",
+   "offset": "0xC200",
+   "x": 32,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "m",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006e",
+   "glyph": "n",
+   "offset": "0xC200",
+   "x": 40,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "n",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g006f",
+   "glyph": "o",
+   "offset": "0xC200",
+   "x": 48,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "o",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0070",
+   "glyph": "p",
+   "offset": "0xC200",
+   "x": 56,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "p",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0072",
+   "glyph": "r",
+   "offset": "0xC200",
+   "x": 64,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "r",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0073",
+   "glyph": "s",
+   "offset": "0xC200",
+   "x": 72,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "s",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0074",
+   "glyph": "t",
+   "offset": "0xC200",
+   "x": 80,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "t",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0075",
+   "glyph": "u",
+   "offset": "0xC200",
+   "x": 88,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "u",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0077",
+   "glyph": "w",
+   "offset": "0xC200",
+   "x": 96,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "w",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g0079",
+   "glyph": "y",
+   "offset": "0xC200",
+   "x": 104,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "y",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g007a",
+   "glyph": "z",
+   "offset": "0xC200",
+   "x": 112,
+   "y": 48,
+   "w": 8,
+   "h": 16,
+   "text": "z",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "g00d7",
+   "glyph": "×",
+   "offset": "0xC200",
+   "x": 0,
+   "y": 64,
+   "w": 16,
+   "h": 16,
+   "text": "×",
+   "jp": "",
+   "fg": 55,
+   "fg_rows": [
+    55,
+    55,
+    55,
+    55,
+    55,
+    53,
+    52,
+    51,
+    50,
+    49,
+    49,
+    49
+   ],
+   "shadow": 226,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  }
+ ]
+}

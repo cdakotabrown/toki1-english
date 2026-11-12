@@ -1,0 +1,355 @@
+{
+ "file": "CDROM/FUKUTEST/EXAMINE.NBN",
+ "note": "exam results screen (ETC func_801478F8 -> 0x801E0000): 4-bpp pages of 8 KB; page 0 is a byte copy of MAINROM page 4 (digits, weekdays, units) and page 1 of MAINROM page 9 (the stat labels), so the HUD cells are repeated here; page 2 carries the 'final exam results' header (x 0..110, y 58..69) and a 7x9 点 (points) glyph left of the big digits, left Japanese (manual review: too small for the 12-px font). CLUT rows of the exe (D_800CC520) as MAINROM.",
+ "bpp": 4,
+ "page_bytes": 8192,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "exe",
+  "row": "auto"
+ },
+ "cells": [
+  {
+   "name": "stat_taichou",
+   "page": 1,
+   "x": 96,
+   "y": 0,
+   "w": 28,
+   "h": 12,
+   "text": "Hlth",
+   "jp": "体調",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_geijutsu",
+   "page": 1,
+   "x": 96,
+   "y": 14,
+   "w": 28,
+   "h": 12,
+   "text": "Art",
+   "jp": "芸術",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_youshi",
+   "page": 1,
+   "x": 96,
+   "y": 28,
+   "w": 28,
+   "h": 12,
+   "text": "Look",
+   "jp": "容姿",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_bunkei",
+   "page": 1,
+   "x": 96,
+   "y": 40,
+   "w": 28,
+   "h": 12,
+   "text": "Lit",
+   "jp": "文系",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_undou",
+   "page": 1,
+   "x": 96,
+   "y": 54,
+   "w": 28,
+   "h": 12,
+   "text": "Spt",
+   "jp": "運動",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_konjou",
+   "page": 1,
+   "x": 96,
+   "y": 68,
+   "w": 28,
+   "h": 12,
+   "text": "Guts",
+   "jp": "根性",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_rikei",
+   "page": 1,
+   "x": 96,
+   "y": 80,
+   "w": 28,
+   "h": 12,
+   "text": "Sci",
+   "jp": "理系",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_zatsugaku",
+   "page": 1,
+   "x": 96,
+   "y": 94,
+   "w": 28,
+   "h": 12,
+   "text": "Trv",
+   "jp": "雑学",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "stat_stress",
+   "page": 1,
+   "x": 96,
+   "y": 108,
+   "w": 28,
+   "h": 12,
+   "text": "Strs",
+   "jp": "ストレス",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "left",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "unit_month",
+   "page": 0,
+   "x": 113,
+   "y": 0,
+   "w": 12,
+   "h": 12,
+   "text": "Mo",
+   "jp": "月",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_tue",
+   "page": 0,
+   "x": 0,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Tu",
+   "jp": "火",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_wed",
+   "page": 0,
+   "x": 16,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "We",
+   "jp": "水",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_thu",
+   "page": 0,
+   "x": 32,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Th",
+   "jp": "木",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_fri",
+   "page": 0,
+   "x": 48,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Fr",
+   "jp": "金",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "wd_sat",
+   "page": 0,
+   "x": 64,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Sa",
+   "jp": "土",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "unit_day",
+   "page": 0,
+   "x": 81,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "D",
+   "jp": "日",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "unit_year",
+   "page": 0,
+   "x": 96,
+   "y": 16,
+   "w": 12,
+   "h": 12,
+   "text": "Yr",
+   "jp": "年",
+   "fg": 9,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph",
+   "shadow": 10
+  },
+  {
+   "name": "header",
+   "page": 2,
+   "x": 0,
+   "y": 57,
+   "w": 112,
+   "h": 13,
+   "text": "Final Exam Results",
+   "jp": "",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center"
+  }
+ ]
+}

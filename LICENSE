@@ -1,0 +1,53 @@
+MIT License
+
+Copyright (c) 2026 cdakotabrown and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+What this licence covers, and what it does not.
+
+Covers: the project's own source, tools, tests, build scripts and
+documentation -- everything in this repository that the project authored,
+unless a file or directory says otherwise. Third-party components keep their
+own licences; see THIRD-PARTY.md.
+
+Does not cover:
+
+  * Tokimeki Memorial: Forever with You. The game, its code, its data, its
+    art, its music and its text are (c) Konami. This repository holds no disc
+    images and none of the game's data files, Japanese script text, art,
+    audio or video. It does contain an unofficial English translation of the
+    game's script (translation/, config/patch/) and English lettering drawn
+    for the game's pictures (src/patch/art/), which are a fan translation:
+    the MIT grant covers only the translators' and artists' own work, and
+    grants no right in the underlying work.
+    The patched disc is built on your machine from your own copy (README.md);
+    the patch code (src/patch/) runs inside the game and calls its functions
+    by address. The MIT grant covers only the project's own expression in
+    these. It grants no right in the game, and the project claims none.
+  * Trademarks. "Tokimeki Memorial" is a trademark of Konami; "PlayStation"
+    is a trademark of Sony Interactive Entertainment. This is an unofficial
+    fan project, not affiliated with, endorsed by or sponsored by Konami or
+    Sony. Neither this licence nor the project grants any trademark right.
+  * The decompilation the patch builds against (toki1-decomp) and the PC port
+    (toki1-pc) are separate repositories with their own licences.
+  * The vendored third-party files listed in THIRD-PARTY.md, which carry
+    their own terms.

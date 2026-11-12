@@ -1,0 +1,14 @@
+sheet,ID,heroine,old,new,reason
+SERIFU/ENDING,assets/extracted_iso/CDROM/SERIFU/ENDING.BIN:0x72d4,Yumi Saotome,"I know that next to the{br}girls in your year, I'm{br}childish and selfish.","I know that next to the{br}girls in your year, Senpai, I'm{br}childish and selfish.",先輩 address form must read Senpai
+SERIFU/ENDING,assets/extracted_iso/CDROM/SERIFU/ENDING.BIN:0x73c8,Yumi Saotome,"Because I love you more than{br}anyone in the whole world,{br}so much I can't stand it...","Because I love you, Senpai,{br}more than anyone in the world,{br}so much I can't stand it...",先輩 address form must read Senpai
+BUNKA/FU_S6,assets/extracted_iso/CDROM/BUNKA/FU_S6.BIN:0x3a78,Shiori Fujisaki,That look in your eyes... Ugh.,That look in your eyes... Honestly.,'Ugh' is Yuko's signature; Shiori never slangs
+BUNKA/FU_S6B,assets/extracted_iso/CDROM/BUNKA/FU_S6B.BIN:0x289c,Shiori Fujisaki,Ugh.{br}I got distracted{br}and it didn't go well.,"Oh, no.{br}I got distracted{br}and it didn't go well.",'Ugh' is Yuko's signature; Shiori never slangs
+BUNKA/FU_S6B,assets/extracted_iso/CDROM/BUNKA/FU_S6B.BIN:0x2e6c,Shiori Fujisaki,Ugh. What a letdown.,"Oh, what a letdown.",'Ugh' is Yuko's signature; Shiori never slangs
+BUNKA/FU_S6B,assets/extracted_iso/CDROM/BUNKA/FU_S6B.BIN:0x6774,Shiori Fujisaki,Ugh.{br}That didn't go well...,"Oh, no.{br}That didn't go well...",'Ugh' is Yuko's signature; Shiori never slangs
+BUNKA/FU_S6B,assets/extracted_iso/CDROM/BUNKA/FU_S6B.BIN:0x6a38,Shiori Fujisaki,Ugh.{br}That didn't go well...,"Oh, no.{br}That didn't go well...",'Ugh' is Yuko's signature; Shiori never slangs
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0x4bc,Saki Nijino,"Well,{br}shall we head home?","Well,{br}let's head home, okay?",'shall we' is coy; Saki is direct
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0xbd0,Saki Nijino,"Well,{br}shall we head home?","Well,{br}let's head home, okay?",'shall we' is coy; Saki is direct
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0xcc8,Saki Nijino,"Well,{br}shall we head home?","Well,{br}let's head home, okay?",'shall we' is coy; Saki is direct
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0x12e0,Saki Nijino,Looks like it's over.{br}Shall we head home?,Looks like it's over.{br}Let's head home.,'shall we' is coy; Saki is direct
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0x1dbc,Saki Nijino,Shall we{br}head home?,"Let's{br}head home, okay?",'shall we' is coy; Saki is direct
+BUNKA/NI_S6W,assets/extracted_iso/CDROM/BUNKA/NI_S6W.BIN:0x1fe8,Saki Nijino,"Oh.{br}Well,{br}shall we head home?","Oh.{br}Well,{br}let's head home.",'shall we' is coy; Saki is direct

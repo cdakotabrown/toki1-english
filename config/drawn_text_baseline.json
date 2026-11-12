@@ -1,0 +1,4 @@
+{
+ "note": "known broken / untranslated drawn strings by target: sha1(Japanese characters)[:16] -> class (tools/patch/audit_drawn_text.py; docs/translation/BROKEN-STRINGS-AUDIT.md). No game text is stored.",
+ "known": {}
+}

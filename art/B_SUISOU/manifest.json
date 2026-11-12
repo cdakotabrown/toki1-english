@@ -1,0 +1,47 @@
+{
+ "file": "CDROM/BUNKASD/B_SUISOU.BIN",
+ "note": "BUNKA_SD brass-band stage (forced scene 128 + now_sub_step = 244, the func_80138ADC route: func_801389E4 loads this file). Same layout as B_BUNGEI: 8-bpp 128x128 pages at 0x2000 + 0x4000k, CLUT = the 256 colours at +0x200. The title board 'Brass Band Club Concert' is drawn from two pieces: page 0x26000 u 90-127 (frame + 吹奏) beside page 0x1a000 u 0-103 (楽部 演奏会 + frame); text rows 38-54, text area u 96-127 + u 0-95 (128 px). Strokes 0xa1 with 0xa2-0xa4 anti-aliasing and a 0xa5 halo on the 0xaf board.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x200",
+  "entries": 256
+ },
+ "cells": [
+  {
+   "name": "title_board",
+   "h": 17,
+   "pieces": [
+    {
+     "offset": "0x26000",
+     "x": 96,
+     "y": 38,
+     "w": 32
+    },
+    {
+     "offset": "0x1a000",
+     "x": 0,
+     "y": 38,
+     "w": 96
+    }
+   ],
+   "text": "Brass Band Concert",
+   "jp": "",
+   "fg": 161,
+   "outline": 165,
+   "erase": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166
+   ],
+   "bg": 175,
+   "align": "center",
+   "valign": "glyph"
+  }
+ ]
+}

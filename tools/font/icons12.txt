@@ -1,0 +1,53 @@
+# Button icons for the PS1 English patch's text renderer (12 px tall).
+# Authored by hand for this project (2026-11-07); not derived from any game
+# or third-party font.  tools/patch/fontgen.py compiles them next to
+# latin12.txt (patch_icon_rows / patch_icon_count in font_latin.c).
+#
+# Format: "glyph <name> sjis <HEX>", then 12 rows of '.'/'#' (at most 13
+# px wide; the renderer gives an icon the 14-px advance of a Shift-JIS
+# glyph).  <HEX> is the two-byte code a patched string carries for the
+# icon: 0xEF40, 0xEF41, ... in order without a gap (the renderer indexes
+# the icons by code - 0xEF40), a block which JIS X 0208 leaves unassigned
+# and the retail font's range table maps to no glyph, so it can never
+# collide with Japanese text (text_vwf.c pt_sjis_rows draws the icon only
+# where the retail font has nothing).  tools/patch/textcodec.py spells
+# each icon as a private-use character (ICONS there); the two tables must
+# agree, and fontgen.py checks they do.
+#
+# The game draws the buttons of its yes/no prompts with code, in the
+# prompt's colour, from four tiny strings (get_pad_str / get_pad_str2 in
+# the main executable, get_etc_yes_button / get_etc_no_button in ETC):
+# the circle and cross glyphs for a pad, and the kanji for "right" and
+# "left" for a mouse.  Those two kanji are among the glyphs the patch
+# module overwrites, so a mouse player saw the missing-glyph box; the
+# English strings name these icons instead.
+
+# the mouse's left button (pressed half filled)
+glyph mouse_left sjis EF40
+....#....
+..#####..
+.####..#.
+#####...#
+#####...#
+#########
+#.......#
+#.......#
+#.......#
+.#.....#.
+..#####..
+.........
+
+# the mouse's right button
+glyph mouse_right sjis EF41
+....#....
+..#####..
+.#..####.
+#...#####
+#...#####
+#########
+#.......#
+#.......#
+#.......#
+.#.....#.
+..#####..
+.........

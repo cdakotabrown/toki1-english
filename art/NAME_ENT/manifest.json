@@ -1,0 +1,497 @@
+{
+ "file": "CDROM/NAME_ENT/NAME_ENT.NBN",
+ "note": "name entry sprite page: 4 bpp 128x128 at file offset 0x200 (32x128 words -> VRAM (320,0), NAME_ENT/func_801321A0); CLUT rows in VRAM y=496.. (several, per tab state). The five page tabs are self-contained 28x14 boxes (strokes 9, drop shadow 10). Page 0 is the patch's Latin key page, so its tab reads ABC. The field labels on this page (名前 あだ名 誕生日 誕生月 血液型 月 日 型 はい いえ) are single 16-px character cells SHARED between labels (名 in both 名前 and あだ名, 日 in 誕生日 and the day unit, 型 in 血液型 and A型, い in はい and いえ, 誕生 in both birth labels), so no per-cell English reads right in every label: manual review (docs/translation/PS1-PATCH-STATUS.md section 5.0). 2026-11-02 (visual sweep): the field labels, units and Yes / No are English word cells through cel_remap (below).",
+ "bpp": 4,
+ "page_bytes": 8192,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "none"
+ },
+ "cells": [
+  {
+   "name": "tab_end",
+   "x": 35,
+   "y": 17,
+   "w": 27,
+   "h": 14,
+   "text": "End",
+   "jp": "終了",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "offset": "0x200"
+  },
+  {
+   "name": "tab_kana",
+   "x": 35,
+   "y": 33,
+   "w": 27,
+   "h": 14,
+   "text": "ABC",
+   "jp": "かな",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "offset": "0x200"
+  },
+  {
+   "name": "tab_sym",
+   "x": 67,
+   "y": 33,
+   "w": 27,
+   "h": 14,
+   "text": "Sym",
+   "jp": "記号",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "offset": "0x200"
+  },
+  {
+   "name": "tab_kata",
+   "x": 35,
+   "y": 49,
+   "w": 27,
+   "h": 14,
+   "text": "Kana",
+   "jp": "カナ",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "offset": "0x200"
+  },
+  {
+   "name": "tab_kanji",
+   "x": 67,
+   "y": 49,
+   "w": 27,
+   "h": 14,
+   "text": "Kanji",
+   "jp": "漢字",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [
+    9,
+    10
+   ],
+   "bg": 0,
+   "align": "center",
+   "offset": "0x200"
+  },
+  {
+   "name": "erase_row80",
+   "offset": "0x200",
+   "x": 16,
+   "y": 80,
+   "w": 80,
+   "h": 16,
+   "text": "",
+   "jp": "あだ名前月 (glyph cells; the labels now use the word cells)",
+   "fg": 9,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0
+  },
+  {
+   "name": "erase_row96",
+   "offset": "0x200",
+   "x": 0,
+   "y": 96,
+   "w": 96,
+   "h": 16,
+   "text": "",
+   "jp": "",
+   "fg": 9,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0
+  },
+  {
+   "name": "erase_row112",
+   "offset": "0x200",
+   "x": 0,
+   "y": 112,
+   "w": 48,
+   "h": 16,
+   "text": "",
+   "jp": "はいえ",
+   "fg": 9,
+   "erase": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ],
+   "bg": 0
+  },
+  {
+   "name": "word_nickname",
+   "offset": "0x200",
+   "x": 16,
+   "y": 80,
+   "w": 40,
+   "h": 16,
+   "text": "Nickname",
+   "jp": "あだ名",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_birthday",
+   "offset": "0x200",
+   "x": 56,
+   "y": 80,
+   "w": 40,
+   "h": 16,
+   "text": "Birthday",
+   "jp": "誕生日",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_name",
+   "offset": "0x200",
+   "x": 0,
+   "y": 96,
+   "w": 24,
+   "h": 16,
+   "text": "Name",
+   "jp": "名前",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_blood",
+   "offset": "0x200",
+   "x": 24,
+   "y": 96,
+   "w": 24,
+   "h": 16,
+   "text": "Blood",
+   "jp": "血液型",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_month",
+   "offset": "0x200",
+   "x": 48,
+   "y": 96,
+   "w": 32,
+   "h": 16,
+   "text": "Month",
+   "jp": "誕生月",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_day",
+   "offset": "0x200",
+   "x": 80,
+   "y": 96,
+   "w": 16,
+   "h": 16,
+   "text": "Day",
+   "jp": "誕生日 (the birthday screen's day list)",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "left",
+   "valign": 0
+  },
+  {
+   "name": "word_yes",
+   "offset": "0x200",
+   "x": 0,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "text": "Yes",
+   "jp": "はい",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "center",
+   "valign": 0
+  },
+  {
+   "name": "word_no",
+   "offset": "0x200",
+   "x": 16,
+   "y": 112,
+   "w": 16,
+   "h": 16,
+   "text": "No",
+   "jp": "いいえ",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "center",
+   "valign": 0
+  },
+  {
+   "name": "word_slash",
+   "offset": "0x200",
+   "x": 32,
+   "y": 112,
+   "w": 8,
+   "h": 16,
+   "text": "/",
+   "jp": "月 (the month unit between the two numbers)",
+   "fg": 9,
+   "shadow": 10,
+   "erase": [],
+   "bg": 0,
+   "align": "center",
+   "valign": 0
+  }
+ ],
+ "cel_remap": {
+  "note": "NAME_ENT.NBN's own frame table (loaded at 0x80190000; img 0x801AAF5C, page table 0x801AAF58 = page 0 at file 0x200, 8-px tiles): the field labels of the name entry (frame 0), the birthday screen (frame 1: header line, month / day / blood grids), the confirm panels (frames 2 and 14) and the Yes / No buttons are cels of shared glyph cells (名 in 名前 and あだ名, 日 in 誕生日 and the day unit, い in はい and いいえ). Every such cel now points at an English word cell drawn where the Japanese glyphs were (rows 80..127 of page 0); the unit cels 日 and 型 and the month list's 月 are dropped (the numbers stand alone), the other 月 become '/'.",
+  "ram": "0x80190000",
+  "table": "0x801AAF5C",
+  "count": 29,
+  "page": 0,
+  "rules": [
+   {
+    "cel": "0xa2",
+    "w": 48,
+    "cell": "word_nickname",
+    "jp": "あだ名"
+   },
+   {
+    "cel": "0xa6",
+    "w": 32,
+    "cell": "word_name",
+    "jp": "名前"
+   },
+   {
+    "cel": "0xc0",
+    "w": 48,
+    "cell": "word_birthday",
+    "jp": "誕生日"
+   },
+   {
+    "cel": "0xc0",
+    "w": 32,
+    "cell": "word_month",
+    "jp": "誕生(月)"
+   },
+   {
+    "cel": "0xc6",
+    "w": 48,
+    "cell": "word_blood",
+    "jp": "血液型"
+   },
+   {
+    "cel": "0xaa",
+    "w": 16,
+    "cell": "word_slash",
+    "jp": "月"
+   },
+   {
+    "cel": "0xc4",
+    "w": 16,
+    "delete": true,
+    "jp": "日"
+   },
+   {
+    "cel": "0xca",
+    "w": 16,
+    "delete": true,
+    "jp": "型"
+   },
+   {
+    "cel": "0xe0",
+    "w": 32,
+    "cell": "word_yes",
+    "jp": "はい"
+   },
+   {
+    "cel": "0xe2",
+    "w": 16,
+    "cell": "word_no",
+    "jp": "い(いえ)"
+   },
+   {
+    "cel": "0xe2",
+    "w": 32,
+    "delete": true,
+    "jp": "(い)いえ"
+   }
+  ],
+  "at": [
+   {
+    "frame": 1,
+    "ox": 40,
+    "oy": 112,
+    "cell": "word_day",
+    "jp": "誕生日 (day list header)"
+   },
+   {
+    "frame": 1,
+    "ox": 72,
+    "oy": 64,
+    "delete": true,
+    "jp": "(誕生)月 header"
+   },
+   {
+    "frame": 1,
+    "ox": 80,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 120,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 160,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 200,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 240,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 280,
+    "oy": 80,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 80,
+    "oy": 96,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 120,
+    "oy": 96,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 160,
+    "oy": 96,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 200,
+    "oy": 96,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 240,
+    "oy": 96,
+    "delete": true
+   },
+   {
+    "frame": 1,
+    "ox": 280,
+    "oy": 96,
+    "delete": true
+   }
+  ]
+ }
+}

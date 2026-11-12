@@ -1,0 +1,284 @@
+# tiny_caps.txt -- a 7-px capital pixel face for 8-px label strips.
+#
+# AUTHORED FOR THIS PROJECT (Tokimeki Memorial English patch), 2026-11-06.
+# Drawn by hand pixel by pixel for this file; not derived from, traced from
+# or measured against any existing font or any retail game art.  It sets
+# the Memorial Spot magazine's genre tags (VISUAL-SWEEP.md 3.2), whose
+# retail kana sit in 8-px rows of FUKUTEST/MAINROM.NBN page 12 where the
+# 12-px latin12 face does not fit.
+#
+# Format: latin12.txt's, with 8 rows per glyph instead of 12:
+#   glyph <char> adv <N>   then 8 rows of '.' / '#'
+# The box is adv-1 px wide (the last column is the 1-px letter spacing);
+# rows 0-6 are the cap height, row 7 is empty.  "space" names 0x20.
+# Most capitals are 4 px wide; M, T, W, Y are 5, L is 3, I is 1.
+
+glyph space adv 2
+.
+.
+.
+.
+.
+.
+.
+.
+
+glyph A adv 5
+.##.
+#..#
+#..#
+####
+#..#
+#..#
+#..#
+....
+
+glyph B adv 5
+###.
+#..#
+#..#
+###.
+#..#
+#..#
+###.
+....
+
+glyph C adv 5
+.##.
+#..#
+#...
+#...
+#...
+#..#
+.##.
+....
+
+glyph D adv 5
+###.
+#..#
+#..#
+#..#
+#..#
+#..#
+###.
+....
+
+glyph E adv 5
+####
+#...
+#...
+###.
+#...
+#...
+####
+....
+
+glyph F adv 5
+####
+#...
+#...
+###.
+#...
+#...
+#...
+....
+
+glyph G adv 5
+.##.
+#..#
+#...
+#.##
+#..#
+#..#
+.###
+....
+
+glyph H adv 5
+#..#
+#..#
+#..#
+####
+#..#
+#..#
+#..#
+....
+
+glyph I adv 2
+#
+#
+#
+#
+#
+#
+#
+.
+
+glyph J adv 5
+...#
+...#
+...#
+...#
+#..#
+#..#
+.##.
+....
+
+glyph K adv 5
+#..#
+#..#
+#.#.
+##..
+#.#.
+#..#
+#..#
+....
+
+glyph L adv 4
+#..
+#..
+#..
+#..
+#..
+#..
+###
+...
+
+glyph M adv 6
+#...#
+##.##
+#.#.#
+#.#.#
+#...#
+#...#
+#...#
+.....
+
+glyph N adv 5
+#..#
+##.#
+##.#
+#.##
+#.##
+#..#
+#..#
+....
+
+glyph O adv 5
+.##.
+#..#
+#..#
+#..#
+#..#
+#..#
+.##.
+....
+
+glyph P adv 5
+###.
+#..#
+#..#
+###.
+#...
+#...
+#...
+....
+
+glyph Q adv 5
+.##.
+#..#
+#..#
+#..#
+#.##
+#..#
+.###
+....
+
+glyph R adv 5
+###.
+#..#
+#..#
+###.
+#.#.
+#..#
+#..#
+....
+
+glyph S adv 5
+.###
+#...
+#...
+.##.
+...#
+...#
+###.
+....
+
+glyph T adv 6
+#####
+..#..
+..#..
+..#..
+..#..
+..#..
+..#..
+.....
+
+glyph U adv 5
+#..#
+#..#
+#..#
+#..#
+#..#
+#..#
+.##.
+....
+
+glyph V adv 6
+#...#
+#...#
+#...#
+#...#
+.#.#.
+.#.#.
+..#..
+.....
+
+glyph W adv 6
+#...#
+#...#
+#...#
+#.#.#
+#.#.#
+##.##
+#...#
+.....
+
+glyph X adv 6
+#...#
+#...#
+.#.#.
+..#..
+.#.#.
+#...#
+#...#
+.....
+
+glyph Y adv 6
+#...#
+#...#
+.#.#.
+..#..
+..#..
+..#..
+..#..
+.....
+
+glyph Z adv 5
+####
+...#
+..#.
+.#..
+#...
+#...
+####
+....

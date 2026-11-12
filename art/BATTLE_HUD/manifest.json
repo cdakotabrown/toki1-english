@@ -1,0 +1,162 @@
+{
+ "file": "CDROM/BATTLE/VS_PARK.BIN",
+ "note": "RPG_BAT battle HUD page (8 bpp, 128 px wide, file offset 0 of VS_PARK.BIN; func_8013DC68 loads the file to 0x801B1000 and the page lands at VRAM (320,256), checked on a VRAM dump of the scene 129 UFO battle). CLUT: 256 entries at VRAM (16,483), uploaded from the exe at 0x800CCB40. The command box labels 奥義 / 攻撃 / 防御 are white (index 24) with a dark down-right shadow (26); the second set (16 + 18) is the same three words in light blue. The glyphs sit 3 px into 32-px cells; the English is centred in the same cells. The page is repeated byte for byte (text included) inside the per-stage files listed under copies (the probe: the label rows found at base + 128*row + 96). Not converted: the 16x7 ミス stack at u 41-56 rows 73-87 (too small for the 12-px font) and the Latin HP.",
+ "bpp": 8,
+ "page_bytes": 16384,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "exe@0x800CCB40",
+  "entries": 256
+ },
+ "copies": [
+  {
+   "file": "CDROM/BATTLE/PARK.BIN",
+   "base": "0x0"
+  },
+  {
+   "file": "CDROM/BATTLE/UTYU.BIN",
+   "base": "0x0"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_UTYU.BIN",
+   "base": "0x0"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_HABU.BIN",
+   "base": "0x20990"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_KUMA.BIN",
+   "base": "0x18870"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_ROBO.BIN",
+   "base": "0x2b1d8"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_SIKA.BIN",
+   "base": "0x18858"
+  },
+  {
+   "file": "CDROM/BATTLE/VS_UFO.BIN",
+   "base": "0x2d2dc"
+  }
+ ],
+ "cells": [
+  {
+   "name": "cmd_special",
+   "offset": "0x0",
+   "x": 96,
+   "y": 0,
+   "w": 32,
+   "h": 15,
+   "text": "Special",
+   "jp": "奥義",
+   "fg": 24,
+   "shadow": 26,
+   "erase": [
+    24,
+    26
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "cmd_attack",
+   "offset": "0x0",
+   "x": 96,
+   "y": 25,
+   "w": 32,
+   "h": 15,
+   "text": "Attack",
+   "jp": "攻撃",
+   "fg": 24,
+   "shadow": 26,
+   "erase": [
+    24,
+    26
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "cmd_guard",
+   "offset": "0x0",
+   "x": 96,
+   "y": 40,
+   "w": 32,
+   "h": 15,
+   "text": "Guard",
+   "jp": "防御",
+   "fg": 24,
+   "shadow": 26,
+   "erase": [
+    24,
+    26
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "cmd_attack_alt",
+   "offset": "0x0",
+   "x": 57,
+   "y": 72,
+   "w": 31,
+   "h": 16,
+   "text": "Attack",
+   "jp": "攻撃",
+   "fg": 16,
+   "shadow": 18,
+   "erase": [
+    16,
+    18
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "cmd_guard_alt",
+   "offset": "0x0",
+   "x": 57,
+   "y": 88,
+   "w": 31,
+   "h": 15,
+   "text": "Guard",
+   "jp": "防御",
+   "fg": 16,
+   "shadow": 18,
+   "erase": [
+    16,
+    18
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  },
+  {
+   "name": "cmd_special_alt",
+   "offset": "0x0",
+   "x": 81,
+   "y": 112,
+   "w": 31,
+   "h": 13,
+   "text": "Special",
+   "jp": "奥義",
+   "fg": 16,
+   "shadow": 18,
+   "erase": [
+    16,
+    18
+   ],
+   "bg": 0,
+   "align": "center",
+   "valign": "glyph"
+  }
+ ]
+}

@@ -1,0 +1,765 @@
+{
+ "file": "CDROM/FUKUTEST/FILESEL.NBN",
+ "note": "file select / album (NAME_ENT scenes 18/19). 8-bpp 128x128 pages at file offsets 0x2000 + 0x4000k, uploaded by NAME_ENT/func_8013BFBC: 0x1a000 -> VRAM (320,0), 0x1e000 (448,0), 0x24000 (640,0), 0x28000 (704,0), 0x2c000 (768,0), 0x3c000 (384,0); the album record panel crosses 0x24000|0x28000|0x2c000, addressed as one 384-px surface. CLUT: the 256 colours at +0x22000 (the screen draws through it; matched against the retail frame). Header 19 年 月 日 -> '19__/__/__' (the save date's digits fill the gaps). Girl names are given names (family names do not fit the 29-px boxes).",
+ "bpp": 8,
+ "page_w": 128,
+ "page_h": 128,
+ "clut": {
+  "source": "file:0x22000"
+ },
+ "cells": [
+  {
+   "name": "copy",
+   "offset": "0x24000",
+   "x": 18,
+   "y": 25,
+   "w": 38,
+   "h": 16,
+   "text": "Copy",
+   "jp": "コピー",
+   "fg": 58,
+   "outline": 166,
+   "erase": [
+    58,
+    166
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "new",
+   "offset": "0x24000",
+   "x": 61,
+   "y": 25,
+   "w": 38,
+   "h": 16,
+   "text": "New",
+   "jp": "ニュー",
+   "fg": 58,
+   "outline": 166,
+   "erase": [
+    58,
+    166
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "clear",
+   "offset": "0x24000",
+   "x": 18,
+   "y": 43,
+   "w": 38,
+   "h": 16,
+   "text": "Clear",
+   "jp": "クリア",
+   "fg": 58,
+   "outline": 166,
+   "erase": [
+    58,
+    166
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "load",
+   "offset": "0x24000",
+   "x": 61,
+   "y": 43,
+   "w": 38,
+   "h": 16,
+   "text": "Load",
+   "jp": "ロード",
+   "fg": 58,
+   "outline": 166,
+   "erase": [
+    58,
+    166
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "copy_hi",
+   "offset": "0x1a000",
+   "x": 2,
+   "y": 1,
+   "w": 38,
+   "h": 16,
+   "text": "Copy",
+   "jp": "コピー",
+   "fg": 177,
+   "outline": 178,
+   "erase": [
+    177,
+    178
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "new_hi",
+   "offset": "0x1a000",
+   "x": 53,
+   "y": 3,
+   "w": 38,
+   "h": 15,
+   "text": "New",
+   "jp": "ニュー",
+   "fg": 177,
+   "outline": 178,
+   "erase": [
+    177,
+    178
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "load_hi",
+   "offset": "0x1e000",
+   "x": 69,
+   "y": 11,
+   "w": 38,
+   "h": 16,
+   "text": "Load",
+   "jp": "ロード",
+   "fg": 177,
+   "outline": 178,
+   "erase": [
+    177,
+    178
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "clear_hi",
+   "offset": "0x1e000",
+   "x": 66,
+   "y": 43,
+   "w": 38,
+   "h": 16,
+   "text": "Clear",
+   "jp": "クリア",
+   "fg": 177,
+   "outline": 178,
+   "erase": [
+    177,
+    178
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "system",
+   "offset": "0x24000",
+   "x": 17,
+   "y": 87,
+   "w": 30,
+   "h": 13,
+   "text": "Sys.",
+   "jp": "システム",
+   "fg": 219,
+   "erase": [
+    219,
+    134
+   ],
+   "bg": "keep",
+   "align": "glyph"
+  },
+  {
+   "name": "sys_yes",
+   "offset": "0x3c000",
+   "x": 114,
+   "y": 55,
+   "w": 11,
+   "h": 11,
+   "text": "Y",
+   "jp": "有",
+   "fg": 227,
+   "erase": [
+    227
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "sys_no",
+   "offset": "0x3c000",
+   "x": 113,
+   "y": 87,
+   "w": 11,
+   "h": 11,
+   "text": "N",
+   "jp": "無",
+   "fg": 227,
+   "erase": [
+    227
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "hdr_year",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 216,
+   "y": 28,
+   "w": 13,
+   "h": 12,
+   "text": "/",
+   "jp": "年",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "hdr_month",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 247,
+   "y": 28,
+   "w": 13,
+   "h": 12,
+   "text": "/",
+   "jp": "月",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "hdr_day",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 278,
+   "y": 28,
+   "w": 12,
+   "h": 12,
+   "text": "",
+   "jp": "日",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "row_name",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 118,
+   "y": 44,
+   "w": 50,
+   "h": 12,
+   "text": "Name",
+   "jp": "名前",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "glyph"
+  },
+  {
+   "name": "row_nick",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 118,
+   "y": 60,
+   "w": 50,
+   "h": 12,
+   "text": "Nickname",
+   "jp": "あだ名",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "glyph"
+  },
+  {
+   "name": "row_club",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 118,
+   "y": 76,
+   "w": 50,
+   "h": 12,
+   "text": "Club",
+   "jp": "所属部",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "glyph"
+  },
+  {
+   "name": "row_cleared",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 118,
+   "y": 94,
+   "w": 50,
+   "h": 13,
+   "text": "Cleared",
+   "jp": "クリア人数",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "glyph"
+  },
+  {
+   "name": "row_people",
+   "offset": [
+    "0x24000",
+    "0x28000",
+    "0x2c000"
+   ],
+   "x": 259,
+   "y": 94,
+   "w": 15,
+   "h": 13,
+   "text": "",
+   "jp": "人",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_taichou",
+   "offset": "0x1a000",
+   "x": 6,
+   "y": 46,
+   "w": 42,
+   "h": 13,
+   "text": "Health",
+   "jp": "体調",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_bunkei",
+   "offset": "0x1a000",
+   "x": 6,
+   "y": 62,
+   "w": 42,
+   "h": 13,
+   "text": "Lit.",
+   "jp": "文系",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_rikei",
+   "offset": "0x1a000",
+   "x": 6,
+   "y": 78,
+   "w": 42,
+   "h": 13,
+   "text": "Science",
+   "jp": "理系",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_geijutsu",
+   "offset": "0x1a000",
+   "x": 6,
+   "y": 94,
+   "w": 42,
+   "h": 14,
+   "text": "Arts",
+   "jp": "芸術",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_undou",
+   "offset": "0x3c000",
+   "x": 55,
+   "y": 37,
+   "w": 42,
+   "h": 15,
+   "text": "Sports",
+   "jp": "運動",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_zatsugaku",
+   "offset": "0x3c000",
+   "x": 55,
+   "y": 54,
+   "w": 42,
+   "h": 14,
+   "text": "Trivia",
+   "jp": "雑学",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_youshi",
+   "offset": "0x3c000",
+   "x": 55,
+   "y": 70,
+   "w": 42,
+   "h": 14,
+   "text": "Looks",
+   "jp": "容姿",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_konjou",
+   "offset": "0x3c000",
+   "x": 55,
+   "y": 86,
+   "w": 42,
+   "h": 14,
+   "text": "Guts",
+   "jp": "根性",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "st_stress",
+   "offset": "0x3c000",
+   "x": 55,
+   "y": 102,
+   "w": 42,
+   "h": 14,
+   "text": "Stress",
+   "jp": "ストレス",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_fujisaki",
+   "offset": "0x1a000",
+   "x": 65,
+   "y": 46,
+   "w": 29,
+   "h": 13,
+   "text": "Shiori",
+   "jp": "藤崎",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_kisaragi",
+   "offset": "0x1a000",
+   "x": 65,
+   "y": 62,
+   "w": 29,
+   "h": 13,
+   "text": "Mio",
+   "jp": "如月",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_himoo",
+   "offset": "0x1a000",
+   "x": 65,
+   "y": 78,
+   "w": 29,
+   "h": 13,
+   "text": "Yuina",
+   "jp": "紐緒",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_katagiri",
+   "offset": "0x1a000",
+   "x": 65,
+   "y": 94,
+   "w": 29,
+   "h": 14,
+   "text": "Ayako",
+   "jp": "片桐",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_ijuuin",
+   "offset": "0x1e000",
+   "x": 14,
+   "y": 5,
+   "w": 41,
+   "h": 14,
+   "text": "Rei",
+   "jp": "伊集院",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_asahina",
+   "offset": "0x1e000",
+   "x": 14,
+   "y": 22,
+   "w": 41,
+   "h": 13,
+   "text": "Yuko",
+   "jp": "朝日奈",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_mikihara",
+   "offset": "0x1e000",
+   "x": 14,
+   "y": 38,
+   "w": 41,
+   "h": 13,
+   "text": "Megumi",
+   "jp": "美樹原",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_saotome",
+   "offset": "0x1e000",
+   "x": 14,
+   "y": 54,
+   "w": 41,
+   "h": 13,
+   "text": "Yumi",
+   "jp": "早乙女",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_tatebayashi",
+   "offset": "0x1e000",
+   "x": 14,
+   "y": 70,
+   "w": 41,
+   "h": 13,
+   "text": "Miharu",
+   "jp": "館林",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_nijino",
+   "offset": "0x3c000",
+   "x": 6,
+   "y": 38,
+   "w": 29,
+   "h": 13,
+   "text": "Saki",
+   "jp": "虹野",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_koshiki",
+   "offset": "0x3c000",
+   "x": 6,
+   "y": 54,
+   "w": 29,
+   "h": 13,
+   "text": "Yukari",
+   "jp": "古式",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_kiyokawa",
+   "offset": "0x3c000",
+   "x": 6,
+   "y": 70,
+   "w": 29,
+   "h": 13,
+   "text": "Nozomi",
+   "jp": "清川",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "girl_kagami",
+   "offset": "0x3c000",
+   "x": 6,
+   "y": 86,
+   "w": 29,
+   "h": 14,
+   "text": "Mira",
+   "jp": "鏡",
+   "fg": 2,
+   "erase": [
+    2
+   ],
+   "bg": "keep",
+   "align": "center"
+  },
+  {
+   "name": "clears",
+   "offset": "0x1a000",
+   "x": 4,
+   "y": 111,
+   "w": 90,
+   "h": 14,
+   "text": "Times cleared",
+   "jp": "クリア回数",
+   "fg": 219,
+   "erase": [
+    219
+   ],
+   "bg": 0,
+   "align": "glyph"
+  },
+  {
+   "name": "params",
+   "offset": "0x3c000",
+   "x": 2,
+   "y": 1,
+   "w": 100,
+   "h": 15,
+   "text": "Parameters",
+   "jp": "パラメータ",
+   "fg": 219,
+   "erase": [
+    219
+   ],
+   "bg": 0,
+   "align": "glyph"
+  },
+  {
+   "name": "girl_ratings",
+   "offset": "0x3c000",
+   "x": 2,
+   "y": 16,
+   "w": 100,
+   "h": 15,
+   "text": "Girl Ratings",
+   "jp": "",
+   "fg": 219,
+   "erase": [
+    219
+   ],
+   "bg": 0,
+   "align": "glyph"
+  }
+ ]
+}

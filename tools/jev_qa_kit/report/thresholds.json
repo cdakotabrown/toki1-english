@@ -1,0 +1,27 @@
+{
+ "_comment": "Report settings. thresholds: flag a line for a question when its problem probability (P(something is wrong), see questions.json 'problem') is >= the threshold. Defaults are 0.5; report/calibrate.py writes report/thresholds.calibrated.json from the pilot labels, which build_report.py prefers when it exists. weights scale each question's problem probability in the risk score: risk = mix * max(weight * p) + (1 - mix) * mean(p).",
+ "thresholds": {
+  "meaning_preserved": 0.5,
+  "register": 0.5,
+  "terminology": 0.5,
+  "naturalness": 0.5,
+  "untranslated_or_garbled": 0.5,
+  "honorific_policy": 0.5,
+  "tone_shift": 0.5,
+  "choice_contrast": 0.5,
+  "needs_human_review": 0.5
+ },
+ "weights": {
+  "meaning_preserved": 1.0,
+  "register": 0.8,
+  "terminology": 0.7,
+  "naturalness": 0.6,
+  "untranslated_or_garbled": 1.0,
+  "honorific_policy": 0.7,
+  "tone_shift": 0.9,
+  "choice_contrast": 0.8,
+  "needs_human_review": 0.9
+ },
+ "mix": 0.7,
+ "lint_risk_floor": 0.9
+}

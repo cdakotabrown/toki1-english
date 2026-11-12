@@ -1,0 +1,2513 @@
+{
+ "note": "Every string the game assembles at runtime (strcpy/strcat chains, sprintf formats, fixed-x pieces on one row), read off the matched C; rendered from the patched build and checked as English by tools/patch/compose_check.py (run by build_patched.py). Piece addresses are retail RAM addresses in the main exe or in the composition's overlay ('ov'). Variables named p_sei / p_mei / p_adana / girl_family / girl_given / girl_full / club / place / digits are read from the build itself (compose_check.builtin_var); the others are listed under 'vars'. 'buf' is the destination buffer in bytes (NUL included): the retail strcat has no bound. 'waive' lists the C files that call strcat/strncat/sprintf but build nothing the player reads as English, with the reason.",
+ "vars": {
+  "month": [
+   "4",
+   "12"
+  ],
+  "day": [
+   "3",
+   "12",
+   "25"
+  ],
+  "num": [
+   "1",
+   "14"
+  ],
+  "hp": [
+   "0",
+   "8",
+   "120",
+   "1024"
+  ]
+ },
+ "compositions": [
+  {
+   "id": "main/machiawase_menu_set",
+   "src": "src/main/matched/machiawase_menu_set.c",
+   "note": "date meeting-place choices: open quote + place + 'meet at' tail + close quote (x_taku menu, 240-px rows)",
+   "alts": [
+    [
+     {
+      "s": "0x800B7E78"
+     },
+     {
+      "v": "place"
+     },
+     {
+      "s": "0x800BCEBC"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7E7C"
+     },
+     {
+      "v": "place"
+     },
+     {
+      "s": "0x800BCEBC"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7E80"
+     },
+     {
+      "v": "place"
+     },
+     {
+      "s": "0x800BCEBC"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7E84"
+     },
+     {
+      "v": "place"
+     },
+     {
+      "s": "0x800BCEBC"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7E88"
+     },
+     {
+      "v": "place"
+     },
+     {
+      "s": "0x800BCEBC"
+     }
+    ]
+   ],
+   "max_px": 236,
+   "buf": 64
+  },
+  {
+   "id": "main/machiawase_show",
+   "src": "src/main/matched/machiawase_show.c",
+   "note": "('well then' + place + particle + girl + 'I'll wait for') field monologue kind 31",
+   "pieces": [
+    {
+     "s": "0x800B7E8C"
+    },
+    {
+     "v": "place"
+    },
+    {
+     "s": "0x800B7E98"
+    },
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x800B7EA0"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "main/holiday_club_select",
+   "src": "src/main/matched/holiday_club_select.c",
+   "note": "club + 部を退部した。",
+   "pieces": [
+    {
+     "v": "club",
+     "pick": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "s": "0x800B7F10"
+    }
+   ],
+   "buf": 64
+  },
+  {
+   "id": "main/join_club_message",
+   "src": "src/main/matched/join_club_message.c",
+   "note": "club + 部に入部した。",
+   "pieces": [
+    {
+     "v": "club"
+    },
+    {
+     "s": "0x800B7240"
+    }
+   ],
+   "buf": 64
+  },
+  {
+   "id": "main/join_club_message:row1",
+   "src": "src/main/matched/join_club_message.c",
+   "note": "captain's line, row y=50: open quote + 'every month' at -86, 'third Sunday' at -44 (colour 1), topic particle at 26 -- the retail pieces fill 42 / 70 px cells; the English pieces are chosen to fill them too",
+   "row": true,
+   "max_x": 130,
+   "pieces": [
+    {
+     "s": "0x800B7258",
+     "x": -86
+    },
+    {
+     "s": "0x800B7260",
+     "x": -44
+    },
+    {
+     "s": "0x800B726C",
+     "x": 26
+    }
+   ]
+  },
+  {
+   "id": "main/join_club_message:row3",
+   "src": "src/main/matched/join_club_message.c",
+   "note": "captain's line, row y=82: 'without missing' at -72 (colour 1), 'please.' at -16",
+   "row": true,
+   "max_x": 130,
+   "pieces": [
+    {
+     "s": "0x800B7288",
+     "x": -72
+    },
+    {
+     "s": "0x800B7294",
+     "x": -16
+    }
+   ]
+  },
+  {
+   "id": "main/pre_syogatu1",
+   "src": "src/main/matched/pre_syogatu1.c",
+   "note": "New Year cards: 'yay!' + girl ('and' girl)* + 'sent me a New Year card, lucky.)'",
+   "alts": [
+    [
+     {
+      "s": "0x800B7360"
+     },
+     {
+      "v": "girl_given"
+     },
+     {
+      "s": "0x800B7374"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7360"
+     },
+     {
+      "v": "girl_given",
+      "pick": [
+       0
+      ]
+     },
+     {
+      "s": "0x800B736C"
+     },
+     {
+      "v": "girl_given"
+     },
+     {
+      "s": "0x800B7374"
+     }
+    ]
+   ],
+   "buf": 256
+  },
+  {
+   "id": "main/holiday_screen_init:date",
+   "src": "src/main/matched/holiday_screen_init.c",
+   "pieces": [
+    {
+     "s": "0x800B7DA4"
+    },
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x800B7DB0"
+    }
+   ],
+   "buf": 260
+  },
+  {
+   "id": "main/holiday_screen_init:match",
+   "src": "src/main/matched/holiday_screen_init.c",
+   "note": "open bracket + 'today is the club practice match)' drawn straight at (-72,66): no sndisp bracket conversion",
+   "pieces": [
+    {
+     "s": "0x800B7DC0"
+    },
+    {
+     "s": "0x800B7DC4"
+    }
+   ],
+   "max_px": 201,
+   "buf": 260
+  },
+  {
+   "id": "main/holiday_screen_init:practice",
+   "src": "src/main/matched/holiday_screen_init.c",
+   "pieces": [
+    {
+     "s": "0x800B7DFC"
+    },
+    {
+     "s": "0x800B7E00"
+    }
+   ],
+   "max_px": 201,
+   "buf": 260
+  },
+  {
+   "id": "TEL/func_80132274:hello",
+   "src": "src/overlay/TEL/tel_yoshio_intro.c",
+   "ov": "TEL",
+   "note": "Yoshio picks up: 'hello,' (sndi row 0) / p_sei + 'speaking.' (row 1, the 44-byte buffer)",
+   "pieces": [
+    {
+     "s": "0x8013E3A4"
+    },
+    {
+     "lit": "{br}"
+    },
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8013E3B0"
+    }
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/func_80132274:oh",
+   "src": "src/overlay/TEL/tel_yoshio_intro.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013E3BC"
+    },
+    {
+     "v": "p_mei"
+    },
+    {
+     "s": "0x8013E3C4"
+    }
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/func_80132274:just",
+   "src": "src/overlay/TEL/tel_yoshio_intro.c",
+   "ov": "TEL",
+   "alts": [
+    [
+     {
+      "s": "0x8013E500"
+     },
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8013E50C"
+     }
+    ],
+    [
+     {
+      "s": "0x8013E658"
+     },
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8013E664"
+     }
+    ]
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/func_80132274:hello2",
+   "src": "src/overlay/TEL/tel_yoshio_intro.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013E640"
+    },
+    {
+     "lit": "{br}"
+    },
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8013E64C"
+    }
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/func_80132FCC:dial",
+   "src": "src/overlay/TEL/tel_yoshio_menu.c",
+   "ov": "TEL",
+   "note": "dialling mutter: name、name‥‥と。",
+   "alts": [
+    [
+     {
+      "t": "0x800B9B10",
+      "n": 1
+     },
+     {
+      "s": "0x8013E768"
+     },
+     {
+      "t": "0x800B9B10",
+      "n": 1
+     },
+     {
+      "s": "0x8013E770"
+     }
+    ],
+    [
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     {
+      "s": "0x8013E76C"
+     },
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     {
+      "s": "0x8013E770"
+     }
+    ]
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/tel_dialog_disp:dial",
+   "src": "src/overlay/TEL/tel_dialog_disp.c",
+   "ov": "TEL",
+   "alts": [
+    [
+     {
+      "t": "0x800B9B10",
+      "n": 1
+     },
+     {
+      "s": "0x8013E9F0"
+     },
+     {
+      "t": "0x800B9B10",
+      "n": 1
+     },
+     {
+      "s": "0x8013E9F8"
+     }
+    ],
+    [
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     {
+      "s": "0x8013E9F4"
+     },
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ]
+     },
+     {
+      "s": "0x8013E9F8"
+     }
+    ]
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/tel_dialog_disp:ask",
+   "src": "src/overlay/TEL/tel_dialog_disp.c",
+   "ov": "TEL",
+   "note": "girl + possessive (row 0) / 'about' (row 1) / 'I want to know.' (row 2)",
+   "pieces": [
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x8013E9A0"
+    },
+    {
+     "lit": "{br}"
+    },
+    {
+     "s": "0x8013E9A4"
+    },
+    {
+     "lit": "{br}"
+    },
+    {
+     "s": "0x8013E9B4"
+    }
+   ],
+   "buf": 44
+  },
+  {
+   "id": "TEL/tel_date_forget",
+   "src": "src/overlay/TEL/tel_date_forget.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013F940"
+    },
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x8013F958"
+    }
+   ],
+   "buf": 260
+  },
+  {
+   "id": "TEL/func_8013B484:mad",
+   "src": "src/overlay/TEL/tel_yoshio_reserved_dialog.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013FC0C"
+    },
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x8013FC18"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "TEL/func_8013ACF8:rumor",
+   "src": "src/overlay/TEL/tel_dial_step.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013FB34"
+    },
+    {
+     "v": "girl_given"
+    },
+    {
+     "s": "0x8013FB50"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "TEL/tel_dialog20:invite",
+   "src": "src/overlay/TEL/tel_dialog20.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "v": "month"
+    },
+    {
+     "s": "0x8013ED54"
+    },
+    {
+     "v": "day"
+    },
+    {
+     "s": "0x8013ED58"
+    },
+    {
+     "s": "0x8013ED5C"
+    },
+    {
+     "v": "place"
+    },
+    {
+     "s": "0x8013ED64"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "TEL/tel_dialog20:meet",
+   "src": "src/overlay/TEL/tel_dialog20.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013ED9C"
+    },
+    {
+     "v": "month"
+    },
+    {
+     "s": "0x8013EDA8"
+    },
+    {
+     "v": "day"
+    },
+    {
+     "s": "0x8013EDAC"
+    },
+    {
+     "s": "0x8013EDB0"
+    },
+    {
+     "v": "place"
+    },
+    {
+     "s": "0x8013EDB8"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "TEL/tel_dialog20:yes",
+   "src": "src/overlay/TEL/tel_dialog20.c",
+   "ov": "TEL",
+   "pieces": [
+    {
+     "s": "0x8013EDE0"
+    },
+    {
+     "v": "month"
+    },
+    {
+     "s": "0x8013EDEC"
+    },
+    {
+     "v": "day"
+    },
+    {
+     "s": "0x8013EDF0"
+    },
+    {
+     "s": "0x8013EDF4"
+    }
+   ],
+   "buf": 256
+  },
+  {
+   "id": "TEL/tel_slot_disp:birthday",
+   "src": "src/overlay/TEL/tel_slot_disp.c",
+   "ov": "TEL",
+   "note": "profile birthday: month + 月 + (day tens | 　) + day + 日 at (-88,-78); the ideographic space pads a one-digit day like retail",
+   "alts": [
+    [
+     {
+      "v": "month"
+     },
+     {
+      "s": "0x801403DC"
+     },
+     {
+      "s": "0x800B9B30"
+     },
+     {
+      "lit": "3"
+     },
+     {
+      "s": "0x801403E0"
+     }
+    ],
+    [
+     {
+      "v": "month"
+     },
+     {
+      "s": "0x801403DC"
+     },
+     {
+      "lit": "1"
+     },
+     {
+      "lit": "2"
+     },
+     {
+      "s": "0x801403E0"
+     }
+    ]
+   ],
+   "allow": [
+    "ideographic_space"
+   ],
+   "buf": 32
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_intro_step:shield",
+   "src": "src/overlay/RPG_BAT/rpg_bat_intro_step.c",
+   "ov": "RPG_BAT",
+   "note": "p_sei + 'shielded' + girl (battle line buffer, 40 B)",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015B610"
+    },
+    {
+     "v": "girl_family",
+     "pick": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ]
+    },
+    {
+     "s": "0x8015B614"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/speech",
+   "src": "src/overlay/RPG_BAT/mongoose_seq.c",
+   "ov": "RPG_BAT",
+   "note": "player family name + 「speech (battle line buffer, 40 B): every p_sei + line pair",
+   "alts": [
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015C614"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015C648"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015C850"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015C86C"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015AABC"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015BF9C"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015E0C8"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B684"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B6B8"
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_80146C38",
+   "src": "src/overlay/RPG_BAT/komusou_seq.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015C850"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_intro",
+   "src": "src/overlay/RPG_BAT/rpg_bat_intro.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015AABC"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_80140CD0",
+   "src": "src/overlay/RPG_BAT/robo_power_seq.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015BF9C"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_801596F0",
+   "src": "src/overlay/RPG_BAT/rpg_bat_win_seq.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015E0C8"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_phase",
+   "src": "src/overlay/RPG_BAT/rpg_bat_phase.c",
+   "ov": "RPG_BAT",
+   "alts": [
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B684"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B6B8"
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_80157648",
+   "src": "src/overlay/RPG_BAT/rpg_bat_escape_seq.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015DDA8"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_8013AF24",
+   "src": "src/overlay/RPG_BAT/rpg_bat_player_attack.c",
+   "ov": "RPG_BAT",
+   "note": "p_sei + 'attacks' (D_8015E74C), then that + 'failed' (D_8015E774)",
+   "alts": [
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015BB28"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015BB28"
+     },
+     {
+      "s": "0x8015BB30"
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_reward_step",
+   "src": "src/overlay/RPG_BAT/rpg_bat_reward_step.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "v": "p_sei"
+    },
+    {
+     "s": "0x8015BB10"
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_pick_list_set",
+   "src": "src/overlay/RPG_BAT/rpg_bat_pick_list_set.c",
+   "ov": "RPG_BAT",
+   "note": "おたから： + item (setA/B/C by enemy)",
+   "alts": [
+    [
+     {
+      "s": "0x8015D858"
+     },
+     {
+      "t": "0x8015EFA0",
+      "n": 4
+     }
+    ],
+    [
+     {
+      "s": "0x8015D858"
+     },
+     {
+      "t": "0x8015EFB0",
+      "n": 4
+     }
+    ],
+    [
+     {
+      "s": "0x8015D858"
+     },
+     {
+      "t": "0x8015EFC0",
+      "n": 4
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/rpg_bat_msg_build",
+   "src": "src/overlay/RPG_BAT/rpg_bat_msg_build.c",
+   "ov": "RPG_BAT",
+   "note": "おたから： + item, 獲得称号： + title (final boss)",
+   "alts": [
+    [
+     {
+      "s": "0x8015E1A8"
+     },
+     {
+      "t": "0x8015EFE0",
+      "n": 4
+     }
+    ],
+    [
+     {
+      "s": "0x8015E1B4"
+     },
+     {
+      "t": "0x8015EFF0",
+      "n": 4
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "RPG_BAT/func_80139E88",
+   "src": "src/overlay/RPG_BAT/rpg_bat_random_quad_pick.c",
+   "ov": "RPG_BAT",
+   "pieces": [
+    {
+     "s": "0x8015B738"
+    },
+    {
+     "t": "0x8015E530",
+     "n": 4
+    }
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "BUNKA_SD/announcer",
+   "src": "src/overlay/BUNKA_SD/bunka_sd_result_step.c",
+   "ov": "BUNKA_SD",
+   "note": "speech-contest announcer: the player's full name, right-aligned to x=96 (text_ov_labels.c pt_bunka_sd_announcer: a Latin name given first, then the separator 0x80139EF4, then the family name; 64-byte buffer)",
+   "pieces": [
+    {
+     "v": "p_mei"
+    },
+    {
+     "s": "0x80139EF4"
+    },
+    {
+     "v": "p_sei"
+    }
+   ],
+   "buf": 64,
+   "max_px": 200
+  },
+  {
+   "id": "SHOUGATU/func_8013B0EC",
+   "src": "src/overlay/SHOUGATU/shougatu_girl10_init.c",
+   "ov": "SHOUGATU",
+   "note": "sprintf(p_name2, \"%sさん\", p_sei): the heroine's name for the player in the party ({P}); p_name2 is a 12-byte buffer and sprintf is not redirected",
+   "pieces": [
+    {
+     "fmt": "0x80143950",
+     "args": [
+      {
+       "v": "p_sei"
+      }
+     ]
+    }
+   ],
+   "buf": 12
+  },
+  {
+   "id": "SHOUGATU/omikuji",
+   "src": "src/overlay/SHOUGATU/shougatu_omikuji.c",
+   "ov": "SHOUGATU",
+   "note": "sprintf(buf, FORMAT, rank) at (-104,48): 'it's %s...' (bad / very bad luck), 'oh, it's %s.' (the four middling ranks), 'lucky! it's %s!!' (great luck); formats rewritten whole in ui_strings.py, ranks from the 5-byte table 0x80143F1C",
+   "alts": [
+    [
+     {
+      "fmt": "0x80143740",
+      "args": [
+       {
+        "rec": "0x80143F1C",
+        "stride": 5,
+        "pick": [
+         3,
+         4
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "fmt": "0x8014374C",
+      "args": [
+       {
+        "rec": "0x80143F1C",
+        "stride": 5,
+        "pick": [
+         1,
+         2,
+         5,
+         6
+        ]
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "fmt": "0x8014375C",
+      "args": [
+       {
+        "rec": "0x80143F1C",
+        "stride": 5,
+        "pick": [
+         0
+        ]
+       }
+      ]
+     }
+    ]
+   ],
+   "max_px": 230
+  },
+  {
+   "id": "NAME_ENT/album_number",
+   "src": "src/overlay/NAME_ENT/name_ent_album_copyc7.c",
+   "ov": "NAME_ENT",
+   "note": "file-select dialogs: album number + 番アルバム… on row 1 at (-64,32), the rest of the sentence on the next rows",
+   "alts": [
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BD98"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BDA8"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BDC8"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BDD8"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BE3C"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BE4C"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BD20"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BD30"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BD6C"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BD7C"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014B984"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014B994"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BC74"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BC88"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014B95C"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014B974"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BC10"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BC20"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BC9C"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BCB0"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BB50"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BB64"
+     },
+     {
+      "lit": "{br}"
+     },
+     {
+      "s": "0x8014BB78"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014BB30"
+     }
+    ]
+   ],
+   "max_px": 190,
+   "buf": 256
+  },
+  {
+   "id": "NAME_ENT/album_card_number",
+   "src": "src/overlay/NAME_ENT/name_ent_album_info_disp.c",
+   "ov": "NAME_ENT",
+   "note": "file select record panel: strncpy(number, 5) + strcat(番) at (-32,-92), 36 px before the date art",
+   "buf": 16,
+   "alts": [
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014B670"
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x8014B674"
+     }
+    ]
+   ],
+   "max_px": 36
+  },
+  {
+   "id": "RPG_BAT/suuzi_str",
+   "src": "src/overlay/RPG_BAT/suuzi_str.c",
+   "ov": "RPG_BAT",
+   "note": "suuzi_str(dst, name, joiner, n, suffix) = name + joiner (retail は) + decimal n + suffix, every call: func_8013AF24, furyou_punch_ally_seq, furyou_punch_ally_seq, furyou_punch_ally_seq, func_80158C54, furyou_punch_stun_seq, func_80152088, func_80156D80, rpg_bat_intro_step, rpg_bat_shade_step, furyou_punch_hit_seq, func_80157160",
+   "alts": [
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015BB3C"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015BB40"
+     }
+    ],
+    [
+     {
+      "s": "0x8015B4CC"
+     },
+     {
+      "s": "0x8015B4D4"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B4D8"
+     }
+    ],
+    [
+     {
+      "s": "0x8015B4EC"
+     },
+     {
+      "s": "0x8015B4F4"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B4F8"
+     }
+    ],
+    [
+     {
+      "s": "0x8015B50C"
+     },
+     {
+      "s": "0x8015B514"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B518"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015E098"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015E09C"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B5BC"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B5C0"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015D7BC"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015D7C0"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015DD5C"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015DD60"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B620"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B624"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015E0B0"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015E0B4"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015B568"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015B56C"
+     }
+    ],
+    [
+     {
+      "v": "p_sei"
+     },
+     {
+      "s": "0x8015DD90"
+     },
+     {
+      "v": "hp"
+     },
+     {
+      "s": "0x8015DD94"
+     }
+    ]
+   ],
+   "buf": 40,
+   "max_px": 250
+  },
+  {
+   "id": "main/album_info_disp:number",
+   "src": "src/main/matched/album_info_disp.c",
+   "note": "album card header: number + strncat(番アルバム, 2) at (pos+12,-80)",
+   "alts": [
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x800B7750",
+      "max": 2
+     }
+    ],
+    [
+     {
+      "v": "num"
+     },
+     {
+      "s": "0x800B77CC",
+      "max": 2
+     }
+    ]
+   ],
+   "buf": 32
+  },
+  {
+   "id": "main/album_info_disp:birthday",
+   "src": "src/main/matched/album_info_disp.c",
+   "note": "album card birth date: yy + 年 + month + 月 + day + 日, every piece strncat 2/4 bytes",
+   "alts": [
+    [
+     {
+      "lit": "9"
+     },
+     {
+      "lit": "5"
+     },
+     {
+      "s": "0x800B777C",
+      "max": 2
+     },
+     {
+      "v": "month",
+      "max": 4
+     },
+     {
+      "s": "0x800B7780",
+      "max": 2
+     },
+     {
+      "v": "day"
+     },
+     {
+      "s": "0x800B7784",
+      "max": 2
+     }
+    ],
+    [
+     {
+      "lit": "9"
+     },
+     {
+      "lit": "5"
+     },
+     {
+      "s": "0x800B77D8",
+      "max": 2
+     },
+     {
+      "v": "month",
+      "max": 4
+     },
+     {
+      "s": "0x800B77DC",
+      "max": 2
+     },
+     {
+      "v": "day"
+     },
+     {
+      "s": "0x800B77E0",
+      "max": 2
+     }
+    ]
+   ],
+   "buf": 32
+  },
+  {
+   "id": "main/album_info_disp:name",
+   "src": "src/main/matched/album_info_disp.c",
+   "note": "album card name: 名前… + family + given; the two strncat sites call text_misc.c pt_name_hold / pt_name_put (english.json main.callsites), which write ' given family' for a Latin name -- rendered here as that code builds it",
+   "alts": [
+    [
+     {
+      "s": "0x800B7788"
+     },
+     {
+      "lit": " "
+     },
+     {
+      "v": "p_mei"
+     },
+     {
+      "lit": " "
+     },
+     {
+      "v": "p_sei"
+     }
+    ],
+    [
+     {
+      "s": "0x800B77E4"
+     },
+     {
+      "lit": " "
+     },
+     {
+      "v": "p_mei"
+     },
+     {
+      "lit": " "
+     },
+     {
+      "v": "p_sei"
+     }
+    ]
+   ],
+   "buf": 32,
+   "max_px": 140
+  },
+  {
+   "id": "main/album_info_disp:fields",
+   "src": "src/main/matched/album_info_disp.c",
+   "note": "album card: あだ名… + nickname (strncat 13 -> 15 for a Latin name: text_misc.c pt_strncat_nick), 所属部‥ + club, クリア人数‥ + count",
+   "alts": [
+    [
+     {
+      "s": "0x800B7790"
+     },
+     {
+      "v": "p_adana",
+      "max": 15
+     }
+    ],
+    [
+     {
+      "s": "0x800B77EC"
+     },
+     {
+      "v": "p_adana",
+      "max": 15
+     }
+    ],
+    [
+     {
+      "s": "0x800B779C"
+     },
+     {
+      "v": "club"
+     }
+    ],
+    [
+     {
+      "s": "0x800B77F8"
+     },
+     {
+      "v": "club"
+     }
+    ],
+    [
+     {
+      "s": "0x800B77A8"
+     },
+     {
+      "v": "num"
+     }
+    ],
+    [
+     {
+      "s": "0x800B7804"
+     },
+     {
+      "v": "num"
+     }
+    ]
+   ],
+   "buf": 32,
+   "max_px": 140
+  },
+  {
+   "id": "ETC/exam_names",
+   "src": "src/overlay/ETC/etc_week_rank_disp.c",
+   "ov": "ETC",
+   "note": "exam results board: strncpy(name, p_sei, 8) + strncat(name, p_mei, 8); the strncat site calls text_misc.c pt_full_name_cat (english.json overlays.ETC.callsites): 'given family' like the girls' names on the board",
+   "pieces": [
+    {
+     "v": "p_mei"
+    },
+    {
+     "lit": " "
+    },
+    {
+     "v": "p_sei"
+    }
+   ],
+   "buf": 268,
+   "max_px": 120
+  },
+  {
+   "id": "ENDING/confession",
+   "src": "src/overlay/ENDING/ending_serifu_cmd.c",
+   "ov": "ENDING",
+   "note": "confession window: the bracket at x=-102 (case 0/6) or -144 (case 1/12), the body 14 px right of it (msg_str_disp), case 6 appends ） to the body",
+   "row": true,
+   "max_gap": 4,
+   "alts": [
+    [
+     {
+      "s": "0x8013BF30",
+      "x": -102
+     },
+     {
+      "lit": "Shiori...",
+      "x": -88
+     }
+    ],
+    [
+     {
+      "s": "0x8013BF3C",
+      "x": -102
+     },
+     {
+      "lit": "Thank you",
+      "x": -88
+     }
+    ],
+    [
+     {
+      "s": "0x8013BF48",
+      "x": -144
+     },
+     {
+      "lit": "I love you",
+      "x": -130
+     }
+    ],
+    [
+     {
+      "s": "0x8013BF54",
+      "x": -144
+     },
+     {
+      "lit": "I love you",
+      "x": -130
+     }
+    ]
+   ]
+  },
+  {
+   "id": "ENDING/confession_close",
+   "src": "src/overlay/ENDING/ending_serifu_cmd.c",
+   "ov": "ENDING",
+   "pieces": [
+    {
+     "lit": "(Shiori...)"
+    },
+    {
+     "s": "0x8013BF40"
+    }
+   ],
+   "note": "case 6: the body + ） suffix",
+   "allow": []
+  },
+  {
+   "id": "BUNKAKEN/profile_names",
+   "src": "src/overlay/BUNKAKEN/bunkaken_main0b.c",
+   "ov": "BUNKAKEN",
+   "note": "festival profile rows: family name at x=-128, given name at x=-72 (y 66), and the player's p_sei / p_mei the same way (y 82): fixed columns, only overlap is an error; girl 11 draws girl 0 (bunkaken_main0b.c), so the family names are 0..10",
+   "row": true,
+   "max_gap": 999,
+   "alts": [
+    [
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "x": -128
+     },
+     {
+      "t": "0x801564B0",
+      "n": 12,
+      "x": -72
+     }
+    ],
+    [
+     {
+      "v": "p_sei",
+      "x": -128
+     },
+     {
+      "v": "p_mei",
+      "x": -72
+     }
+    ]
+   ]
+  },
+  {
+   "id": "BUNKASAI/profile_names",
+   "src": "src/overlay/BUNKASAI/bunkasai_aisyou_check_main.c",
+   "ov": "BUNKASAI",
+   "row": true,
+   "max_gap": 999,
+   "alts": [
+    [
+     {
+      "v": "girl_family",
+      "pick": [
+       0,
+       1,
+       2,
+       3,
+       4,
+       5,
+       6,
+       7,
+       8,
+       9,
+       10
+      ],
+      "x": -128
+     },
+     {
+      "t": "0x80160AF0",
+      "n": 12,
+      "x": -72
+     }
+    ],
+    [
+     {
+      "v": "p_sei",
+      "x": -128
+     },
+     {
+      "v": "p_mei",
+      "x": -72
+     }
+    ]
+   ],
+   "note": "festival profile rows"
+  },
+  {
+   "id": "token/{A}:gift",
+   "token": "{A}",
+   "ov": "GEKO",
+   "rows": [
+    "SERIFU/G_BIRTH",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "プレゼント",
+   "src": "src/overlay/GEKO/geko_name_set.c",
+   "note": "birthday gift: geko_name_set copies the gift (GEKO 0x80145130, 33-byte records) into aname",
+   "values": [
+    {
+     "rec": "0x80145130",
+     "stride": 33,
+     "n": 99
+    }
+   ]
+  },
+  {
+   "id": "token/{A}:festival_gift",
+   "token": "{A}",
+   "ov": "BUNKAKEN",
+   "rows": [
+    "BUNKA/BUN_FU"
+   ],
+   "src": "src/overlay/BUNKAKEN/bunkaken_msg_set.c",
+   "note": "festival gift: bunkaken_msg_set / bunkasai_msg_set copy the gift into aname",
+   "values": [
+    {
+     "rec": "0x8015637C",
+     "stride": 33,
+     "n": 9
+    }
+   ]
+  },
+  {
+   "id": "token/{M}:club",
+   "token": "{M}",
+   "ov": "GEKO",
+   "rows": [
+    "SERIFU/GEKO",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "遊びに|見学|見に来て",
+   "src": "src/overlay/GEKO/geko_reaction.c",
+   "note": "walk home: geko_reaction copies the club (GEKO 0x80144CBC, 20-byte records) into mname",
+   "values": [
+    {
+     "rec": "0x80144CBC",
+     "stride": 20,
+     "n": 11
+    }
+   ]
+  },
+  {
+   "id": "token/{M}:meeting_spot",
+   "token": "{M}",
+   "ov": "GEKO",
+   "rows": [
+    "SERIFU/G_INVITE",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "待ち合わせ|いいかな",
+   "src": "src/overlay/GEKO/geko_girl_pick_init.c",
+   "note": "date invitation: geko_girl_pick_init copies the meeting spot (GEKO 0x801478B8, 33-byte records) into mname",
+   "values": [
+    {
+     "rec": "0x801478B8",
+     "stride": 33,
+     "n": 19
+    }
+   ]
+  },
+  {
+   "id": "token/{O}:fortune",
+   "token": "{O}",
+   "ov": "SHOUGATU",
+   "rows": [
+    "SERIFU/SHOGATU",
+    "SPEAKTST/TEST_*"
+   ],
+   "src": "src/overlay/SHOUGATU/shougatu_omikuji_set.c",
+   "note": "New Year: func_801359E8 copies the fortune rank (5-byte records 0x80143F40) into oname",
+   "values": [
+    {
+     "rec": "0x80143F40",
+     "stride": 5,
+     "n": 7
+    }
+   ]
+  },
+  {
+   "id": "token/{W}:charm",
+   "token": "{W}",
+   "ov": "SHOUGATU",
+   "rows": [
+    "SERIFU/SHOGATU",
+    "SPEAKTST/TEST_*"
+   ],
+   "src": "src/overlay/SHOUGATU/shougatu_taku_set.c",
+   "note": "New Year: func_80134408 copies the wish (9-byte records 0x80143E48) into wname",
+   "values": [
+    {
+     "rec": "0x80143E48",
+     "stride": 9,
+     "n": 3
+    }
+   ]
+  },
+  {
+   "id": "token/{S}:trip",
+   "token": "{S}",
+   "ov": "SHUGAKU",
+   "rows": [
+    "SERIFU/SHUGAKU",
+    "SPEAKTST/TEST_*"
+   ],
+   "src": "src/overlay/SHUGAKU/shugaku_place_set.c",
+   "note": "school trip: the destination copied into shu_name",
+   "values": [
+    {
+     "s": "0x8013AE20"
+    },
+    {
+     "s": "0x8013AE38"
+    },
+    {
+     "s": "0x8013AE48"
+    },
+    {
+     "s": "0x8013AEB8"
+    },
+    {
+     "s": "0x8013AEC0"
+    }
+   ]
+  },
+  {
+   "id": "token/{AM}:date_spot",
+   "token": "{A}",
+   "ov": "DATE",
+   "rows": [
+    "SERIFU/SERIFU",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "場所|行ってみよう",
+   "src": "src/overlay/DATE/date_machiawase_name_set.c",
+   "note": "date: func_8013EF2C copies the spot (DATE 0x8015B9BC, 33-byte records) into aname / mname",
+   "values": [
+    {
+     "rec": "0x8015B9BC",
+     "stride": 33,
+     "n": 22
+    }
+   ]
+  },
+  {
+   "id": "token/{M}:date_spot",
+   "token": "{M}",
+   "ov": "DATE",
+   "rows": [
+    "SERIFU/SERIFU",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "場所|行ってみよう",
+   "src": "src/overlay/DATE/date_machiawase_name_set.c",
+   "values": [
+    {
+     "rec": "0x8015B9BC",
+     "stride": 33,
+     "n": 22
+    }
+   ]
+  },
+  {
+   "id": "token/{A}:secret_art",
+   "token": "{A}",
+   "ov": "KANGEI",
+   "rows": [
+    "SERIFU/GASSHUKU",
+    "SERIFU/GASSH_*",
+    "SPEAKTST/TEST_*"
+   ],
+   "match": "奥義",
+   "src": "src/overlay/KANGEI/kangei_class_init.c",
+   "note": "camp: func_801376A4 copies the club (KANGEI 0x80139FBC, 20-byte records) into aname",
+   "values": [
+    {
+     "rec": "0x80139FBC",
+     "stride": 20,
+     "n": 11
+    }
+   ]
+  },
+  {
+   "id": "token/{M}:epilogue",
+   "token": "{M}",
+   "ov": "ENDING",
+   "rows": [
+    "SERIFU/EPILOG"
+   ],
+   "match": "残念",
+   "src": "src/overlay/ENDING/ending_result_disp.c",
+   "note": "epilogue: ending_result_disp copies the university / company into mname",
+   "values": [
+    {
+     "s": "0x8013C124"
+    },
+    {
+     "s": "0x8013C130"
+    },
+    {
+     "s": "0x8013C13C"
+    },
+    {
+     "s": "0x8013C148"
+    },
+    {
+     "s": "0x8013C154"
+    },
+    {
+     "s": "0x8013C160"
+    }
+   ]
+  },
+  {
+   "id": "token/{M}:career",
+   "token": "{M}",
+   "ov": "ENDING",
+   "strings": [
+    "0x8013C100"
+   ],
+   "src": "src/overlay/ENDING/ending_result_disp.c",
+   "note": "epilogue: a career route copies 'the novelist ...' into mname, then ENDING's own {M} + 'unfortunately it did not work out, but' string is drawn through msg_str_disp",
+   "values": [
+    {
+     "s": "0x8013C16C"
+    },
+    {
+     "s": "0x8013C178"
+    },
+    {
+     "s": "0x8013C180"
+    },
+    {
+     "s": "0x8013C18C"
+    },
+    {
+     "s": "0x8013C1A0"
+    },
+    {
+     "s": "0x8013C1A8"
+    },
+    {
+     "s": "0x8013C1B4"
+    },
+    {
+     "s": "0x8013C1C4"
+    },
+    {
+     "s": "0x8013C1D4"
+    },
+    {
+     "s": "0x8013C1EC"
+    },
+    {
+     "s": "0x8013C1FC"
+    }
+   ]
+  },
+  {
+   "id": "NAME_ENT/birthday_answer",
+   "src": "src/overlay/NAME_ENT/_name_ent_mainf.c",
+   "ov": "NAME_ENT",
+   "note": "prologue: the player answers Shiori's birthday (month + 月 (strncat 2) + day + 日。 (strncat 4)) and blood type (letter + 型。, strncat 4)",
+   "alts": [
+    [
+     {
+      "v": "month"
+     },
+     {
+      "s": "0x8014C924",
+      "max": 2
+     },
+     {
+      "v": "day"
+     },
+     {
+      "s": "0x8014C928",
+      "max": 4
+     }
+    ],
+    [
+     {
+      "t": "0x8014D180",
+      "n": 4
+     },
+     {
+      "s": "0x8014C930",
+      "max": 4
+     }
+    ]
+   ],
+   "buf": 128
+  }
+ ],
+ "waive": {
+  "src/main/matched/get_g_name.c": "the girl-name builder: its outputs are the girl_given variable every composition above renders",
+  "src/main/matched/get_p_name.c": "the player-name builder, replaced by text_misc.c pt_get_p_name (honorific suffixes blank); its outputs are p_sei / p_mei / p_adana",
+  "src/main/matched/sndi.c": "replaced by text_field.c pt_field_line (ASCII bracket before an English row, P/G expanded by the patch)",
+  "src/main/matched/serifu_cmd_exec.c": "replaced by text_event.c pt_event_message (speaker labels and brackets drawn by the patch)",
+  "src/main/matched/msg_str_disp.c": "replaced by text_msg.c pt_schedule_analyze (token expansion with the long-name redirects)",
+  "src/main/matched/msg_part_reorder.c": "choice shuffle: re-joins the reply segments in a new order, replaced by text_msg.c pt_choice_shuffle",
+  "src/main/matched/sprintf.c": "the sprintf implementation itself",
+  "src/main/matched/save_name_set.c": "memory-card file name bu00:BISLPS-00065 + hex digit (BIOS directory entry, never drawn)",
+  "src/main/matched/card_file_save.c": "memory-card file title for the BIOS card manager (Shift-JIS on purpose, PS1-PATCH-STATUS.md section 4)",
+  "src/main/matched/card_file_write.c": "memory-card file title for the BIOS card manager (Shift-JIS on purpose)",
+  "src/main/matched/album_info_disp.c": "album card: rendered by the main/album_info_disp:* compositions",
+  "src/overlay/TACO/taco_num_set.c": "TwinBee score: right-aligned digits padded with spaces (drawn by the TACO sprite font)",
+  "src/overlay/NAME_ENT/name_ent_album_make4c.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_make4a.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_dispc4.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_loadc2.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_loading_disp.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_dispe2.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_copyc8.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_makea8.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_dispa4.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_makea9.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_album_first_load.c": "album number dialog, rendered by NAME_ENT/album_number",
+  "src/overlay/NAME_ENT/name_ent_record_set.c": "record name family+given: replaced by text_name_ent.c pt_name_commit (space between the names)",
+  "src/overlay/ETC/etc_week_rank_disp.c": "exam results board names: rendered by ETC/exam_names",
+  "src/overlay/TACO/taco_name_entry.c": "TwinBee 3-letter initials (A-Z keys)",
+  "src/overlay/TACO/taco_round_end.c": "TwinBee high-score initials",
+  "src/overlay/TACO/taco_result_save0.c": "TwinBee high-score initials",
+  "src/overlay/TACO/record_work_init.c": "TwinBee high-score initials"
+ },
+ "kept_japanese": {
+  "OLH:0x80137A8C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137A90": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137A94": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137A98": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137A9C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AA0": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AA4": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AA8": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AAC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AB0": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AB4": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AB8": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137ABC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AC0": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AC4": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AC8": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137ACC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AD0": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AD4": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137AD8": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80137ADC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x801388EC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x801388F0": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x801388F4": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x801388F8": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x801388FC": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138900": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138904": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138908": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x8013890C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138910": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138914": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138918": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x8013891C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138920": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138924": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138928": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x8013892C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138930": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138934": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x80138938": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "OLH:0x8013893C": "OLH placeholder pages (あ..き, one kana per row): retail ships them unfinished",
+  "RPG_BAT:0x8015E74C": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E774": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E79C": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E828": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E850": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E878": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E904": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E92C": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015E9E0": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015EA08": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015EA30": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015EA58": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015EA80": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "RPG_BAT:0x8015EAA8": "RPG_BAT 40-byte line buffers: the .data placeholder １２３…, always overwritten before the draw",
+  "main:0x800B6330": "sndi's brackets: text_field.c swaps them for '\"' / '(' before an English row",
+  "main:0x800B6334": "sndi's brackets: text_field.c swaps them for '\"' / '(' before an English row",
+  "main:0x800B6338": "sndi's brackets: text_field.c swaps them for '\"' / '(' before an English row",
+  "main:0x800B63E0": "memory-card file title (BIOS card manager: Shift-JIS only; card_file_write)",
+  "main:0x800B63F0": "memory-card file title (BIOS card manager: Shift-JIS only)",
+  "main:0x800B6404": "memory-card file title (BIOS card manager: Shift-JIS only)",
+  "main:0x800B87C4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B87D4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B87E4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B88A4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B88B4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B88D4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B88E4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B88F4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B8904": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B8914": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B8950": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B896C": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B8988": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89A4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89B4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89B8": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89C0": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89C4": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89C8": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89CC": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "main:0x800B89DC": "serifu_cmd_exec's brackets: the patch renderer (text_event.c) draws an ASCII quote before an English row and these only before a Japanese one",
+  "NAME_ENT:0x8014B3E4": "name-entry kanji page: the reading-index row (や ゆ よ / わ) of the kana index at y=88; its sibling rows are the kept key grids (overlay_drafts.d/sys.json skip)"
+ },
+ "draw_slots": [
+  {
+   "ov": "BUNKAKEN",
+   "s": "0x80154B98",
+   "gloss": "portrait",
+   "src": [
+    "src/overlay/BUNKAKEN/bunkaken_basyo_init3.c"
+   ],
+   "max_px": 182,
+   "why": "culture-festival place plate (bunka_bukatu 4, first year). basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "BUNKASAI",
+   "s": "0x8015D758",
+   "gloss": "portrait",
+   "src": [
+    "src/overlay/BUNKASAI/bunkasai_basyo_init.c"
+   ],
+   "max_px": 182,
+   "why": "culture-festival place plate (bunka_bukatu 4, first year). basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "BUNKA_SD",
+   "s": "0x8013A4C5",
+   "gloss": "(appoints) you to the high office of finance magistrate",
+   "src": [
+    "src/overlay/BUNKA_SD/bunka_sd_rollcall_step.c",
+    "src/overlay/BUNKA_SD/bunka_sd_speaker_set.c"
+   ],
+   "why": "samurai-play stage line: the record ' ' + text at 0x8013A4C4 is reached only through the row table word 0x8013B83C (table chosen by bunka_sd_speaker_set into D_8013B760), which names the RECORD, not the text; bunka_sd_rollcall_step (hooked: pt_bunka_sd_rollcall, text_ov_labels.c) reads s[0] and draws s + 1 with set_kanji_string, so the command letter stays and the text slot holds the module reference."
+  },
+  {
+   "ov": "BUNKA_SD",
+   "s": "0x8013B031",
+   "gloss": "of 100 sheets of coloured paper",
+   "src": [
+    "src/overlay/BUNKA_SD/bunka_sd_list_disp2.c",
+    "src/overlay/BUNKA_SD/bunka_sd_club1_y96_cd_load.c"
+   ],
+   "why": "Cultman quiz stage line: the record ' ' + text at 0x8013B030 is reached only through the row table word 0x8013CEC8 (table 0x8013CE60, stored into D_8013D8FC by bunka_sd_club1_y96_cd_load), which names the RECORD, not the text; bunka_sd_list_disp2 reads s[0] (the command letter, 103 = page end) and draws s + 1 as one row with set_kanji_string (text_vwf.c), which expands a module string, so the command letter stays and the text slot holds the module reference."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013B9E0",
+   "gloss": "Game Grand Prize",
+   "src": [
+    "src/overlay/MASTER/master_basyo_init.c"
+   ],
+   "max_px": 182,
+   "why": "club-award ceremony place plate. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013B9EC",
+   "gloss": "Mokuten (art exhibition) Grand Prize",
+   "src": [
+    "src/overlay/MASTER/master_basyo_init.c"
+   ],
+   "max_px": 182,
+   "why": "club-award ceremony place plate. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013C0C4",
+   "gloss": "National Stadium",
+   "src": [
+    "src/overlay/MASTER/master_bukatu_init.c"
+   ],
+   "max_px": 182,
+   "why": "club national-tournament place plate. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013C114",
+   "gloss": "National Stadium",
+   "src": [
+    "src/overlay/MASTER/master_bukatu_judge.c"
+   ],
+   "max_px": 182,
+   "why": "club national-tournament place plate. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013BB80",
+   "gloss": " Secret Baseball Art (leading ideographic space)",
+   "src": [
+    "src/overlay/MASTER/master_cw_result_step.c"
+   ],
+   "why": "baseball mastery result, first of three rows (x = -128). drawn as one row by set_kanji_string (text_vwf.c), which expands a module string; the slot is reached by a lui/addiu pair, not a pointer word. The four leading spaces are the indent (16 px, the ideographic space retail used); module strings are ASCII only."
+  },
+  {
+   "ov": "MASTER",
+   "s": "0x8013BC70",
+   "gloss": " Secret Baseball Art (leading ideographic space)",
+   "src": [
+    "src/overlay/MASTER/master_result_rank_snow_main.c"
+   ],
+   "why": "baseball mastery result (second route), first of three rows. drawn as one row by set_kanji_string (text_vwf.c), which expands a module string; the slot is reached by a lui/addiu pair, not a pointer word. The four leading spaces are the indent (16 px)."
+  },
+  {
+   "ov": "OLH",
+   "s": "0x80137E58",
+   "gloss": "...affects it.",
+   "src": [
+    "src/overlay/OLH/olh_bio_red_help.c"
+   ],
+   "why": "help-page row 3 of olh_bio_red_help. drawn as one row by set_kanji_string (text_vwf.c), which expands a module string; the slot is reached by a lui/addiu pair, not a pointer word."
+  },
+  {
+   "ov": "RPG_BAT",
+   "s": "0x8015BEF0",
+   "gloss": "Himoo: \"True World Conquest Robo!!",
+   "src": [
+    "src/overlay/RPG_BAT/rpg_bat_talk1a.c"
+   ],
+   "buf": 40,
+   "why": "battle line: strcpy (BIOS thunk, hooked: pt_strcpy, which copies a module string's text) into line 0 of rpg_bat_msg_buf2 (5 lines of 40 bytes), drawn as one row by rpg_bat_msg_step's set_kanji_string."
+  },
+  {
+   "ov": "RPG_BAT",
+   "s": "0x8015DE50",
+   "gloss": "Bancho: \"Sleeve Dragon!",
+   "src": [
+    "src/overlay/RPG_BAT/banchou_attack_call_talk.c"
+   ],
+   "buf": 40,
+   "why": "battle line: strcpy (hooked: pt_strcpy) into line 0 of rpg_bat_msg_buf2 (40 bytes), drawn as one row by rpg_bat_msg_step's set_kanji_string."
+  },
+  {
+   "ov": "RPG_BAT",
+   "s": "0x8015CF2C",
+   "gloss": "Kagami: \"Come back and try again!",
+   "src": [
+    "src/overlay/RPG_BAT/kagami_miss_talk.c"
+   ],
+   "buf": 40,
+   "max_px": 238,
+   "why": "battle line: kagami_miss_talk strcpy's it (BIOS thunk, hooked: pt_strcpy, which copies a module string's text) into line 0 of rpg_bat_msg_buf3 (5 lines of 40 bytes), drawn as one row at x = -126 by rpg_bat_msg_step's set_kanji_string. max_px 238: the widest English row this same draw already ships in place (0x8015CFB0, Himoo's design-strength line via rpg_bat_msg_buf4); its Japanese is 22 full-width characters."
+  },
+  {
+   "ov": "SHOUGATU",
+   "s": "0x80143700",
+   "gloss": "Draw a fortune slip.",
+   "src": [
+    "src/overlay/SHOUGATU/shougatu_omikuji.c"
+   ],
+   "why": "shougatu_omikuji copies the 24-byte block at the slot to the stack (bufA = D_80143700) and draws it with set_kanji_string: the copy carries the 2-byte module reference, which the renderer expands."
+  },
+  {
+   "ov": "ETC",
+   "s": "0x801507A4",
+   "gloss": "Skip it, go to the university entrance exam",
+   "src": [
+    "src/overlay/ETC/etc_taku_step.c"
+   ],
+   "why": "exam-eve choice 2 (job-exam route): etc_taku_step passes the slot as the second row to x_taku_string_set (main), which only hands it to set_kanji_string(-120, 66, ...) (text_vwf.c), which expands a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "ETC",
+   "s": "0x8014C2F0",
+   "gloss": "confession check",
+   "src": [
+    "src/overlay/ETC/etc_hizuke_basyo_init.c"
+   ],
+   "max_px": 182,
+   "why": "confession check place plate: etc_hizuke_basyo_init passes it only to basyo_init. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "ETC",
+   "s": "0x8014C370",
+   "gloss": "confession scene",
+   "src": [
+    "src/overlay/ETC/etc_confession_basyo_init.c"
+   ],
+   "max_px": 182,
+   "why": "confession scene place plate: etc_confession_basyo_init passes it only to basyo_init. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "TAIIKU",
+   "s": "0x80148E7C",
+   "gloss": "behind the school building",
+   "src": [
+    "src/overlay/TAIIKU/taiiku_sub_sub_main.c"
+   ],
+   "max_px": 182,
+   "why": "sports-festival place plate (behind the school building): taiiku_sub_sub_main case 20 passes it only to basyo_init. basyo_init (hooked: pt_basyo_init, text_misc.c) queues the place name with set_kanji_string and sizes the plate from pt_text_width; both expand a module string. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  },
+  {
+   "ov": "BUNKA_SD",
+   "s": "0x8013AF51",
+   "gloss": "a treasure of humanity",
+   "src": [
+    "src/overlay/BUNKA_SD/bunka_sd_list_disp2.c",
+    "src/overlay/BUNKA_SD/bunka_sd_club1_y96_cd_load.c"
+   ],
+   "why": "Cultman quiz stage line: the record ' ' + text at 0x8013AF50 is reached only through the row table word 0x8013CEA4 (table 0x8013CE60, stored into D_8013D8FC by bunka_sd_club1_y96_cd_load), which names the RECORD, not the text; bunka_sd_list_disp2 reads s[0] (the command letter) and draws s + 1 as one row with set_kanji_string (text_vwf.c), which expands a module string, so the command letter stays and the text slot holds the module reference."
+  },
+  {
+   "ov": "TEL",
+   "s": "0x8013E948",
+   "gloss": "Read the info magazine now and then.",
+   "src": [
+    "src/overlay/TEL/tel_yoshio_menu.c"
+   ],
+   "wraps": 2,
+   "why": "Yoshio's phone advice, row 1 after 'You' (0x8013E940, row 0): tel_yoshio_menu case 242 passes it only to sndi(s, 1, 13), replaced by pt_field_line (text_field.c), whose pt_field_expand copies a module string's text (and drops control bytes, so the text carries no {br}); pt_field_queue word-wraps it at x = -72 (201 px) into rows 1 and 2, the last visible row of the 3-row window. The slot is reached by a lui/addiu pair, not a pointer word, so overlay_sheets.py has nothing to relocate through."
+  }
+ ]
+}
