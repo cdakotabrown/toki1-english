@@ -37,7 +37,7 @@ Output
   translation/localization/containers.json           per-file base / sites
 
 Sheet columns: ID, File, Offset, MaxBytes, PtrSite, Kind, Speaker, Tokens,
-English, Status, Notes.  The sheet deliberately carries NO Japanese text (owner
+English, Status, Notes.  The sheet deliberately carries NO Japanese text (project
 decision D4): `File` + `Offset` locate the string on the player's disc, where the
 reviewer and every checker read it with the `decode()` below.  `Tokens` lists the
 control tokens present (so a QA check can insist they survive) and `MaxBytes` is

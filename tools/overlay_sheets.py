@@ -6,7 +6,7 @@ data files (FUKUTEST/JOHO.NBN) and the containers that have no sheet
 (MASTER/KOSIEN.BIN, BUNKA/URANAI.BIN, TARA_OBJ/KARAKASI.BIN).
 
 Inputs, in order of precedence:
-  1. an editor sheet with the cloud agent's columns under
+  1. an editor sheet with the sheets' columns under
      translation/localization/sheets/<rel>.csv (e.g. EXEDIR/TEL.EXN.csv);
   2. config/patch/overlay_drafts.json and the fragments under
      config/patch/overlay_drafts.d/*.json: `by_addr` ("<rel>:<0xoffset>"),

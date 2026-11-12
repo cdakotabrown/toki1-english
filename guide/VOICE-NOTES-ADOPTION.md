@@ -5,7 +5,7 @@ machine-generated transcript of someone else's video essay, and republishing it
 would not be ours to do. This file is the record of what the localization took
 from it; every claim below is also checkable against the sheets and the game.
 
-Decided 2026-09-26 (producer: the project owner). The source is a Whisper transcript of Tim
+Decided 2026-09-26 (producer). The source is a Whisper transcript of Tim
 Rogers' Action Button video essay on the 1994 game, post-processed into a guide.
 It is secondhand and machine-transcribed: character kanji are "from general
 knowledge", gameplay facts and timestamps are unverified, and at least one name
@@ -34,14 +34,14 @@ of facts about the script; the script itself (the sheets) wins on every conflict
   out of scope (this is a text localization).
 - Gameplay strategy, stat thresholds, timestamps — irrelevant to the script and
   unverified.
-- The reviewer's personal verdicts on routes and characters ("annoying",
-  "store brand Shiori") — not voice guidance.
+- The reviewer's personal verdicts on routes and characters — not voice
+  guidance.
 
 ## Correction the review surfaced (independent of the doc)
 
 Our own kit had 紐緒結奈 as "Yumi Himoo". She is **Yuina Himoo**; Yumi is Saotome.
-Fixed 2026-09-26 in the bible, glossary, extractor speaker map and every HI sheet
-(`311fe7130`, `1c2d7f0db`); no translated line used the wrong name.
+Fixed 2026-09-26 in the bible, glossary, extractor speaker map and every HI sheet;
+no translated line used the wrong name.
 
 ## Editor actions queued by these adoptions
 

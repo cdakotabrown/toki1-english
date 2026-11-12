@@ -228,7 +228,7 @@ class ContextTests(unittest.TestCase):
         self.folder = Path(self.directory.name)
         self.path = self.folder / "context.json"
 
-    def test_unknown_rows_have_no_fabricated_visuals(self):
+    def test_unknown_rows_have_no_invented_visuals(self):
         context = SceneContext(self.path)
         self.assertEqual(context.variants("anything"), [])
         self.assertFalse(self.path.exists())

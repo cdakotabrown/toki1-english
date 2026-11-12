@@ -7,6 +7,15 @@ disc image and a PPF patch from your own Japanese disc.
 Unofficial fan project, not affiliated with Konami or Sony. No game data is
 included: no disc, executable, Japanese script, art or audio.
 
+## Status
+
+Every line started as a machine first pass (each row's `Notes` says how it
+was edited and checked since). Of the script's 47,380 rows, 46,792 are
+`edited`, 583 are still `draft` and 5 are `untranslated`; none is marked
+`final` yet. Three optional pieces of signage art are still Japanese: the
+culture-festival drama act cards and hero-show logo, and a tiny line on
+the album cover.
+
 ## Disc
 
 The patch reads your disc from `../toki1-decomp/disks/` (names in
@@ -61,7 +70,7 @@ make gates test ci  # re-check the build, unit tests, the CI jobs
 | `patch/` | the patch code (IDO C); `patch/debug/` the debug build |
 | `art/` | English lettering: PNG cells and manifests |
 | `tools/` | build, gates, lint, hydrate; `reviewer/` sheet editor; `jev_qa_kit/` QA kit |
-| `docs/` | how the patch works |
+| `docs/` | how the patch works (other `docs/` files cited in comments are unpublished notes) |
 | `work/` | yours: hydrated sheets (ignored) |
 
 ## Licence

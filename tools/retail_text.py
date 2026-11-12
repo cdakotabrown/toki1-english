@@ -1,6 +1,6 @@
 """The retail Japanese of a sheet row, read from the player's own disc.
 
-Owner decision D4 (2026-11): the localization sheets carry the project's work
+Project decision D4 (2026-11): the localization sheets carry the project's work
 (IDs, offsets, budgets, English, status, notes) and **not** Konami's Japanese
 text. A row names the file it was extracted from (`File`, repo-relative), the
 byte offset (`Offset`) and the in-place budget (`MaxBytes`); the string runs

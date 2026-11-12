@@ -17,8 +17,8 @@ underlying work. The same holds for the English lettering drawn for the game's
 pictures (`art/`): the PNG cells are the project's own drawings of
 English words, placed into the game's files on your machine. The localization
 sheets carry no Japanese: each row names the file, offset and byte budget of
-the retail string, which the tools read from your own disc (owner decision D4,
-`tools/retail_text.py`).
+the retail string, which the tools read from your own disc
+(`tools/retail_text.py`).
 
 The disc-derived inputs (the retail executable and overlays, the extracted
 file tree) are generated on your machine from your own disc, inside the

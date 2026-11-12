@@ -7,7 +7,7 @@ kept in the project's private docs) are being handled by the engineering side in
 ## 1. Roles
 | Role | Owns | Deliverable |
 |---|---|---|
-| Producer (the project owner) | scope, sign-off on OPEN style decisions, priorities | signed style guide; batch order |
+| Producer | scope, sign-off on OPEN style decisions, priorities | signed style guide; batch order |
 | Translator | first-pass English for assigned sheets | rows with `Status = translated` |
 | Editor | voice, consistency, glossary discipline | rows `edited`; glossary rows `final` |
 | Engineering | encoding, budgets, relocation, fonts, disc build | playable build per batch; QA report |

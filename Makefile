@@ -67,7 +67,7 @@ test-disc-free:
 
 # everything, including the tests that read the extracted disc in toki1-decomp
 test: test-disc-free
-	$(PYTHON) tools/test_art_frames_2026_11_03.py
+	$(PYTHON) tools/test_art_frames.py
 	$(PYTHON) tools/test_mag_genre_tags.py
 	$(PYTHON) tools/test_name_ent_labels.py
 	$(PYTHON) tools/test_name_plates.py

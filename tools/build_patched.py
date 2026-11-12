@@ -71,7 +71,7 @@ Profile schema (config/patch/<name>.json):
                   "status": [accepted Status values], "dte": "auto" |
                   "build/patch/gen/dte.json" | false, "dte_count": 80}.
                   Every selected container is repacked at its exact size
-                  from the cloud agent's sheets, the DTE dictionary goes
+                  from the translation sheets, the DTE dictionary goes
                   into the string pool and patch_dte_table[], and
                   build/patch/inject.report.json carries the fit report.
   encoding        "ascii" | "fullwidth" | "patch" (tools/patch/textcodec.py:
@@ -125,7 +125,7 @@ DEFAULT_PINS = Path("config") / "patch" / "symbols.json"
 class SymbolPins:
     """Rename-proof symbol resolution for the patch profile.
 
-    Other agents rename main-binary symbols (func_XXXXXXXX -> a landed name,
+    The decompilation renames main-binary symbols (func_XXXXXXXX -> a landed name,
     or a landed name -> a better one) while this profile is being worked on.
     Every name the module, the hooks, the call-site redirects and the pokes
     reference is resolved to an ADDRESS through the naming ledger

@@ -1,6 +1,6 @@
 {
   "name": "english",
-  "description": "The English patch profile (2026-10-09): the proportional Latin text engine and every parser/label override of vwf-test.json, every text container (SERIFU, SPEAKTST, BUNKA, MASTER, TAIIKU, SHIAI) repacked from the cloud agent sheets with an 80-entry DTE built over the whole English corpus, English name tables and the overlay string overrides. Build: python3 tools/patch/build_patched.py config/patch/english.json (or make build-patched PROFILE=config/patch/english.json); apply build/patch/english.ppf to Track 1 of the Rev 1 dump.",
+  "description": "The English patch profile (2026-10-09): the proportional Latin text engine and every parser/label override of vwf-test.json, every text container (SERIFU, SPEAKTST, BUNKA, MASTER, TAIIKU, SHIAI) repacked from the translation sheets with an 80-entry DTE built over the whole English corpus, English name tables and the overlay string overrides. Build: python3 tools/patch/build_patched.py config/patch/english.json (or make build-patched PROFILE=config/patch/english.json); apply build/patch/english.ppf to Track 1 of the Rev 1 dump.",
   "main": {
     "module": {
       "generated": [
@@ -1427,7 +1427,7 @@
       "TARA_OBJ"
     ],
     "dte": "build/patch/gen/dte.json",
-    "note": "tools/patch/inject.py: every text container repacked from the cloud agent's sheets at its exact size; the DTE table is rebuilt from the whole corpus when build/patch/gen/dte.json is missing. BATTLE and BUNKASD hold mini-game data, not text (refused by the injector)."
+    "note": "tools/patch/inject.py: every text container repacked from the translation sheets at its exact size; the DTE table is rebuilt from the whole corpus when build/patch/gen/dte.json is missing. BATTLE and BUNKASD hold mini-game data, not text (refused by the injector)."
   },
   "generated": [
     {

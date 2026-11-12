@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """inject.py - sheet -> script-container injector for the PS1 English patch.
 
-Reads the cloud agent's sheets (translation/localization/sheets/<DIR>/<FILE>.csv,
+Reads the translation sheets (translation/localization/sheets/<DIR>/<FILE>.csv,
 READ ONLY) and rewrites COPIES of the script containers under
 build/patch/files/CDROM/... so that every file keeps its exact size (and so
 its sector count: the loader addresses every file by LBA, see

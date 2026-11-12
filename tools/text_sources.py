@@ -421,7 +421,7 @@ def load_profile_coverage(profile_path, with_sheets=True):
 
 
 def load_container_index():
-    """containers.json (the cloud agent's, read-only) + the patch's own
+    """containers.json (the extractor's, read-only) + the patch's own
     extra containers (config/patch/containers_extra.json, same format)"""
     idx = {}
     for p in (CONTAINERS,
@@ -851,7 +851,7 @@ def remaining_table(records):
 
 def write_draft_sheets(records, image):
     """sheet-missing rows -> build/patch/gen/sheets/<DIR>/<FILE>.csv in the
-    cloud agent's column layout (English empty, Status untranslated)"""
+    sheets' column layout (English empty, Status untranslated)"""
     n = 0
     files = 0
     ce = PATCH_CONFIG / "containers_extra.json"

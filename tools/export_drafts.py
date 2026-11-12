@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """export_drafts.py - every DRAFT English string the patch carries outside
-the editor's sheets, exported as sheets in the translation agent's CSV
+the editor's sheets, exported as sheets in the translation sheets' CSV
 layout for the editor (build/patch/handoff/).
 
-The patch drafts English in several places because the cloud agent's
+The patch drafts English in several places because the translation
 sheets (translation/localization/sheets/) only cover the containers:
 
   * the profile's own strings (config/patch/english.json: the prologue,

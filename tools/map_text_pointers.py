@@ -21,11 +21,11 @@ Two reference kinds are detected, both rewritable:
 Address model (verified from the on-disk headers, not assumed):
   main PS-X EXE : body starts at file 0x800; vaddr = t_addr + (off - 0x800),
                   where t_addr is read live from the EXE header (0x80041000).
-  .EXN overlays : headerless, loaded whole to 0x80132000 (CLAUDE.md); every
+  .EXN overlays : headerless, loaded whole to 0x80132000; every
                   overlay shares that base, so a pointer whose target lands in
                   overlay space is only unambiguous WITHIN its own file. Such
                   cross-file coincidences are reported but never asserted as a
-                  specific string -- this tool does not fabricate matches.
+                  specific string -- this tool does not invent matches.
 
 CDROM data containers are skipped for pointer scanning: they are DMA'd to
 runtime buffers whose addresses are not statically known, so no 0x80xxxxxx
@@ -50,7 +50,7 @@ from roots import locate  # noqa: E402
 SHEET = locate("translation/tokimeki_script.csv")
 DEFAULT_OUT = locate("translation/text_pointers.json")
 
-OVERLAY_BASE = 0x80132000          # CLAUDE.md: every .EXN loads here.
+OVERLAY_BASE = 0x80132000          # every .EXN loads here.
 EXE_BODY_OFFSET = 0x800            # PS-X EXE header size.
 RAM_LO, RAM_HI = 0x80000000, 0x80200000   # 2 MiB kseg0 window.
 
